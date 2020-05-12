@@ -49,6 +49,7 @@
 									<listOptionValue builtIn="false" value="&quot;C:\Libraries\tm4c&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;C:\Libraries\frt10\inc&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;C:\Libraries\frt10\port\TivaM4&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;C:\Libraries\emp&quot;"/>
 								</option>
 								<option id="com.ti.ccstudio.buildDefinitions.TMS470_GNU_7.0.compilerID.ASM_SPECIFIC_FLAGS.662552940" name="Miscellaneous assembly source specific flags" superClass="com.ti.ccstudio.buildDefinitions.TMS470_GNU_7.0.compilerID.ASM_SPECIFIC_FLAGS" useByScannerDiscovery="false" valueType="stringList">
 									<listOptionValue builtIn="false" value="-x assembler-with-cpp"/>
@@ -122,6 +123,7 @@
 									<listOptionValue builtIn="false" value="&quot;C:\Libraries\tm4c&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;C:\Libraries\frt10\inc&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;C:\Libraries\frt10\port\TivaM4&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;C:\Libraries\emp&quot;"/>
 								</option>
 								<option id="com.ti.ccstudio.buildDefinitions.TMS470_GNU_7.0.compilerID.ASM_SPECIFIC_FLAGS.1629643220" name="Miscellaneous assembly source specific flags" superClass="com.ti.ccstudio.buildDefinitions.TMS470_GNU_7.0.compilerID.ASM_SPECIFIC_FLAGS" useByScannerDiscovery="false" valueType="stringList">
 									<listOptionValue builtIn="false" value="-x assembler-with-cpp"/>
@@ -152,6 +154,6 @@
 	<storageModule moduleId="cdtBuildSystem" version="4.0.0">
 		<project id="FinalAssignment.com.ti.ccstudio.buildDefinitions.TMS470.ProjectType.1181578705" name="TMS470" projectType="com.ti.ccstudio.buildDefinitions.TMS470.ProjectType"/>
 	</storageModule>
-	<storageModule moduleId="scannerConfiguration"/>
 	<storageModule moduleId="org.eclipse.cdt.make.core.buildtargets"/>
+	<storageModule moduleId="scannerConfiguration"/>
 </cproject>
