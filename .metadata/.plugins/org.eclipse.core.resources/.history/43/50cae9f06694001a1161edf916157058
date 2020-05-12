@@ -22,7 +22,6 @@
 #include "tm4c123gh6pm.h"
 #include "emp_type.h"
 
-#include "digiswitch.h"
 #include "FreeRTOS.h"
 #include "task.h"
 #include "queue.h"
@@ -96,7 +95,7 @@ int main(void)
 
 	// Create the tasks.
 	xTaskCreate( status_led_task, "Status_led", USERTASK_STACK_SIZE, NULL, LOW_PRIO, NULL );
-	//xTaskCreate( ai_task, "Analog_input", USERTASK_STACK_SIZE, NULL, LOW_PRIO, NULL );
+	xTaskCreate( ai_task, "Analog_input", USERTASK_STACK_SIZE, NULL, LOW_PRIO, NULL );
 	xTaskCreate( lcd_task, "LCD", USERTASK_STACK_SIZE, NULL, LOW_PRIO, NULL ); //(void *) xMutex_Scale_LCD
 	xTaskCreate( scale_task, "Scale", USERTASK_STACK_SIZE, NULL, LOW_PRIO, NULL ); //(void *) xMutex_Scale_LCD
 	xTaskCreate( keyboard_task, "Keyboard", USERTASK_STACK_SIZE, NULL, LOW_PRIO, NULL );

@@ -57,7 +57,7 @@ void init_gpio(void)
   GPIO_PORTD_DEN_R = 0x4C;
   GPIO_PORTF_DEN_R = 0x1F;
 
-  GPIO_PORTA_DEN_R = 0xFC; //Key&digiswitch
+  GPIO_PORTA_DEN_R = 0x1C; //Key
   GPIO_PORTE_DEN_R = 0x0F; //Key
 
   // Enable internal pull-up (PF0 and PF4).

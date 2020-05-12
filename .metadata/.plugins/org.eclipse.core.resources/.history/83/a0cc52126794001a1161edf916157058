@@ -96,7 +96,7 @@ int main(void)
 
 	// Create the tasks.
 	xTaskCreate( status_led_task, "Status_led", USERTASK_STACK_SIZE, NULL, LOW_PRIO, NULL );
-	//xTaskCreate( ai_task, "Analog_input", USERTASK_STACK_SIZE, NULL, LOW_PRIO, NULL );
+	xTaskCreate( ai_task, "Analog_input", USERTASK_STACK_SIZE, NULL, LOW_PRIO, NULL );
 	xTaskCreate( lcd_task, "LCD", USERTASK_STACK_SIZE, NULL, LOW_PRIO, NULL ); //(void *) xMutex_Scale_LCD
 	xTaskCreate( scale_task, "Scale", USERTASK_STACK_SIZE, NULL, LOW_PRIO, NULL ); //(void *) xMutex_Scale_LCD
 	xTaskCreate( keyboard_task, "Keyboard", USERTASK_STACK_SIZE, NULL, LOW_PRIO, NULL );
