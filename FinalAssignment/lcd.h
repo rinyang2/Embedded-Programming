@@ -32,20 +32,14 @@
 
 #define ESC		0x1B
 
+
 /*****************************   Constants   *******************************/
 
 /*****************************   Functions   *******************************/
-void move_LCD( INT8U, INT8U );
-INT8U wr_ch_LCD( INT8U );
 void wr_str_LCD( INT8U* );
+void move_LCD( INT8U, INT8U );
+INT8U wr_ch_LCD( INT8U Ch );
 
-
-void lcd_init_queue();
-/*****************************************************************************
-*   Input    : -
-*   Output   : -
-*   Function : Test function
-******************************************************************************/
 
 
 void lcd_task();

@@ -4,16 +4,16 @@
 *
 * MODULENAME.: main.c
 *
-* PROJECT....: Assignment7_FreeRTOS
+* PROJECT....: EMP
 *
-* DESCRIPTION: Assignment 7, main module. No main.h file.
+* DESCRIPTION: Assignment 2, main module. No main.h file.
 *
 * Change Log:
 *****************************************************************************
 * Date    Id    Change
-* DDMMYY
+* YYMMDD
 * --------------------
-* 060420  AMS   Module created.
+* 150215  MoH   Module created.
 *
 *****************************************************************************/
 
@@ -21,22 +21,19 @@
 #include <stdint.h>
 #include "tm4c123gh6pm.h"
 #include "emp_type.h"
-
-#include "digiswitch.h"
+#include "systick_frt.h"
 #include "FreeRTOS.h"
 #include "task.h"
-#include "queue.h"
-#include "semphr.h"
-//#include "systick_frt.h"
-//#include "semtest.h"
-
-#include "status_led.h"
-#include "adc.h"
-#include "gpio.h"
-#include "lcd.h"
 #include "key.h"
+#include "gpio.h"
+#include "ui.h"
+#include "lcd.h"
+#include "queue.h"
+#include "glob_def.h"
+#include "semphr.h"
+#include "scale.h"
+#include "analog.h"
 
-#include "file.h"
 
 /*****************************    Defines    *******************************/
 #define USERTASK_STACK_SIZE configMINIMAL_STACK_SIZE
@@ -45,41 +42,29 @@
 #define MED_PRIO  2
 #define HIGH_PRIO 3
 
+
 /*****************************   Constants   *******************************/
 
 /*****************************   Variables   *******************************/
-//static SemaphoreHandle_t xMutex_Scale_LCD = NULL;
 
 /*****************************   Functions   *******************************/
+
 
 
 static void setupHardware(void)
 /*****************************************************************************
 *   Input    :  -
 *   Output   :  -
-*   Function :  Hardware configuration and initialization
+*   Function :
 *****************************************************************************/
 {
-    status_led_init();
-    init_adc();
+  // TODO: Put hardware configuration and initialisation in here
+
+  // Warning: If you do not initialize the hardware clock, the timings will be inaccurate
+    init_systick();
     init_gpio();
-
-    set_scalefactor(1);
-    set_offset(10);
-}
-
-static void initializeSemaphores(void)
-/*****************************************************************************
-*   Input    :  -
-*   Output   :  -
-*   Function :  Initialize the Semaphore handlers.
-*****************************************************************************/
-{
-    init_adc_semaphores();
-    //xMutex_Scale_LCD = xSemaphoreCreateMutex();
-    //xSemaphoreGive(xMutex_Scale_LCD);
-    lcd_init_queue();
-    key_init_queue();
+    init_adc();
+    init_files();
 }
 
 
@@ -90,25 +75,29 @@ int main(void)
 *   Function : The super loop.
 ******************************************************************************/
 {
-	setupHardware();
-	initializeSemaphores();
-	init_files();
+  setupHardware();
 
-	// Create the tasks.
-	xTaskCreate( status_led_task, "Status_led", USERTASK_STACK_SIZE, NULL, LOW_PRIO, NULL );
-	//xTaskCreate( ai_task, "Analog_input", USERTASK_STACK_SIZE, NULL, LOW_PRIO, NULL );
-	xTaskCreate( lcd_task, "LCD", USERTASK_STACK_SIZE, NULL, LOW_PRIO, NULL ); //(void *) xMutex_Scale_LCD
-	xTaskCreate( scale_task, "Scale", USERTASK_STACK_SIZE, NULL, LOW_PRIO, NULL ); //(void *) xMutex_Scale_LCD
-	xTaskCreate( keyboard_task, "Keyboard", USERTASK_STACK_SIZE, NULL, LOW_PRIO, NULL );
-	xTaskCreate( ui_task, "UI", USERTASK_STACK_SIZE, NULL, LOW_PRIO, NULL );
-	xTaskCreate( driver, "Digiswitch", USERTASK_STACK_SIZE, NULL, LOW_PRIO, NULL );
+  xMutex = xSemaphoreCreateMutex();                                                     // create the mutex and the queues. make sure the handles are defined globally (in glob_def.h for example)
 
-	// Start the scheduler.
-	vTaskStartScheduler();
+  Q_KEY = xQueueCreate( 128,  sizeof(INT8U) );
+  Q_LCD = xQueueCreate( 128, sizeof(INT8U) );
 
-	// Will only get here, if there was insufficient memory.
-    return 1;
+  // Start the tasks.
+  xTaskCreate( key_task,        "key",  USERTASK_STACK_SIZE, NULL, LOW_PRIO, NULL );    // the tasks are created. all priorities are the same or else only the higher priorities will run if ready
+  xTaskCreate( lcd_task,        "lcd",  USERTASK_STACK_SIZE, NULL, LOW_PRIO, NULL );
+  xTaskCreate( ai_task,         "ai",   USERTASK_STACK_SIZE, NULL, LOW_PRIO, NULL );
+  xTaskCreate( scale_task,      "scale",USERTASK_STACK_SIZE, NULL, LOW_PRIO, NULL );
+  xTaskCreate( ui_task,         "ui",   USERTASK_STACK_SIZE, NULL, LOW_PRIO, NULL );
+
+  // ----------------
+
+  // Start the scheduler.
+  // --------------------
+  vTaskStartScheduler();
+
+  // Will only get here, if there was insufficient memory.
+  // -----------------------------------------------------
+  return 1;
 }
-
 
 /****************************** End Of Module *******************************/

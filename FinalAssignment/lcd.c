@@ -23,21 +23,13 @@
 #include "emp_type.h"
 #include "lcd.h"
 #include "glob_def.h"
-#include "tmodel.h"
-//#include "queue.h"
-//#include "sem.h"
-
-#include "adc.h"
 #include "file.h"
 #include "string.h"
 
-#include "FreeRTOS.h"
-#include "Task.h"
-#include "queue.h"
-#include "semphr.h"
-
 
 /*****************************    Defines    *******************************/
+
+#define QUEUE_LEN   128
 
 enum LCD_states
 {
@@ -46,9 +38,6 @@ enum LCD_states
   LCD_READY,
   LCD_ESC_RECEIVED,
 };
-
-#define QUEUE_LEN   128
-#define SIZE_UINT8  sizeof(unsigned char)
 
 /*****************************   Constants   *******************************/
 const INT8U LCD_init_sequense[]= 
@@ -71,10 +60,10 @@ const INT8U LCD_init_sequense[]=
 //INT8U LCD_buf_tail = 0;
 //INT8U LCD_buf_len  = 0;
 
-static enum LCD_states LCD_state = LCD_POWER_UP;
+enum LCD_states LCD_state = LCD_POWER_UP;
 INT8U LCD_init;
 
-static QueueHandle_t xQueueOutput;
+
 
 /*****************************   Functions   *******************************/
 INT8U wr_ch_LCD( INT8U Ch )
@@ -83,7 +72,9 @@ INT8U wr_ch_LCD( INT8U Ch )
 *   Function : See module specification (.h-file).
 *****************************************************************************/
 {
-  return( xQueueSend(xQueueOutput, &Ch, portMAX_DELAY) );
+
+
+  return (xQueueSendToBack( Q_LCD, &Ch, portMAX_DELAY));
 }
 
 void wr_str_LCD( INT8U *pStr )
@@ -91,6 +82,7 @@ void wr_str_LCD( INT8U *pStr )
 *   Function : See module specification (.h-file).
 *****************************************************************************/
 {
+
   while( *pStr )
   {
     wr_ch_LCD( *pStr );
@@ -187,7 +179,7 @@ void wr_ctrl_LCD( INT8U Ch )
 *   Function : Write control data to LCD.
 ******************************************************************************/
 {
-  static INT8U Mode4bit = FALSE;
+  static INT8U Mode4bit = 0;
   INT16U i;
 
   wr_ctrl_LCD_high( Ch );
@@ -199,7 +191,7 @@ void wr_ctrl_LCD( INT8U Ch )
   else
   {
 	if( (Ch & 0x30) == 0x20 )
-	  Mode4bit = TRUE;
+	  Mode4bit = 1;
   }
 }
 
@@ -210,7 +202,8 @@ void clr_LCD()
 *   Function : Clear LCD.
 ******************************************************************************/
 {
-  wr_ctrl_LCD( 0x01 );
+  gfprintf(COM2, "%c%c                                                                                       ", 0x1B, 0x80);
+  //wr_ctrl_LCD( 0x01 );
 }
 
 
@@ -250,19 +243,10 @@ void out_LCD( INT8U Ch )
 }
 
 
-void lcd_init_queue()
-{
-    xQueueOutput = xQueueCreate(QUEUE_LEN, sizeof(INT8U));
-
-    //move_LCD( 4, 0 );
-    //wr_ch_LCD( '4' );
-    //move_LCD( 6, 1 );
-    //wr_ch_LCD( '2' );
-}
 
 
-void lcd_task(void *pvParameters)
-//INT8U task_no;
+
+void lcd_task()
 /*****************************************************************************
 *   Input    :
 *   Output   :
@@ -270,77 +254,69 @@ void lcd_task(void *pvParameters)
 ******************************************************************************/
 {
   INT8U ch;
-  SemaphoreHandle_t* mutex_scale_lcd = (SemaphoreHandle_t*) pvParameters;
+  INT8U lcd_state = LCD_POWER_UP;
 
   while (1)
   {
-      //if (xSemaphoreTake(mutex_scale_lcd, portMAX_DELAY))
-      //{
-          switch( LCD_state )
-          {
-            case LCD_POWER_UP:
-              LCD_init = 0;
-              LCD_state = LCD_INIT;
-              //vTaskDelay(500 / portTICK_RATE_MS); // wait 100 milliseconds
-              vTaskDelay(  50 / portTICK_PERIOD_MS);
-              break;
 
-            case LCD_INIT:
-              if( LCD_init_sequense[LCD_init] != 0xFF )
-                wr_ctrl_LCD( LCD_init_sequense[LCD_init++] );
-              else
-              {
-                LCD_state = LCD_READY;
-              }
-              vTaskDelay(  50 / portTICK_PERIOD_MS);
-              //vTaskDelay(500 / portTICK_RATE_MS); // wait 100 milliseconds
-              break;
+  switch( lcd_state )
+  {
+    case LCD_POWER_UP:
+      LCD_init = 0;
+      lcd_state = LCD_INIT ;
 
-            case LCD_READY:
-              xQueueReceive(xQueueOutput, &ch, portMAX_DELAY);
-              if( ch )
-              {
-                switch( ch )
-                {
-                  case 0xFF:
-                    clr_LCD();
-                    break;
-                  case ESC:
-                  LCD_state = LCD_ESC_RECEIVED;
-                    break;
-                  default:
-                    out_LCD( ch );
-                    vTaskDelay(  5 / portTICK_PERIOD_MS);
-                }
-              }
-              break;
+      vTaskDelay(  50 / portTICK_PERIOD_MS);
+      break;
 
-            case LCD_ESC_RECEIVED:
-                xQueueReceive(xQueueOutput, &ch, portMAX_DELAY);
-                if( ch )
-                {
-                    if( ch & 0x80 )
-                    {
-                        Set_cursor( ch );
-                    }
-                    else
-                    {
-                        switch( ch )
-                        {
-                            case '@':
-                              home_LCD();
-                              break;
-                        }
-                    }
-                    LCD_state = LCD_READY;
-                    vTaskDelay(  5 / portTICK_PERIOD_MS);
-                    //vTaskDelay(50 / portTICK_RATE_MS); // wait 10 milliseconds
-                }
-              break;
-          }
-          //xSemaphoreGive(mutex_scale_lcd);
-          //vTaskDelay(50 / portTICK_RATE_MS); // wait 10 milliseconds
-      //}
+    case LCD_INIT:
+      if( LCD_init_sequense[LCD_init] != 0xFF )
+        wr_ctrl_LCD( LCD_init_sequense[LCD_init++] );
+      else
+	  {
+		lcd_state = LCD_READY ;
+	  }
+      vTaskDelay(  50 / portTICK_PERIOD_MS);
+      break;
+
+    case LCD_READY:
+      if( xQueueReceive( Q_LCD, &ch, portMAX_DELAY ))
+      {
+        switch( ch )
+        {
+	      case 0xFF:
+	        clr_LCD();
+	        break;
+	      case ESC:
+		    lcd_state = LCD_ESC_RECEIVED ;
+		    break;
+	      default:
+		    out_LCD( ch );
+		    vTaskDelay(  5 / portTICK_PERIOD_MS);
+		}
+	  }
+	  break;
+
+	case LCD_ESC_RECEIVED:
+	  if( xQueueReceive( Q_LCD, &ch, portMAX_DELAY ))
+	  {
+		if( ch & 0x80 )
+		{
+			Set_cursor( ch );
+		}
+		else
+		{
+		  switch( ch )
+		  {
+		    case '@':
+		    	home_LCD();
+			  break;
+		  }
+        }
+	    lcd_state = LCD_READY ;
+	    vTaskDelay(  5 / portTICK_PERIOD_MS);
+      }
+	  break;
+  }
   }
 }
 
