@@ -22,11 +22,7 @@
 #include "tm4c123gh6pm.h"
 #include "emp_type.h"
 #include "glob_def.h"
-//#include "rtcs.h"
 #include "file.h"
-//#include "tmodel.h"
-//#include "key.h"
-//#include "uart.h"
 #include "lcd.h"
 #include "key.h"
 
@@ -42,7 +38,7 @@ typedef struct
 /*****************************   Constants   *******************************/
 
 /*****************************   Variables   *******************************/
-fcb pof[MAX_FILES];	            // Pool of files
+fcb pof[MAX_FILES];	            // Pool of foles
 
 /*****************************   Functions   *******************************/
 

@@ -17,7 +17,5 @@ typedef INT8U* FILE;
 #define COM3  2      // Keyboard
 
 BOOLEAN put_file( FILE, INT8U );
-BOOLEAN get_file( FILE, INT8U* );
-extern INT8U init_files();
 
 #endif /* FILE_H_ */

@@ -20,10 +20,7 @@
 #ifndef _KEY_H
   #define _KEY_H
 
-void key_init_queue();
-BOOLEAN get_keyboard( INT8U* );
-void keyboard_task(void *pvParameters);
-void set_state(INT8U);
-void ui_task(void *pvParameters);
+INT8U get_keyboard();
+void key_task();
 
 #endif

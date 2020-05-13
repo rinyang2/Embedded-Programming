@@ -8,10 +8,7 @@
 #include <stdarg.h>
 #include "emp_type.h"
 #include "glob_def.h"
-//#include "rtcs.h"
 #include "file.h"
-//#include "uart.h"
-#include "tmodel.h"
 
 void putc1( fp, ch )
 FILE *fp;

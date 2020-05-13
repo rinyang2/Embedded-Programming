@@ -1,19 +1,19 @@
 /*****************************************************************************
 * University of Southern Denmark
-* Embedded C Programming (ECP)
+* Embedded Programming (EMP)
 *
 * MODULENAME.: key.c
 *
-* PROJECT....: Assignment7_FreeRTOS
+* PROJECT....: EMP
 *
 * DESCRIPTION: See module specification file (.h-file).
 *
 * Change Log:
-******************************************************************************
+*****************************************************************************
 * Date    Id    Change
-* DDMMYY
+* YYMMDD
 * --------------------
-* 060420  AMS   Module created.
+* 150321  MoH   Module created.
 *
 *****************************************************************************/
 
@@ -21,39 +21,10 @@
 #include <stdint.h>
 #include "tm4c123gh6pm.h"
 #include "emp_type.h"
-#include "tmodel.h"
-#include "key.h"
-
 #include "FreeRTOS.h"
-#include "Task.h"
 #include "queue.h"
-#include "semphr.h"
-
-#include "adc.h"
-#include "file.h"
-#include "string.h"
-
-/*****************************    Defines    *******************************/
-#define QUEUE_LEN   128
-#define SIZE_UINT8  sizeof(unsigned char)
-
-/*****************************   Constants   *******************************/
-
-/*****************************   Variables   *******************************/
-static INT8U my_state = 0;
-static INT8U my_state_keyboard = 0, my_state_ui = 0;
-static QueueHandle_t xQueueKey;
-static SemaphoreHandle_t xMutex_Key_UI = NULL;
-
-/*****************************   Functions   *******************************/
-
-void key_init_queue()
-{
-    xQueueKey = xQueueCreate(QUEUE_LEN, sizeof(INT8U));
-    xMutex_Key_UI = xSemaphoreCreateMutex();
-    xSemaphoreGive(xMutex_Key_UI);
-}
-
+#include "glob_def.h"
+#include "key.h"
 
 INT8U row( INT8U y )
 {
@@ -79,10 +50,14 @@ INT8U x, y;
   return( matrix[x-1][y-1] );
 }
 
-BOOLEAN get_keyboard( INT8U *pch )
+INT8U get_keyboard( )
 {
-    xQueueReceive(xQueueKey, &pch, 0U);
-    return( 1 );
+    INT8U test;
+    if( xQueueReceive(Q_KEY, &test, 0 ))
+        {
+            return test;
+        }
+    return 0;
 }
 
 BOOLEAN check_column(INT8U x)
@@ -91,130 +66,53 @@ BOOLEAN check_column(INT8U x)
     if( y )                                         // If one of them are set...
     {                                               // ...we first find the row number with the function row()
         INT8U ch = key_catch( x, row(y) );          // Now that we have the row and column we look up the corresponding character using the function key_catch
-        xQueueSend(xQueueKey, &ch, 0U);             // Put the character in a queue so it can be used by another task
-        //put_queue( Q_KEY, ch, 1 );                // Put the character in a queue so it can be used by another task
+        xQueueSend( Q_KEY, &ch, 0 );                // Put the character in a queue so it can be used by another task
         return 1;
     }
     return 0;
 }
 
-
-void set_state(INT8U new_state)
-{
-    my_state = new_state;
-}
-
-
-void keyboard_task(void *pvParameters)
+void key_task()
 /*****************************************************************************
 *   Input    :
 *   Output   :
 *   Function :
 ******************************************************************************/
 {
-  while(1)
+  INT8U my_state = 0;
+  while (1)
   {
-      //if (xSemaphoreTake(xMutex_Key_UI, portMAX_DELAY))
-      //{
-          switch(my_state_keyboard)
-          {
-          case 0:
-            GPIO_PORTA_DATA_R &= 0xE3;          // Clear the 3 bits for the columns
-            GPIO_PORTA_DATA_R |= 0x10;          // Set the bit for column 1
-            if (check_column(1))                // Check all the rows for column 1, using the function check_column
-            {                                   // If a button press is registered we go to next state so the press is only registered once
-                my_state_keyboard = 1;
-                //set_state(1);
-                //xSemaphoreGive(xMutex_Key_UI);
-                break;
-            }
-            GPIO_PORTA_DATA_R &= 0xE3;          // Repeat the above for the two other columns
-            GPIO_PORTA_DATA_R |= 0x08;
-            if (check_column(2))
-            {
-                my_state_keyboard = 1;
-                //set_state(1);
-                //xSemaphoreGive(xMutex_Key_UI);
-                break;
-            }
-            GPIO_PORTA_DATA_R &= 0xE3;
-            GPIO_PORTA_DATA_R |= 0x04;
-            if (check_column(3))
-            {
-                my_state_keyboard = 1;
-                //set_state(1);
-                //xSemaphoreGive(xMutex_Key_UI);
-                break;
-            }
-            break;
-          case 1:
-            if( !(GPIO_PORTE_DATA_R & 0x0F) )   // We stay here until the button is released so a button press is not counted more than once
-            {
-                my_state_keyboard = 0;
-                //set_state( 0 );
-            }
-            break;
-          }
-          //xSemaphoreGive(xMutex_Key_UI);
-          //vTaskDelay(250 / portTICK_RATE_MS); // wait 50 milliseconds
-      //}
+    switch(my_state)
+    {
+    case 0:
+      GPIO_PORTA_DATA_R &= 0xE3;          // Clear the 3 bits for the columns
+      GPIO_PORTA_DATA_R |= 0x10;          // Set the bit for column 1
+      if (check_column(1))                // Check all the rows for column 1, using the function check_column
+      {                                   // If a button press is registered we go to next state so the press is only registered once
+          my_state = 1;
+          break;
+      }
+      GPIO_PORTA_DATA_R &= 0xE3;          // Repeat the above for the two other columns
+      GPIO_PORTA_DATA_R |= 0x08;
+      if (check_column(2))
+      {
+          my_state = 1;
+          break;
+      }
+      GPIO_PORTA_DATA_R &= 0xE3;
+      GPIO_PORTA_DATA_R |= 0x04;
+      if (check_column(3))
+      {
+          my_state = 1;
+          break;
+      }
+      break;
+    case 1:
+      if( !(GPIO_PORTE_DATA_R & 0x0F) )   // We stay here until the button is released so a button press is not counted more than once
+      {
+        my_state = 0;
+      }
+      break;
+    }
   }
 }
-
-void ui_task(void *pvParameters)
-/*****************************************************************************
-*   Input    :
-*   Output   :
-*   Function :
-******************************************************************************/
-{
-  INT8U ch;
-  static INT8U  Buf[4];
-
-  while(1)
-  {
-      //if (xSemaphoreTake(xMutex_Key_UI, portMAX_DELAY))
-      //{
-          if( get_file( COM3, &ch ))
-          {
-              xQueueReceive(xQueueKey, &ch, portMAX_DELAY);
-              switch( my_state_ui )
-              {
-              case 0:
-                  Buf[0] = ch;
-                  gfprintf( COM2, "%c%cS:%c", 0x1B, 0xC4, ch );
-                  my_state_ui = 1;
-                  //set_state( 1 );
-                  break;
-              case 1:
-                  Buf[1] = ch;
-                  gfprintf( COM2, "%c%c%c O:", 0x1B, 0xC7, ch );
-                  my_state_ui = 2;
-                  //set_state( 2 );
-                  break;
-              case 2:
-                  Buf[2] = ch;
-                  gfprintf( COM2, "%c%c%c", 0x1B, 0xCB, ch );
-                  my_state_ui = 3;
-                  //set_state( 3 );
-                  break;
-              case 3:
-                  Buf[3] = ch;
-                  INT16U scalefactor_new;
-                  INT16U offset_new;
-                  scalefactor_new = (Buf[0]-'0')*10+Buf[1]-'0';
-                  offset_new = (Buf[2]-'0')*10+Buf[3]-'0';
-                  set_scalefactor(scalefactor_new);
-                  set_offset(offset_new);
-                  gfprintf( COM2, "%c%c         ", 0x1B, 0xC3 );
-                  my_state_ui = 0;
-                  //set_state( 0 );
-                  break;
-              }
-          }
-          //xSemaphoreGive(xMutex_Key_UI);
-          //vTaskDelay(250 / portTICK_RATE_MS); // wait 50 milliseconds
-      //}
-  }
-}
-

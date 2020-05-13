@@ -3,15 +3,6 @@
 
 "C:\\ti\\ccsv8\\utils\\bin\\gmake" -k -j 12 all -O 
  
-Building file: "../main.c"
-Invoking: GNU Compiler
-"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/bin/arm-none-eabi-gcc.exe" -c -mcpu=cortex-m4 -march=armv7e-m -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DPART_TM4C123GH6PM -I"C:/Users/jinsk/workspace_v8/Embedded-Programming/FinalAssignment" -I"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/arm-none-eabi/include" -I"C:/Libraries/tm4c" -I"C:/Libraries/frt10/inc" -I"C:/Libraries/frt10/port/TivaM4" -I"C:/Libraries/emp" -Og -ffunction-sections -fdata-sections -g -gdwarf-3 -gstrict-dwarf -Wall -specs="nosys.specs" -MMD -MP -MF"main.d" -MT"main.o"   -o"main.o" "../main.c"
-Finished building: "../main.c"
- 
-Building target: "FinalAssignment.out"
-Invoking: GNU Linker
-"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/bin/arm-none-eabi-gcc.exe" -DPART_TM4C123GH6PM -Og -ffunction-sections -fdata-sections -g -gdwarf-3 -gstrict-dwarf -Wall -specs="nosys.specs" -march=armv7e-m -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -Wl,-Map,"FinalAssignment.map" -o"FinalAssignment.out" "./adc.o" "./digiswitch.o" "./file.o" "./gpio.o" "./heap_2.o" "./key.o" "./lcd.o" "./list.o" "./main.o" "./port.o" "./queue.o" "./startup_frt.o" "./status_led.o" "./string.o" "./systick_frt.o" "./tasks.o" -Wl,-T"../tm4c123gh6pm.lds"  
-Finished building target: "FinalAssignment.out"
- 
+gmake[1]: 'FinalAssignment.out' is up to date.
 
 **** Build Finished ****

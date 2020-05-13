@@ -821,3 +821,2066 @@ Finished building target: "FinalAssignment.out"
  
 
 **** Build Finished ****
+
+**** Build of configuration Debug for project FinalAssignment ****
+
+"C:\\ti\\ccsv8\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+Building file: "../main.c"
+Invoking: GNU Compiler
+"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/bin/arm-none-eabi-gcc.exe" -c -mcpu=cortex-m4 -march=armv7e-m -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DPART_TM4C123GH6PM -I"C:/Users/jinsk/workspace_v8/Embedded-Programming/FinalAssignment" -I"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/arm-none-eabi/include" -I"C:/Libraries/tm4c" -I"C:/Libraries/frt10/inc" -I"C:/Libraries/frt10/port/TivaM4" -I"C:/Libraries/emp" -Og -ffunction-sections -fdata-sections -g -gdwarf-3 -gstrict-dwarf -Wall -specs="nosys.specs" -MMD -MP -MF"main.d" -MT"main.o"   -o"main.o" "../main.c"
+Finished building: "../main.c"
+ 
+Building target: "FinalAssignment.out"
+Invoking: GNU Linker
+"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/bin/arm-none-eabi-gcc.exe" -DPART_TM4C123GH6PM -Og -ffunction-sections -fdata-sections -g -gdwarf-3 -gstrict-dwarf -Wall -specs="nosys.specs" -march=armv7e-m -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -Wl,-Map,"FinalAssignment.map" -o"FinalAssignment.out" "./adc.o" "./digiswitch.o" "./file.o" "./gpio.o" "./heap_2.o" "./key.o" "./lcd.o" "./list.o" "./main.o" "./port.o" "./queue.o" "./startup_frt.o" "./status_led.o" "./string.o" "./systick_frt.o" "./tasks.o" -Wl,-T"../tm4c123gh6pm.lds"  
+Finished building target: "FinalAssignment.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project FinalAssignment ****
+
+"C:\\ti\\ccsv8\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+Building file: "../main.c"
+Invoking: GNU Compiler
+"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/bin/arm-none-eabi-gcc.exe" -c -mcpu=cortex-m4 -march=armv7e-m -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DPART_TM4C123GH6PM -I"C:/Users/jinsk/workspace_v8/Embedded-Programming/FinalAssignment" -I"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/arm-none-eabi/include" -I"C:/Libraries/tm4c" -I"C:/Libraries/frt10/inc" -I"C:/Libraries/frt10/port/TivaM4" -I"C:/Libraries/emp" -Og -ffunction-sections -fdata-sections -g -gdwarf-3 -gstrict-dwarf -Wall -specs="nosys.specs" -MMD -MP -MF"main.d" -MT"main.o"   -o"main.o" "../main.c"
+Finished building: "../main.c"
+ 
+Building target: "FinalAssignment.out"
+Invoking: GNU Linker
+"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/bin/arm-none-eabi-gcc.exe" -DPART_TM4C123GH6PM -Og -ffunction-sections -fdata-sections -g -gdwarf-3 -gstrict-dwarf -Wall -specs="nosys.specs" -march=armv7e-m -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -Wl,-Map,"FinalAssignment.map" -o"FinalAssignment.out" "./adc.o" "./digiswitch.o" "./file.o" "./gpio.o" "./heap_2.o" "./key.o" "./lcd.o" "./list.o" "./main.o" "./port.o" "./queue.o" "./startup_frt.o" "./status_led.o" "./string.o" "./systick_frt.o" "./tasks.o" -Wl,-T"../tm4c123gh6pm.lds"  
+Finished building target: "FinalAssignment.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project FinalAssignment ****
+
+"C:\\ti\\ccsv8\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+Building file: "../main.c"
+Invoking: GNU Compiler
+"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/bin/arm-none-eabi-gcc.exe" -c -mcpu=cortex-m4 -march=armv7e-m -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DPART_TM4C123GH6PM -I"C:/Users/jinsk/workspace_v8/Embedded-Programming/FinalAssignment" -I"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/arm-none-eabi/include" -I"C:/Libraries/tm4c" -I"C:/Libraries/frt10/inc" -I"C:/Libraries/frt10/port/TivaM4" -I"C:/Libraries/emp" -Og -ffunction-sections -fdata-sections -g -gdwarf-3 -gstrict-dwarf -Wall -specs="nosys.specs" -MMD -MP -MF"main.d" -MT"main.o"   -o"main.o" "../main.c"
+In file included from ../main.c:33:0:
+../index.h:33:6: warning: conflicting types for built-in function 'index' [-Wbuiltin-declaration-mismatch]
+ void index();
+      ^~~~~
+Finished building: "../main.c"
+ 
+Building file: "../index.c"
+Invoking: GNU Compiler
+"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/bin/arm-none-eabi-gcc.exe" -c -mcpu=cortex-m4 -march=armv7e-m -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DPART_TM4C123GH6PM -I"C:/Users/jinsk/workspace_v8/Embedded-Programming/FinalAssignment" -I"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/arm-none-eabi/include" -I"C:/Libraries/tm4c" -I"C:/Libraries/frt10/inc" -I"C:/Libraries/frt10/port/TivaM4" -I"C:/Libraries/emp" -Og -ffunction-sections -fdata-sections -g -gdwarf-3 -gstrict-dwarf -Wall -specs="nosys.specs" -MMD -MP -MF"index.d" -MT"index.o"   -o"index.o" "../index.c"
+../index.c:46:6: warning: conflicting types for built-in function 'index' [-Wbuiltin-declaration-mismatch]
+ void index(){
+      ^~~~~
+In file included from ../index.c:31:0:
+../index.c: In function 'index':
+../file.h:16:15: warning: passing argument 1 of 'gfprintf' makes pointer from integer without a cast [-Wint-conversion]
+ #define COM2  1      // LCD
+               ^
+../index.c:48:19: note: in expansion of macro 'COM2'
+         gfprintf( COM2, "SELECT PAYMENT");
+                   ^~~~
+In file included from ../index.c:32:0:
+../string.h:10:12: note: expected 'FILE {aka unsigned char *}' but argument is of type 'int'
+ const void gfprintf( FILE, const char*, ...);
+            ^~~~~~~~
+In file included from ../index.c:31:0:
+../file.h:16:15: warning: passing argument 1 of 'gfprintf' makes pointer from integer without a cast [-Wint-conversion]
+ #define COM2  1      // LCD
+               ^
+../index.c:49:19: note: in expansion of macro 'COM2'
+         gfprintf( COM2, "CARD: 1 / CASH: 2", 0x1B, 0xC4);
+                   ^~~~
+In file included from ../index.c:32:0:
+../string.h:10:12: note: expected 'FILE {aka unsigned char *}' but argument is of type 'int'
+ const void gfprintf( FILE, const char*, ...);
+            ^~~~~~~~
+Finished building: "../index.c"
+ 
+Building target: "FinalAssignment.out"
+Invoking: GNU Linker
+"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/bin/arm-none-eabi-gcc.exe" -DPART_TM4C123GH6PM -Og -ffunction-sections -fdata-sections -g -gdwarf-3 -gstrict-dwarf -Wall -specs="nosys.specs" -march=armv7e-m -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -Wl,-Map,"FinalAssignment.map" -o"FinalAssignment.out" "./adc.o" "./digiswitch.o" "./file.o" "./gpio.o" "./heap_2.o" "./index.o" "./key.o" "./lcd.o" "./list.o" "./main.o" "./port.o" "./queue.o" "./startup_frt.o" "./status_led.o" "./string.o" "./systick_frt.o" "./tasks.o" -Wl,-T"../tm4c123gh6pm.lds"  
+Finished building target: "FinalAssignment.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project FinalAssignment ****
+
+"C:\\ti\\ccsv8\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+Building file: "../index.c"
+Invoking: GNU Compiler
+"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/bin/arm-none-eabi-gcc.exe" -c -mcpu=cortex-m4 -march=armv7e-m -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DPART_TM4C123GH6PM -I"C:/Users/jinsk/workspace_v8/Embedded-Programming/FinalAssignment" -I"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/arm-none-eabi/include" -I"C:/Libraries/tm4c" -I"C:/Libraries/frt10/inc" -I"C:/Libraries/frt10/port/TivaM4" -I"C:/Libraries/emp" -Og -ffunction-sections -fdata-sections -g -gdwarf-3 -gstrict-dwarf -Wall -specs="nosys.specs" -MMD -MP -MF"index.d" -MT"index.o"   -o"index.o" "../index.c"
+../index.c:46:6: warning: conflicting types for built-in function 'index' [-Wbuiltin-declaration-mismatch]
+ void index(){
+      ^~~~~
+In file included from ../index.c:31:0:
+../index.c: In function 'index':
+../file.h:16:15: warning: passing argument 1 of 'gfprintf' makes pointer from integer without a cast [-Wint-conversion]
+ #define COM2  1      // LCD
+               ^
+../index.c:48:19: note: in expansion of macro 'COM2'
+         gfprintf( COM2, "SELECT PAYMENT");
+                   ^~~~
+In file included from ../index.c:32:0:
+../string.h:10:12: note: expected 'FILE {aka unsigned char *}' but argument is of type 'int'
+ const void gfprintf( FILE, const char*, ...);
+            ^~~~~~~~
+In file included from ../index.c:31:0:
+../file.h:16:15: warning: passing argument 1 of 'gfprintf' makes pointer from integer without a cast [-Wint-conversion]
+ #define COM2  1      // LCD
+               ^
+../index.c:49:19: note: in expansion of macro 'COM2'
+         gfprintf( COM2, "CARD: 1 / CASH: 2", 0x1B, 0xC4);
+                   ^~~~
+In file included from ../index.c:32:0:
+../string.h:10:12: note: expected 'FILE {aka unsigned char *}' but argument is of type 'int'
+ const void gfprintf( FILE, const char*, ...);
+            ^~~~~~~~
+Finished building: "../index.c"
+ 
+Building target: "FinalAssignment.out"
+Invoking: GNU Linker
+"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/bin/arm-none-eabi-gcc.exe" -DPART_TM4C123GH6PM -Og -ffunction-sections -fdata-sections -g -gdwarf-3 -gstrict-dwarf -Wall -specs="nosys.specs" -march=armv7e-m -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -Wl,-Map,"FinalAssignment.map" -o"FinalAssignment.out" "./adc.o" "./digiswitch.o" "./file.o" "./gpio.o" "./heap_2.o" "./index.o" "./key.o" "./lcd.o" "./list.o" "./main.o" "./port.o" "./queue.o" "./startup_frt.o" "./status_led.o" "./string.o" "./systick_frt.o" "./tasks.o" -Wl,-T"../tm4c123gh6pm.lds"  
+Finished building target: "FinalAssignment.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project FinalAssignment ****
+
+"C:\\ti\\ccsv8\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+Building file: "../index.c"
+Invoking: GNU Compiler
+"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/bin/arm-none-eabi-gcc.exe" -c -mcpu=cortex-m4 -march=armv7e-m -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DPART_TM4C123GH6PM -I"C:/Users/jinsk/workspace_v8/Embedded-Programming/FinalAssignment" -I"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/arm-none-eabi/include" -I"C:/Libraries/tm4c" -I"C:/Libraries/frt10/inc" -I"C:/Libraries/frt10/port/TivaM4" -I"C:/Libraries/emp" -Og -ffunction-sections -fdata-sections -g -gdwarf-3 -gstrict-dwarf -Wall -specs="nosys.specs" -MMD -MP -MF"index.d" -MT"index.o"   -o"index.o" "../index.c"
+../index.c:46:6: warning: conflicting types for built-in function 'index' [-Wbuiltin-declaration-mismatch]
+ void index(){
+      ^~~~~
+In file included from ../index.c:31:0:
+../index.c: In function 'index':
+../file.h:16:15: warning: passing argument 1 of 'gfprintf' makes pointer from integer without a cast [-Wint-conversion]
+ #define COM2  1      // LCD
+               ^
+../index.c:48:19: note: in expansion of macro 'COM2'
+         gfprintf( COM2, "SELECT PAYMENT");
+                   ^~~~
+In file included from ../index.c:32:0:
+../string.h:10:12: note: expected 'FILE {aka unsigned char *}' but argument is of type 'int'
+ const void gfprintf( FILE, const char*, ...);
+            ^~~~~~~~
+Finished building: "../index.c"
+ 
+Building target: "FinalAssignment.out"
+Invoking: GNU Linker
+"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/bin/arm-none-eabi-gcc.exe" -DPART_TM4C123GH6PM -Og -ffunction-sections -fdata-sections -g -gdwarf-3 -gstrict-dwarf -Wall -specs="nosys.specs" -march=armv7e-m -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -Wl,-Map,"FinalAssignment.map" -o"FinalAssignment.out" "./adc.o" "./digiswitch.o" "./file.o" "./gpio.o" "./heap_2.o" "./index.o" "./key.o" "./lcd.o" "./list.o" "./main.o" "./port.o" "./queue.o" "./startup_frt.o" "./status_led.o" "./string.o" "./systick_frt.o" "./tasks.o" -Wl,-T"../tm4c123gh6pm.lds"  
+Finished building target: "FinalAssignment.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project FinalAssignment ****
+
+"C:\\ti\\ccsv8\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+gmake[1]: 'FinalAssignment.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project FinalAssignment ****
+
+"C:\\ti\\ccsv8\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+Building file: "../index.c"
+Invoking: GNU Compiler
+"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/bin/arm-none-eabi-gcc.exe" -c -mcpu=cortex-m4 -march=armv7e-m -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DPART_TM4C123GH6PM -I"C:/Users/jinsk/workspace_v8/Embedded-Programming/FinalAssignment" -I"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/arm-none-eabi/include" -I"C:/Libraries/tm4c" -I"C:/Libraries/frt10/inc" -I"C:/Libraries/frt10/port/TivaM4" -I"C:/Libraries/emp" -Og -ffunction-sections -fdata-sections -g -gdwarf-3 -gstrict-dwarf -Wall -specs="nosys.specs" -MMD -MP -MF"index.d" -MT"index.o"   -o"index.o" "../index.c"
+../index.c:46:6: warning: conflicting types for built-in function 'index' [-Wbuiltin-declaration-mismatch]
+ void index(){
+      ^~~~~
+In file included from ../index.c:31:0:
+../index.c: In function 'index':
+../file.h:16:15: warning: passing argument 1 of 'gfprintf' makes pointer from integer without a cast [-Wint-conversion]
+ #define COM2  1      // LCD
+               ^
+../index.c:48:19: note: in expansion of macro 'COM2'
+         gfprintf( COM2, "SELECT PAYMENT");
+                   ^~~~
+In file included from ../index.c:32:0:
+../string.h:10:12: note: expected 'FILE {aka unsigned char *}' but argument is of type 'int'
+ const void gfprintf( FILE, const char*, ...);
+            ^~~~~~~~
+In file included from ../index.c:31:0:
+../file.h:16:15: warning: passing argument 1 of 'gfprintf' makes pointer from integer without a cast [-Wint-conversion]
+ #define COM2  1      // LCD
+               ^
+../index.c:49:19: note: in expansion of macro 'COM2'
+         gfprintf( COM2, "CARD: 1 / CASH: 2", 0x1B, 0xC4);
+                   ^~~~
+In file included from ../index.c:32:0:
+../string.h:10:12: note: expected 'FILE {aka unsigned char *}' but argument is of type 'int'
+ const void gfprintf( FILE, const char*, ...);
+            ^~~~~~~~
+Finished building: "../index.c"
+ 
+Building target: "FinalAssignment.out"
+Invoking: GNU Linker
+"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/bin/arm-none-eabi-gcc.exe" -DPART_TM4C123GH6PM -Og -ffunction-sections -fdata-sections -g -gdwarf-3 -gstrict-dwarf -Wall -specs="nosys.specs" -march=armv7e-m -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -Wl,-Map,"FinalAssignment.map" -o"FinalAssignment.out" "./adc.o" "./digiswitch.o" "./file.o" "./gpio.o" "./heap_2.o" "./index.o" "./key.o" "./lcd.o" "./list.o" "./main.o" "./port.o" "./queue.o" "./startup_frt.o" "./status_led.o" "./string.o" "./systick_frt.o" "./tasks.o" -Wl,-T"../tm4c123gh6pm.lds"  
+Finished building target: "FinalAssignment.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project FinalAssignment ****
+
+"C:\\ti\\ccsv8\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+Building file: "../index.c"
+Invoking: GNU Compiler
+"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/bin/arm-none-eabi-gcc.exe" -c -mcpu=cortex-m4 -march=armv7e-m -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DPART_TM4C123GH6PM -I"C:/Users/jinsk/workspace_v8/Embedded-Programming/FinalAssignment" -I"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/arm-none-eabi/include" -I"C:/Libraries/tm4c" -I"C:/Libraries/frt10/inc" -I"C:/Libraries/frt10/port/TivaM4" -I"C:/Libraries/emp" -Og -ffunction-sections -fdata-sections -g -gdwarf-3 -gstrict-dwarf -Wall -specs="nosys.specs" -MMD -MP -MF"index.d" -MT"index.o"   -o"index.o" "../index.c"
+../index.c:46:6: warning: conflicting types for built-in function 'index' [-Wbuiltin-declaration-mismatch]
+ void index(){
+      ^~~~~
+In file included from ../index.c:31:0:
+../index.c: In function 'index':
+../file.h:16:15: warning: passing argument 1 of 'gfprintf' makes pointer from integer without a cast [-Wint-conversion]
+ #define COM2  1      // LCD
+               ^
+../index.c:48:19: note: in expansion of macro 'COM2'
+         gfprintf( COM2, "SELECT PAYMENT");
+                   ^~~~
+In file included from ../index.c:32:0:
+../string.h:10:12: note: expected 'FILE {aka unsigned char *}' but argument is of type 'int'
+ const void gfprintf( FILE, const char*, ...);
+            ^~~~~~~~
+Finished building: "../index.c"
+ 
+Building target: "FinalAssignment.out"
+Invoking: GNU Linker
+"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/bin/arm-none-eabi-gcc.exe" -DPART_TM4C123GH6PM -Og -ffunction-sections -fdata-sections -g -gdwarf-3 -gstrict-dwarf -Wall -specs="nosys.specs" -march=armv7e-m -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -Wl,-Map,"FinalAssignment.map" -o"FinalAssignment.out" "./adc.o" "./digiswitch.o" "./file.o" "./gpio.o" "./heap_2.o" "./index.o" "./key.o" "./lcd.o" "./list.o" "./main.o" "./port.o" "./queue.o" "./startup_frt.o" "./status_led.o" "./string.o" "./systick_frt.o" "./tasks.o" -Wl,-T"../tm4c123gh6pm.lds"  
+Finished building target: "FinalAssignment.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project FinalAssignment ****
+
+"C:\\ti\\ccsv8\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+Building file: "../index.c"
+Invoking: GNU Compiler
+"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/bin/arm-none-eabi-gcc.exe" -c -mcpu=cortex-m4 -march=armv7e-m -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DPART_TM4C123GH6PM -I"C:/Users/jinsk/workspace_v8/Embedded-Programming/FinalAssignment" -I"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/arm-none-eabi/include" -I"C:/Libraries/tm4c" -I"C:/Libraries/frt10/inc" -I"C:/Libraries/frt10/port/TivaM4" -I"C:/Libraries/emp" -Og -ffunction-sections -fdata-sections -g -gdwarf-3 -gstrict-dwarf -Wall -specs="nosys.specs" -MMD -MP -MF"index.d" -MT"index.o"   -o"index.o" "../index.c"
+subdir_rules.mk:9: recipe for target 'index.o' failed
+../index.c:46:6: warning: conflicting types for built-in function 'index' [-Wbuiltin-declaration-mismatch]
+ void index(){
+      ^~~~~
+In file included from ../index.c:31:0:
+../index.c: In function 'index':
+../file.h:16:15: warning: passing argument 1 of 'gfprintf' makes pointer from integer without a cast [-Wint-conversion]
+ #define COM2  1      // LCD
+               ^
+../index.c:48:19: note: in expansion of macro 'COM2'
+         gfprintf( COM2, "SELECT PAYMENT");
+                   ^~~~
+In file included from ../index.c:32:0:
+../string.h:10:12: note: expected 'FILE {aka unsigned char *}' but argument is of type 'int'
+ const void gfprintf( FILE, const char*, ...);
+            ^~~~~~~~
+In file included from ../index.c:31:0:
+../file.h:16:15: warning: passing argument 1 of 'gfprintf' makes pointer from integer without a cast [-Wint-conversion]
+ #define COM2  1      // LCD
+               ^
+../index.c:49:19: note: in expansion of macro 'COM2'
+         gfprintf( COM2, "CARD: 1 / CASH: 2", 0x1B, 0xC4);
+                   ^~~~
+In file included from ../index.c:32:0:
+../string.h:10:12: note: expected 'FILE {aka unsigned char *}' but argument is of type 'int'
+ const void gfprintf( FILE, const char*, ...);
+            ^~~~~~~~
+../index.c:50:26: error: 'ch' undeclared (first use in this function); did you mean 'char'?
+         get_file( COM3, &ch );
+                          ^~
+                          char
+../index.c:50:26: note: each undeclared identifier is reported only once for each function it appears in
+In file included from ../index.c:31:0:
+../file.h:17:15: warning: passing argument 1 of 'get_file' makes pointer from integer without a cast [-Wint-conversion]
+ #define COM3  2      // Keyboard
+               ^
+../index.c:50:19: note: in expansion of macro 'COM3'
+         get_file( COM3, &ch );
+                   ^~~~
+../file.h:20:9: note: expected 'FILE {aka unsigned char *}' but argument is of type 'int'
+ BOOLEAN get_file( FILE, INT8U* );
+         ^~~~~~~~
+gmake: *** [index.o] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project FinalAssignment ****
+
+"C:\\ti\\ccsv8\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+Building file: "../index.c"
+Invoking: GNU Compiler
+"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/bin/arm-none-eabi-gcc.exe" -c -mcpu=cortex-m4 -march=armv7e-m -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DPART_TM4C123GH6PM -I"C:/Users/jinsk/workspace_v8/Embedded-Programming/FinalAssignment" -I"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/arm-none-eabi/include" -I"C:/Libraries/tm4c" -I"C:/Libraries/frt10/inc" -I"C:/Libraries/frt10/port/TivaM4" -I"C:/Libraries/emp" -Og -ffunction-sections -fdata-sections -g -gdwarf-3 -gstrict-dwarf -Wall -specs="nosys.specs" -MMD -MP -MF"index.d" -MT"index.o"   -o"index.o" "../index.c"
+../index.c:46:6: warning: conflicting types for built-in function 'index' [-Wbuiltin-declaration-mismatch]
+ void index(){
+      ^~~~~
+In file included from ../index.c:31:0:
+../index.c: In function 'index':
+../file.h:16:15: warning: passing argument 1 of 'gfprintf' makes pointer from integer without a cast [-Wint-conversion]
+ #define COM2  1      // LCD
+               ^
+../index.c:50:19: note: in expansion of macro 'COM2'
+         gfprintf( COM2, "SELECT PAYMENT");
+                   ^~~~
+In file included from ../index.c:32:0:
+../string.h:10:12: note: expected 'FILE {aka unsigned char *}' but argument is of type 'int'
+ const void gfprintf( FILE, const char*, ...);
+            ^~~~~~~~
+In file included from ../index.c:31:0:
+../file.h:16:15: warning: passing argument 1 of 'gfprintf' makes pointer from integer without a cast [-Wint-conversion]
+ #define COM2  1      // LCD
+               ^
+../index.c:51:19: note: in expansion of macro 'COM2'
+         gfprintf( COM2, "CARD: 1 / CASH: 2", 0x1B, 0xC4);
+                   ^~~~
+In file included from ../index.c:32:0:
+../string.h:10:12: note: expected 'FILE {aka unsigned char *}' but argument is of type 'int'
+ const void gfprintf( FILE, const char*, ...);
+            ^~~~~~~~
+In file included from ../index.c:31:0:
+../file.h:17:15: warning: passing argument 1 of 'get_file' makes pointer from integer without a cast [-Wint-conversion]
+ #define COM3  2      // Keyboard
+               ^
+../index.c:52:19: note: in expansion of macro 'COM3'
+         get_file( COM3, &ch );
+                   ^~~~
+../file.h:20:9: note: expected 'FILE {aka unsigned char *}' but argument is of type 'int'
+ BOOLEAN get_file( FILE, INT8U* );
+         ^~~~~~~~
+../index.c:49:23: warning: unused variable 'Buf' [-Wunused-variable]
+         static INT8U  Buf[4];
+                       ^~~
+At top level:
+../index.c:49:23: warning: 'Buf' defined but not used [-Wunused-variable]
+Finished building: "../index.c"
+ 
+Building target: "FinalAssignment.out"
+Invoking: GNU Linker
+"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/bin/arm-none-eabi-gcc.exe" -DPART_TM4C123GH6PM -Og -ffunction-sections -fdata-sections -g -gdwarf-3 -gstrict-dwarf -Wall -specs="nosys.specs" -march=armv7e-m -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -Wl,-Map,"FinalAssignment.map" -o"FinalAssignment.out" "./adc.o" "./digiswitch.o" "./file.o" "./gpio.o" "./heap_2.o" "./index.o" "./key.o" "./lcd.o" "./list.o" "./main.o" "./port.o" "./queue.o" "./startup_frt.o" "./status_led.o" "./string.o" "./systick_frt.o" "./tasks.o" -Wl,-T"../tm4c123gh6pm.lds"  
+Finished building target: "FinalAssignment.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project FinalAssignment ****
+
+"C:\\ti\\ccsv8\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+Building file: "../index.c"
+Invoking: GNU Compiler
+"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/bin/arm-none-eabi-gcc.exe" -c -mcpu=cortex-m4 -march=armv7e-m -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DPART_TM4C123GH6PM -I"C:/Users/jinsk/workspace_v8/Embedded-Programming/FinalAssignment" -I"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/arm-none-eabi/include" -I"C:/Libraries/tm4c" -I"C:/Libraries/frt10/inc" -I"C:/Libraries/frt10/port/TivaM4" -I"C:/Libraries/emp" -Og -ffunction-sections -fdata-sections -g -gdwarf-3 -gstrict-dwarf -Wall -specs="nosys.specs" -MMD -MP -MF"index.d" -MT"index.o"   -o"index.o" "../index.c"
+../index.c:46:6: warning: conflicting types for built-in function 'index' [-Wbuiltin-declaration-mismatch]
+ void index(){
+      ^~~~~
+In file included from ../index.c:31:0:
+../index.c: In function 'index':
+../file.h:16:15: warning: passing argument 1 of 'gfprintf' makes pointer from integer without a cast [-Wint-conversion]
+ #define COM2  1      // LCD
+               ^
+../index.c:50:19: note: in expansion of macro 'COM2'
+         gfprintf( COM2, "SELECT PAYMENT");
+                   ^~~~
+In file included from ../index.c:32:0:
+../string.h:10:12: note: expected 'FILE {aka unsigned char *}' but argument is of type 'int'
+ const void gfprintf( FILE, const char*, ...);
+            ^~~~~~~~
+In file included from ../index.c:31:0:
+../file.h:16:15: warning: passing argument 1 of 'gfprintf' makes pointer from integer without a cast [-Wint-conversion]
+ #define COM2  1      // LCD
+               ^
+../index.c:51:19: note: in expansion of macro 'COM2'
+         gfprintf( COM2, "CARD: 1 / CASH: 2", 0x1B, 0xC4);
+                   ^~~~
+In file included from ../index.c:32:0:
+../string.h:10:12: note: expected 'FILE {aka unsigned char *}' but argument is of type 'int'
+ const void gfprintf( FILE, const char*, ...);
+            ^~~~~~~~
+In file included from ../index.c:31:0:
+../file.h:17:15: warning: passing argument 1 of 'get_file' makes pointer from integer without a cast [-Wint-conversion]
+ #define COM3  2      // Keyboard
+               ^
+../index.c:52:19: note: in expansion of macro 'COM3'
+         get_file( COM3, &ch );
+                   ^~~~
+../file.h:20:9: note: expected 'FILE {aka unsigned char *}' but argument is of type 'int'
+ BOOLEAN get_file( FILE, INT8U* );
+         ^~~~~~~~
+../index.c:49:23: warning: unused variable 'Buf' [-Wunused-variable]
+         static INT8U  Buf[4];
+                       ^~~
+At top level:
+../index.c:49:23: warning: 'Buf' defined but not used [-Wunused-variable]
+Finished building: "../index.c"
+ 
+Building target: "FinalAssignment.out"
+Invoking: GNU Linker
+"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/bin/arm-none-eabi-gcc.exe" -DPART_TM4C123GH6PM -Og -ffunction-sections -fdata-sections -g -gdwarf-3 -gstrict-dwarf -Wall -specs="nosys.specs" -march=armv7e-m -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -Wl,-Map,"FinalAssignment.map" -o"FinalAssignment.out" "./adc.o" "./digiswitch.o" "./file.o" "./gpio.o" "./heap_2.o" "./index.o" "./key.o" "./lcd.o" "./list.o" "./main.o" "./port.o" "./queue.o" "./startup_frt.o" "./status_led.o" "./string.o" "./systick_frt.o" "./tasks.o" -Wl,-T"../tm4c123gh6pm.lds"  
+Finished building target: "FinalAssignment.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project FinalAssignment ****
+
+"C:\\ti\\ccsv8\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+Building file: "../index.c"
+Invoking: GNU Compiler
+"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/bin/arm-none-eabi-gcc.exe" -c -mcpu=cortex-m4 -march=armv7e-m -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DPART_TM4C123GH6PM -I"C:/Users/jinsk/workspace_v8/Embedded-Programming/FinalAssignment" -I"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/arm-none-eabi/include" -I"C:/Libraries/tm4c" -I"C:/Libraries/frt10/inc" -I"C:/Libraries/frt10/port/TivaM4" -I"C:/Libraries/emp" -Og -ffunction-sections -fdata-sections -g -gdwarf-3 -gstrict-dwarf -Wall -specs="nosys.specs" -MMD -MP -MF"index.d" -MT"index.o"   -o"index.o" "../index.c"
+../index.c:46:6: warning: conflicting types for built-in function 'index' [-Wbuiltin-declaration-mismatch]
+ void index(){
+      ^~~~~
+In file included from ../index.c:31:0:
+../index.c: In function 'index':
+../file.h:16:15: warning: passing argument 1 of 'gfprintf' makes pointer from integer without a cast [-Wint-conversion]
+ #define COM2  1      // LCD
+               ^
+../index.c:50:19: note: in expansion of macro 'COM2'
+         gfprintf( COM2, "%cSELECT PAYMENT", 0x84);
+                   ^~~~
+In file included from ../index.c:32:0:
+../string.h:10:12: note: expected 'FILE {aka unsigned char *}' but argument is of type 'int'
+ const void gfprintf( FILE, const char*, ...);
+            ^~~~~~~~
+In file included from ../index.c:31:0:
+../file.h:16:15: warning: passing argument 1 of 'gfprintf' makes pointer from integer without a cast [-Wint-conversion]
+ #define COM2  1      // LCD
+               ^
+../index.c:51:19: note: in expansion of macro 'COM2'
+         gfprintf( COM2, "%cCARD: 1 / CASH: 2", 0xC4);
+                   ^~~~
+In file included from ../index.c:32:0:
+../string.h:10:12: note: expected 'FILE {aka unsigned char *}' but argument is of type 'int'
+ const void gfprintf( FILE, const char*, ...);
+            ^~~~~~~~
+In file included from ../index.c:31:0:
+../file.h:17:15: warning: passing argument 1 of 'get_file' makes pointer from integer without a cast [-Wint-conversion]
+ #define COM3  2      // Keyboard
+               ^
+../index.c:52:19: note: in expansion of macro 'COM3'
+         get_file( COM3, &ch );
+                   ^~~~
+../file.h:20:9: note: expected 'FILE {aka unsigned char *}' but argument is of type 'int'
+ BOOLEAN get_file( FILE, INT8U* );
+         ^~~~~~~~
+../index.c:49:23: warning: unused variable 'Buf' [-Wunused-variable]
+         static INT8U  Buf[4];
+                       ^~~
+At top level:
+../index.c:49:23: warning: 'Buf' defined but not used [-Wunused-variable]
+Finished building: "../index.c"
+ 
+Building target: "FinalAssignment.out"
+Invoking: GNU Linker
+"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/bin/arm-none-eabi-gcc.exe" -DPART_TM4C123GH6PM -Og -ffunction-sections -fdata-sections -g -gdwarf-3 -gstrict-dwarf -Wall -specs="nosys.specs" -march=armv7e-m -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -Wl,-Map,"FinalAssignment.map" -o"FinalAssignment.out" "./adc.o" "./digiswitch.o" "./file.o" "./gpio.o" "./heap_2.o" "./index.o" "./key.o" "./lcd.o" "./list.o" "./main.o" "./port.o" "./queue.o" "./startup_frt.o" "./status_led.o" "./string.o" "./systick_frt.o" "./tasks.o" -Wl,-T"../tm4c123gh6pm.lds"  
+Finished building target: "FinalAssignment.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project FinalAssignment ****
+
+"C:\\ti\\ccsv8\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+gmake[1]: 'FinalAssignment.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project FinalAssignment ****
+
+"C:\\ti\\ccsv8\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+Building file: "../index.c"
+Invoking: GNU Compiler
+"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/bin/arm-none-eabi-gcc.exe" -c -mcpu=cortex-m4 -march=armv7e-m -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DPART_TM4C123GH6PM -I"C:/Users/jinsk/workspace_v8/Embedded-Programming/FinalAssignment" -I"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/arm-none-eabi/include" -I"C:/Libraries/tm4c" -I"C:/Libraries/frt10/inc" -I"C:/Libraries/frt10/port/TivaM4" -I"C:/Libraries/emp" -Og -ffunction-sections -fdata-sections -g -gdwarf-3 -gstrict-dwarf -Wall -specs="nosys.specs" -MMD -MP -MF"index.d" -MT"index.o"   -o"index.o" "../index.c"
+../index.c:46:6: warning: conflicting types for built-in function 'index' [-Wbuiltin-declaration-mismatch]
+ void index(){
+      ^~~~~
+In file included from ../index.c:31:0:
+../index.c: In function 'index':
+../file.h:16:15: warning: passing argument 1 of 'gfprintf' makes pointer from integer without a cast [-Wint-conversion]
+ #define COM2  1      // LCD
+               ^
+../index.c:49:19: note: in expansion of macro 'COM2'
+         gfprintf( COM2, "%cSELECT PAYMENT", 0x84);
+                   ^~~~
+In file included from ../index.c:32:0:
+../string.h:10:12: note: expected 'FILE {aka unsigned char *}' but argument is of type 'int'
+ const void gfprintf( FILE, const char*, ...);
+            ^~~~~~~~
+In file included from ../index.c:31:0:
+../file.h:16:15: warning: passing argument 1 of 'gfprintf' makes pointer from integer without a cast [-Wint-conversion]
+ #define COM2  1      // LCD
+               ^
+../index.c:50:19: note: in expansion of macro 'COM2'
+         gfprintf( COM2, "%cCARD: 1 / CASH: 2", 0xC4);
+                   ^~~~
+In file included from ../index.c:32:0:
+../string.h:10:12: note: expected 'FILE {aka unsigned char *}' but argument is of type 'int'
+ const void gfprintf( FILE, const char*, ...);
+            ^~~~~~~~
+In file included from ../index.c:31:0:
+../file.h:17:15: warning: passing argument 1 of 'get_file' makes pointer from integer without a cast [-Wint-conversion]
+ #define COM3  2      // Keyboard
+               ^
+../index.c:51:19: note: in expansion of macro 'COM3'
+         get_file( COM3, &ch );
+                   ^~~~
+../file.h:20:9: note: expected 'FILE {aka unsigned char *}' but argument is of type 'int'
+ BOOLEAN get_file( FILE, INT8U* );
+         ^~~~~~~~
+../index.c:48:23: warning: unused variable 'Buf' [-Wunused-variable]
+         static INT8U  Buf[4];
+                       ^~~
+At top level:
+../index.c:48:23: warning: 'Buf' defined but not used [-Wunused-variable]
+Finished building: "../index.c"
+ 
+Building file: "../main.c"
+Invoking: GNU Compiler
+"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/bin/arm-none-eabi-gcc.exe" -c -mcpu=cortex-m4 -march=armv7e-m -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DPART_TM4C123GH6PM -I"C:/Users/jinsk/workspace_v8/Embedded-Programming/FinalAssignment" -I"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/arm-none-eabi/include" -I"C:/Libraries/tm4c" -I"C:/Libraries/frt10/inc" -I"C:/Libraries/frt10/port/TivaM4" -I"C:/Libraries/emp" -Og -ffunction-sections -fdata-sections -g -gdwarf-3 -gstrict-dwarf -Wall -specs="nosys.specs" -MMD -MP -MF"main.d" -MT"main.o"   -o"main.o" "../main.c"
+In file included from ../main.c:33:0:
+../index.h:33:6: warning: conflicting types for built-in function 'index' [-Wbuiltin-declaration-mismatch]
+ void index();
+      ^~~~~
+Finished building: "../main.c"
+ 
+Building target: "FinalAssignment.out"
+Invoking: GNU Linker
+"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/bin/arm-none-eabi-gcc.exe" -DPART_TM4C123GH6PM -Og -ffunction-sections -fdata-sections -g -gdwarf-3 -gstrict-dwarf -Wall -specs="nosys.specs" -march=armv7e-m -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -Wl,-Map,"FinalAssignment.map" -o"FinalAssignment.out" "./adc.o" "./digiswitch.o" "./file.o" "./gpio.o" "./heap_2.o" "./index.o" "./key.o" "./lcd.o" "./list.o" "./main.o" "./port.o" "./queue.o" "./startup_frt.o" "./status_led.o" "./string.o" "./systick_frt.o" "./tasks.o" -Wl,-T"../tm4c123gh6pm.lds"  
+Finished building target: "FinalAssignment.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project FinalAssignment ****
+
+"C:\\ti\\ccsv8\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+gmake[1]: 'FinalAssignment.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project FinalAssignment ****
+
+"C:\\ti\\ccsv8\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+Building file: "../main.c"
+Invoking: GNU Compiler
+"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/bin/arm-none-eabi-gcc.exe" -c -mcpu=cortex-m4 -march=armv7e-m -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DPART_TM4C123GH6PM -I"C:/Users/jinsk/workspace_v8/Embedded-Programming/FinalAssignment" -I"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/arm-none-eabi/include" -I"C:/Libraries/tm4c" -I"C:/Libraries/frt10/inc" -I"C:/Libraries/frt10/port/TivaM4" -I"C:/Libraries/emp" -Og -ffunction-sections -fdata-sections -g -gdwarf-3 -gstrict-dwarf -Wall -specs="nosys.specs" -MMD -MP -MF"main.d" -MT"main.o"   -o"main.o" "../main.c"
+subdir_rules.mk:9: recipe for target 'main.o' failed
+In file included from ../main.c:33:0:
+../index.h:33:6: warning: conflicting types for built-in function 'index' [-Wbuiltin-declaration-mismatch]
+ void index();
+      ^~~~~
+../main.c: In function 'main':
+../main.c:100:2: error: expected expression before '/' token
+  /xTaskCreate( index, "Index", USERTASK_STACK_SIZE, NULL, LOW_PRIO, NULL );
+  ^
+gmake: *** [main.o] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project FinalAssignment ****
+
+"C:\\ti\\ccsv8\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+Building file: "../main.c"
+Invoking: GNU Compiler
+"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/bin/arm-none-eabi-gcc.exe" -c -mcpu=cortex-m4 -march=armv7e-m -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DPART_TM4C123GH6PM -I"C:/Users/jinsk/workspace_v8/Embedded-Programming/FinalAssignment" -I"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/arm-none-eabi/include" -I"C:/Libraries/tm4c" -I"C:/Libraries/frt10/inc" -I"C:/Libraries/frt10/port/TivaM4" -I"C:/Libraries/emp" -Og -ffunction-sections -fdata-sections -g -gdwarf-3 -gstrict-dwarf -Wall -specs="nosys.specs" -MMD -MP -MF"main.d" -MT"main.o"   -o"main.o" "../main.c"
+In file included from ../main.c:33:0:
+../index.h:33:6: warning: conflicting types for built-in function 'index' [-Wbuiltin-declaration-mismatch]
+ void index();
+      ^~~~~
+Finished building: "../main.c"
+ 
+Building target: "FinalAssignment.out"
+Invoking: GNU Linker
+"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/bin/arm-none-eabi-gcc.exe" -DPART_TM4C123GH6PM -Og -ffunction-sections -fdata-sections -g -gdwarf-3 -gstrict-dwarf -Wall -specs="nosys.specs" -march=armv7e-m -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -Wl,-Map,"FinalAssignment.map" -o"FinalAssignment.out" "./adc.o" "./digiswitch.o" "./file.o" "./gpio.o" "./heap_2.o" "./index.o" "./key.o" "./lcd.o" "./list.o" "./main.o" "./port.o" "./queue.o" "./startup_frt.o" "./status_led.o" "./string.o" "./systick_frt.o" "./tasks.o" -Wl,-T"../tm4c123gh6pm.lds"  
+Finished building target: "FinalAssignment.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project FinalAssignment ****
+
+"C:\\ti\\ccsv8\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+Building file: "../index.c"
+Invoking: GNU Compiler
+"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/bin/arm-none-eabi-gcc.exe" -c -mcpu=cortex-m4 -march=armv7e-m -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DPART_TM4C123GH6PM -I"C:/Users/jinsk/workspace_v8/Embedded-Programming/FinalAssignment" -I"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/arm-none-eabi/include" -I"C:/Libraries/tm4c" -I"C:/Libraries/frt10/inc" -I"C:/Libraries/frt10/port/TivaM4" -I"C:/Libraries/emp" -Og -ffunction-sections -fdata-sections -g -gdwarf-3 -gstrict-dwarf -Wall -specs="nosys.specs" -MMD -MP -MF"index.d" -MT"index.o"   -o"index.o" "../index.c"
+../index.c:46:6: warning: conflicting types for built-in function 'index' [-Wbuiltin-declaration-mismatch]
+ void index(){
+      ^~~~~
+In file included from ../index.c:31:0:
+../index.c: In function 'index':
+../file.h:17:15: warning: passing argument 1 of 'get_file' makes pointer from integer without a cast [-Wint-conversion]
+ #define COM3  2      // Keyboard
+               ^
+../index.c:49:20: note: in expansion of macro 'COM3'
+     while(get_file(COM3, &ch)){
+                    ^~~~
+../file.h:20:9: note: expected 'FILE {aka unsigned char *}' but argument is of type 'int'
+ BOOLEAN get_file( FILE, INT8U* );
+         ^~~~~~~~
+../file.h:16:15: warning: passing argument 1 of 'gfprintf' makes pointer from integer without a cast [-Wint-conversion]
+ #define COM2  1      // LCD
+               ^
+../index.c:51:19: note: in expansion of macro 'COM2'
+         gfprintf( COM2, "%cSELECT PAYMENT", 0x84);
+                   ^~~~
+In file included from ../index.c:32:0:
+../string.h:10:12: note: expected 'FILE {aka unsigned char *}' but argument is of type 'int'
+ const void gfprintf( FILE, const char*, ...);
+            ^~~~~~~~
+In file included from ../index.c:31:0:
+../file.h:16:15: warning: passing argument 1 of 'gfprintf' makes pointer from integer without a cast [-Wint-conversion]
+ #define COM2  1      // LCD
+               ^
+../index.c:52:19: note: in expansion of macro 'COM2'
+         gfprintf( COM2, "%cCARD: 1 / CASH: 2", 0xC4);
+                   ^~~~
+In file included from ../index.c:32:0:
+../string.h:10:12: note: expected 'FILE {aka unsigned char *}' but argument is of type 'int'
+ const void gfprintf( FILE, const char*, ...);
+            ^~~~~~~~
+In file included from ../index.c:31:0:
+../file.h:17:15: warning: passing argument 1 of 'get_file' makes pointer from integer without a cast [-Wint-conversion]
+ #define COM3  2      // Keyboard
+               ^
+../index.c:53:19: note: in expansion of macro 'COM3'
+         get_file( COM3, &ch );
+                   ^~~~
+../file.h:20:9: note: expected 'FILE {aka unsigned char *}' but argument is of type 'int'
+ BOOLEAN get_file( FILE, INT8U* );
+         ^~~~~~~~
+../index.c:48:19: warning: unused variable 'Buf' [-Wunused-variable]
+     static INT8U  Buf[4];
+                   ^~~
+At top level:
+../index.c:48:19: warning: 'Buf' defined but not used [-Wunused-variable]
+Finished building: "../index.c"
+ 
+Building target: "FinalAssignment.out"
+Invoking: GNU Linker
+"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/bin/arm-none-eabi-gcc.exe" -DPART_TM4C123GH6PM -Og -ffunction-sections -fdata-sections -g -gdwarf-3 -gstrict-dwarf -Wall -specs="nosys.specs" -march=armv7e-m -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -Wl,-Map,"FinalAssignment.map" -o"FinalAssignment.out" "./adc.o" "./digiswitch.o" "./file.o" "./gpio.o" "./heap_2.o" "./index.o" "./key.o" "./lcd.o" "./list.o" "./main.o" "./port.o" "./queue.o" "./startup_frt.o" "./status_led.o" "./string.o" "./systick_frt.o" "./tasks.o" -Wl,-T"../tm4c123gh6pm.lds"  
+Finished building target: "FinalAssignment.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project FinalAssignment ****
+
+"C:\\ti\\ccsv8\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+Building file: "../index.c"
+Invoking: GNU Compiler
+"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/bin/arm-none-eabi-gcc.exe" -c -mcpu=cortex-m4 -march=armv7e-m -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DPART_TM4C123GH6PM -I"C:/Users/jinsk/workspace_v8/Embedded-Programming/FinalAssignment" -I"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/arm-none-eabi/include" -I"C:/Libraries/tm4c" -I"C:/Libraries/frt10/inc" -I"C:/Libraries/frt10/port/TivaM4" -I"C:/Libraries/emp" -Og -ffunction-sections -fdata-sections -g -gdwarf-3 -gstrict-dwarf -Wall -specs="nosys.specs" -MMD -MP -MF"index.d" -MT"index.o"   -o"index.o" "../index.c"
+../index.c:46:6: warning: conflicting types for built-in function 'index' [-Wbuiltin-declaration-mismatch]
+ void index(){
+      ^~~~~
+In file included from ../index.c:31:0:
+../index.c: In function 'index':
+../file.h:17:15: warning: passing argument 1 of 'get_file' makes pointer from integer without a cast [-Wint-conversion]
+ #define COM3  2      // Keyboard
+               ^
+../index.c:49:21: note: in expansion of macro 'COM3'
+     while(!get_file(COM3, &ch)){
+                     ^~~~
+../file.h:20:9: note: expected 'FILE {aka unsigned char *}' but argument is of type 'int'
+ BOOLEAN get_file( FILE, INT8U* );
+         ^~~~~~~~
+../file.h:16:15: warning: passing argument 1 of 'gfprintf' makes pointer from integer without a cast [-Wint-conversion]
+ #define COM2  1      // LCD
+               ^
+../index.c:51:19: note: in expansion of macro 'COM2'
+         gfprintf( COM2, "%cSELECT PAYMENT", 0x84);
+                   ^~~~
+In file included from ../index.c:32:0:
+../string.h:10:12: note: expected 'FILE {aka unsigned char *}' but argument is of type 'int'
+ const void gfprintf( FILE, const char*, ...);
+            ^~~~~~~~
+In file included from ../index.c:31:0:
+../file.h:16:15: warning: passing argument 1 of 'gfprintf' makes pointer from integer without a cast [-Wint-conversion]
+ #define COM2  1      // LCD
+               ^
+../index.c:52:19: note: in expansion of macro 'COM2'
+         gfprintf( COM2, "%cCARD: 1 / CASH: 2", 0xC4);
+                   ^~~~
+In file included from ../index.c:32:0:
+../string.h:10:12: note: expected 'FILE {aka unsigned char *}' but argument is of type 'int'
+ const void gfprintf( FILE, const char*, ...);
+            ^~~~~~~~
+In file included from ../index.c:31:0:
+../file.h:17:15: warning: passing argument 1 of 'get_file' makes pointer from integer without a cast [-Wint-conversion]
+ #define COM3  2      // Keyboard
+               ^
+../index.c:53:19: note: in expansion of macro 'COM3'
+         get_file( COM3, &ch );
+                   ^~~~
+../file.h:20:9: note: expected 'FILE {aka unsigned char *}' but argument is of type 'int'
+ BOOLEAN get_file( FILE, INT8U* );
+         ^~~~~~~~
+../index.c:48:19: warning: unused variable 'Buf' [-Wunused-variable]
+     static INT8U  Buf[4];
+                   ^~~
+At top level:
+../index.c:48:19: warning: 'Buf' defined but not used [-Wunused-variable]
+Finished building: "../index.c"
+ 
+Building target: "FinalAssignment.out"
+Invoking: GNU Linker
+"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/bin/arm-none-eabi-gcc.exe" -DPART_TM4C123GH6PM -Og -ffunction-sections -fdata-sections -g -gdwarf-3 -gstrict-dwarf -Wall -specs="nosys.specs" -march=armv7e-m -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -Wl,-Map,"FinalAssignment.map" -o"FinalAssignment.out" "./adc.o" "./digiswitch.o" "./file.o" "./gpio.o" "./heap_2.o" "./index.o" "./key.o" "./lcd.o" "./list.o" "./main.o" "./port.o" "./queue.o" "./startup_frt.o" "./status_led.o" "./string.o" "./systick_frt.o" "./tasks.o" -Wl,-T"../tm4c123gh6pm.lds"  
+Finished building target: "FinalAssignment.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project FinalAssignment ****
+
+"C:\\ti\\ccsv8\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+Building file: "../index.c"
+Invoking: GNU Compiler
+"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/bin/arm-none-eabi-gcc.exe" -c -mcpu=cortex-m4 -march=armv7e-m -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DPART_TM4C123GH6PM -I"C:/Users/jinsk/workspace_v8/Embedded-Programming/FinalAssignment" -I"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/arm-none-eabi/include" -I"C:/Libraries/tm4c" -I"C:/Libraries/frt10/inc" -I"C:/Libraries/frt10/port/TivaM4" -I"C:/Libraries/emp" -Og -ffunction-sections -fdata-sections -g -gdwarf-3 -gstrict-dwarf -Wall -specs="nosys.specs" -MMD -MP -MF"index.d" -MT"index.o"   -o"index.o" "../index.c"
+../index.c:46:6: warning: conflicting types for built-in function 'index' [-Wbuiltin-declaration-mismatch]
+ void index(){
+      ^~~~~
+In file included from ../index.c:31:0:
+../index.c: In function 'index':
+../file.h:17:15: warning: passing argument 1 of 'get_file' makes pointer from integer without a cast [-Wint-conversion]
+ #define COM3  2      // Keyboard
+               ^
+../index.c:49:20: note: in expansion of macro 'COM3'
+     while(get_file(COM3, &ch)){
+                    ^~~~
+../file.h:20:9: note: expected 'FILE {aka unsigned char *}' but argument is of type 'int'
+ BOOLEAN get_file( FILE, INT8U* );
+         ^~~~~~~~
+../file.h:16:15: warning: passing argument 1 of 'gfprintf' makes pointer from integer without a cast [-Wint-conversion]
+ #define COM2  1      // LCD
+               ^
+../index.c:51:19: note: in expansion of macro 'COM2'
+         gfprintf( COM2, "%cSELECT PAYMENT", 0x84);
+                   ^~~~
+In file included from ../index.c:32:0:
+../string.h:10:12: note: expected 'FILE {aka unsigned char *}' but argument is of type 'int'
+ const void gfprintf( FILE, const char*, ...);
+            ^~~~~~~~
+In file included from ../index.c:31:0:
+../file.h:16:15: warning: passing argument 1 of 'gfprintf' makes pointer from integer without a cast [-Wint-conversion]
+ #define COM2  1      // LCD
+               ^
+../index.c:52:19: note: in expansion of macro 'COM2'
+         gfprintf( COM2, "%cCARD: 1 / CASH: 2", 0xC4);
+                   ^~~~
+In file included from ../index.c:32:0:
+../string.h:10:12: note: expected 'FILE {aka unsigned char *}' but argument is of type 'int'
+ const void gfprintf( FILE, const char*, ...);
+            ^~~~~~~~
+In file included from ../index.c:31:0:
+../file.h:17:15: warning: passing argument 1 of 'get_file' makes pointer from integer without a cast [-Wint-conversion]
+ #define COM3  2      // Keyboard
+               ^
+../index.c:53:19: note: in expansion of macro 'COM3'
+         get_file( COM3, &ch );
+                   ^~~~
+../file.h:20:9: note: expected 'FILE {aka unsigned char *}' but argument is of type 'int'
+ BOOLEAN get_file( FILE, INT8U* );
+         ^~~~~~~~
+../index.c:48:19: warning: unused variable 'Buf' [-Wunused-variable]
+     static INT8U  Buf[4];
+                   ^~~
+At top level:
+../index.c:48:19: warning: 'Buf' defined but not used [-Wunused-variable]
+Finished building: "../index.c"
+ 
+Building target: "FinalAssignment.out"
+Invoking: GNU Linker
+"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/bin/arm-none-eabi-gcc.exe" -DPART_TM4C123GH6PM -Og -ffunction-sections -fdata-sections -g -gdwarf-3 -gstrict-dwarf -Wall -specs="nosys.specs" -march=armv7e-m -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -Wl,-Map,"FinalAssignment.map" -o"FinalAssignment.out" "./adc.o" "./digiswitch.o" "./file.o" "./gpio.o" "./heap_2.o" "./index.o" "./key.o" "./lcd.o" "./list.o" "./main.o" "./port.o" "./queue.o" "./startup_frt.o" "./status_led.o" "./string.o" "./systick_frt.o" "./tasks.o" -Wl,-T"../tm4c123gh6pm.lds"  
+Finished building target: "FinalAssignment.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project FinalAssignment ****
+
+"C:\\ti\\ccsv8\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+Building file: "../index.c"
+Invoking: GNU Compiler
+"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/bin/arm-none-eabi-gcc.exe" -c -mcpu=cortex-m4 -march=armv7e-m -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DPART_TM4C123GH6PM -I"C:/Users/jinsk/workspace_v8/Embedded-Programming/FinalAssignment" -I"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/arm-none-eabi/include" -I"C:/Libraries/tm4c" -I"C:/Libraries/frt10/inc" -I"C:/Libraries/frt10/port/TivaM4" -I"C:/Libraries/emp" -Og -ffunction-sections -fdata-sections -g -gdwarf-3 -gstrict-dwarf -Wall -specs="nosys.specs" -MMD -MP -MF"index.d" -MT"index.o"   -o"index.o" "../index.c"
+subdir_rules.mk:9: recipe for target 'index.o' failed
+../index.c:46:6: warning: conflicting types for built-in function 'index' [-Wbuiltin-declaration-mismatch]
+ void index(){
+      ^~~~~
+In file included from ../index.c:31:0:
+../index.c: In function 'index':
+../file.h:17:15: warning: passing argument 1 of 'get_file' makes pointer from integer without a cast [-Wint-conversion]
+ #define COM3  2      // Keyboard
+               ^
+../index.c:49:20: note: in expansion of macro 'COM3'
+     while(get_file(COM3, &ch)){
+                    ^~~~
+../file.h:20:9: note: expected 'FILE {aka unsigned char *}' but argument is of type 'int'
+ BOOLEAN get_file( FILE, INT8U* );
+         ^~~~~~~~
+../index.c:50:23: error: 'xQueueKey' undeclared (first use in this function); did you mean 'xQueuePeek'?
+         xQueueReceive(xQueueKey, &ch, portMAX_DELAY);
+                       ^~~~~~~~~
+                       xQueuePeek
+../index.c:50:23: note: each undeclared identifier is reported only once for each function it appears in
+In file included from ../index.c:31:0:
+../file.h:16:15: warning: passing argument 1 of 'gfprintf' makes pointer from integer without a cast [-Wint-conversion]
+ #define COM2  1      // LCD
+               ^
+../index.c:51:19: note: in expansion of macro 'COM2'
+         gfprintf( COM2, "%cSELECT PAYMENT", 0x84);
+                   ^~~~
+In file included from ../index.c:32:0:
+../string.h:10:12: note: expected 'FILE {aka unsigned char *}' but argument is of type 'int'
+ const void gfprintf( FILE, const char*, ...);
+            ^~~~~~~~
+In file included from ../index.c:31:0:
+../file.h:16:15: warning: passing argument 1 of 'gfprintf' makes pointer from integer without a cast [-Wint-conversion]
+ #define COM2  1      // LCD
+               ^
+../index.c:52:19: note: in expansion of macro 'COM2'
+         gfprintf( COM2, "%cCARD: 1 / CASH: 2", 0xC4);
+                   ^~~~
+In file included from ../index.c:32:0:
+../string.h:10:12: note: expected 'FILE {aka unsigned char *}' but argument is of type 'int'
+ const void gfprintf( FILE, const char*, ...);
+            ^~~~~~~~
+In file included from ../index.c:31:0:
+../file.h:17:15: warning: passing argument 1 of 'get_file' makes pointer from integer without a cast [-Wint-conversion]
+ #define COM3  2      // Keyboard
+               ^
+../index.c:53:19: note: in expansion of macro 'COM3'
+         get_file( COM3, &ch );
+                   ^~~~
+../file.h:20:9: note: expected 'FILE {aka unsigned char *}' but argument is of type 'int'
+ BOOLEAN get_file( FILE, INT8U* );
+         ^~~~~~~~
+../index.c:48:19: warning: unused variable 'Buf' [-Wunused-variable]
+     static INT8U  Buf[4];
+                   ^~~
+At top level:
+../index.c:48:19: warning: 'Buf' defined but not used [-Wunused-variable]
+gmake: *** [index.o] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project FinalAssignment ****
+
+"C:\\ti\\ccsv8\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+Building file: "../index.c"
+Invoking: GNU Compiler
+"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/bin/arm-none-eabi-gcc.exe" -c -mcpu=cortex-m4 -march=armv7e-m -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DPART_TM4C123GH6PM -I"C:/Users/jinsk/workspace_v8/Embedded-Programming/FinalAssignment" -I"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/arm-none-eabi/include" -I"C:/Libraries/tm4c" -I"C:/Libraries/frt10/inc" -I"C:/Libraries/frt10/port/TivaM4" -I"C:/Libraries/emp" -Og -ffunction-sections -fdata-sections -g -gdwarf-3 -gstrict-dwarf -Wall -specs="nosys.specs" -MMD -MP -MF"index.d" -MT"index.o"   -o"index.o" "../index.c"
+subdir_rules.mk:9: recipe for target 'index.o' failed
+../index.c:47:6: warning: conflicting types for built-in function 'index' [-Wbuiltin-declaration-mismatch]
+ void index(){
+      ^~~~~
+In file included from ../index.c:32:0:
+../index.c: In function 'index':
+../file.h:17:15: warning: passing argument 1 of 'get_file' makes pointer from integer without a cast [-Wint-conversion]
+ #define COM3  2      // Keyboard
+               ^
+../index.c:50:20: note: in expansion of macro 'COM3'
+     while(get_file(COM3, &ch)){
+                    ^~~~
+../file.h:20:9: note: expected 'FILE {aka unsigned char *}' but argument is of type 'int'
+ BOOLEAN get_file( FILE, INT8U* );
+         ^~~~~~~~
+../index.c:51:23: error: 'xQueueKey' undeclared (first use in this function); did you mean 'xQueuePeek'?
+         xQueueReceive(xQueueKey, &ch, portMAX_DELAY);
+                       ^~~~~~~~~
+                       xQueuePeek
+../index.c:51:23: note: each undeclared identifier is reported only once for each function it appears in
+In file included from ../index.c:32:0:
+../file.h:16:15: warning: passing argument 1 of 'gfprintf' makes pointer from integer without a cast [-Wint-conversion]
+ #define COM2  1      // LCD
+               ^
+../index.c:52:19: note: in expansion of macro 'COM2'
+         gfprintf( COM2, "%cSELECT PAYMENT", 0x84);
+                   ^~~~
+In file included from ../index.c:33:0:
+../string.h:10:12: note: expected 'FILE {aka unsigned char *}' but argument is of type 'int'
+ const void gfprintf( FILE, const char*, ...);
+            ^~~~~~~~
+In file included from ../index.c:32:0:
+../file.h:16:15: warning: passing argument 1 of 'gfprintf' makes pointer from integer without a cast [-Wint-conversion]
+ #define COM2  1      // LCD
+               ^
+../index.c:53:19: note: in expansion of macro 'COM2'
+         gfprintf( COM2, "%cCARD: 1 / CASH: 2", 0xC4);
+                   ^~~~
+In file included from ../index.c:33:0:
+../string.h:10:12: note: expected 'FILE {aka unsigned char *}' but argument is of type 'int'
+ const void gfprintf( FILE, const char*, ...);
+            ^~~~~~~~
+In file included from ../index.c:32:0:
+../file.h:17:15: warning: passing argument 1 of 'get_file' makes pointer from integer without a cast [-Wint-conversion]
+ #define COM3  2      // Keyboard
+               ^
+../index.c:54:19: note: in expansion of macro 'COM3'
+         get_file( COM3, &ch );
+                   ^~~~
+../file.h:20:9: note: expected 'FILE {aka unsigned char *}' but argument is of type 'int'
+ BOOLEAN get_file( FILE, INT8U* );
+         ^~~~~~~~
+../index.c:49:19: warning: unused variable 'Buf' [-Wunused-variable]
+     static INT8U  Buf[4];
+                   ^~~
+At top level:
+../index.c:49:19: warning: 'Buf' defined but not used [-Wunused-variable]
+gmake: *** [index.o] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project FinalAssignment ****
+
+"C:\\ti\\ccsv8\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+Building file: "../index.c"
+Invoking: GNU Compiler
+"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/bin/arm-none-eabi-gcc.exe" -c -mcpu=cortex-m4 -march=armv7e-m -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DPART_TM4C123GH6PM -I"C:/Users/jinsk/workspace_v8/Embedded-Programming/FinalAssignment" -I"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/arm-none-eabi/include" -I"C:/Libraries/tm4c" -I"C:/Libraries/frt10/inc" -I"C:/Libraries/frt10/port/TivaM4" -I"C:/Libraries/emp" -Og -ffunction-sections -fdata-sections -g -gdwarf-3 -gstrict-dwarf -Wall -specs="nosys.specs" -MMD -MP -MF"index.d" -MT"index.o"   -o"index.o" "../index.c"
+../index.c:47:6: warning: conflicting types for built-in function 'index' [-Wbuiltin-declaration-mismatch]
+ void index(){
+      ^~~~~
+In file included from ../index.c:32:0:
+../index.c: In function 'index':
+../file.h:17:15: warning: passing argument 1 of 'get_file' makes pointer from integer without a cast [-Wint-conversion]
+ #define COM3  2      // Keyboard
+               ^
+../index.c:50:20: note: in expansion of macro 'COM3'
+     while(get_file(COM3, &ch)){
+                    ^~~~
+../file.h:20:9: note: expected 'FILE {aka unsigned char *}' but argument is of type 'int'
+ BOOLEAN get_file( FILE, INT8U* );
+         ^~~~~~~~
+../file.h:16:15: warning: passing argument 1 of 'gfprintf' makes pointer from integer without a cast [-Wint-conversion]
+ #define COM2  1      // LCD
+               ^
+../index.c:52:19: note: in expansion of macro 'COM2'
+         gfprintf( COM2, "%cSELECT PAYMENT", 0x84);
+                   ^~~~
+In file included from ../index.c:33:0:
+../string.h:10:12: note: expected 'FILE {aka unsigned char *}' but argument is of type 'int'
+ const void gfprintf( FILE, const char*, ...);
+            ^~~~~~~~
+In file included from ../index.c:32:0:
+../file.h:16:15: warning: passing argument 1 of 'gfprintf' makes pointer from integer without a cast [-Wint-conversion]
+ #define COM2  1      // LCD
+               ^
+../index.c:53:19: note: in expansion of macro 'COM2'
+         gfprintf( COM2, "%cCARD: 1 / CASH: 2", 0xC4);
+                   ^~~~
+In file included from ../index.c:33:0:
+../string.h:10:12: note: expected 'FILE {aka unsigned char *}' but argument is of type 'int'
+ const void gfprintf( FILE, const char*, ...);
+            ^~~~~~~~
+In file included from ../index.c:32:0:
+../file.h:17:15: warning: passing argument 1 of 'get_file' makes pointer from integer without a cast [-Wint-conversion]
+ #define COM3  2      // Keyboard
+               ^
+../index.c:54:19: note: in expansion of macro 'COM3'
+         get_file( COM3, &ch );
+                   ^~~~
+../file.h:20:9: note: expected 'FILE {aka unsigned char *}' but argument is of type 'int'
+ BOOLEAN get_file( FILE, INT8U* );
+         ^~~~~~~~
+../index.c:49:19: warning: unused variable 'Buf' [-Wunused-variable]
+     static INT8U  Buf[4];
+                   ^~~
+At top level:
+../index.c:49:19: warning: 'Buf' defined but not used [-Wunused-variable]
+Finished building: "../index.c"
+ 
+Building target: "FinalAssignment.out"
+Invoking: GNU Linker
+"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/bin/arm-none-eabi-gcc.exe" -DPART_TM4C123GH6PM -Og -ffunction-sections -fdata-sections -g -gdwarf-3 -gstrict-dwarf -Wall -specs="nosys.specs" -march=armv7e-m -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -Wl,-Map,"FinalAssignment.map" -o"FinalAssignment.out" "./adc.o" "./digiswitch.o" "./file.o" "./gpio.o" "./heap_2.o" "./index.o" "./key.o" "./lcd.o" "./list.o" "./main.o" "./port.o" "./queue.o" "./startup_frt.o" "./status_led.o" "./string.o" "./systick_frt.o" "./tasks.o" -Wl,-T"../tm4c123gh6pm.lds"  
+Finished building target: "FinalAssignment.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project FinalAssignment ****
+
+"C:\\ti\\ccsv8\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+Building file: "../index.c"
+Invoking: GNU Compiler
+"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/bin/arm-none-eabi-gcc.exe" -c -mcpu=cortex-m4 -march=armv7e-m -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DPART_TM4C123GH6PM -I"C:/Users/jinsk/workspace_v8/Embedded-Programming/FinalAssignment" -I"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/arm-none-eabi/include" -I"C:/Libraries/tm4c" -I"C:/Libraries/frt10/inc" -I"C:/Libraries/frt10/port/TivaM4" -I"C:/Libraries/emp" -Og -ffunction-sections -fdata-sections -g -gdwarf-3 -gstrict-dwarf -Wall -specs="nosys.specs" -MMD -MP -MF"index.d" -MT"index.o"   -o"index.o" "../index.c"
+../index.c:47:6: warning: conflicting types for built-in function 'index' [-Wbuiltin-declaration-mismatch]
+ void index(){
+      ^~~~~
+In file included from ../index.c:32:0:
+../index.c: In function 'index':
+../file.h:17:15: warning: passing argument 1 of 'get_file' makes pointer from integer without a cast [-Wint-conversion]
+ #define COM3  2      // Keyboard
+               ^
+../index.c:50:20: note: in expansion of macro 'COM3'
+     while(get_file(COM3, &ch)){
+                    ^~~~
+../file.h:20:9: note: expected 'FILE {aka unsigned char *}' but argument is of type 'int'
+ BOOLEAN get_file( FILE, INT8U* );
+         ^~~~~~~~
+../file.h:16:15: warning: passing argument 1 of 'gfprintf' makes pointer from integer without a cast [-Wint-conversion]
+ #define COM2  1      // LCD
+               ^
+../index.c:51:19: note: in expansion of macro 'COM2'
+         gfprintf( COM2, "%cSELECT PAYMENT", 0x84);
+                   ^~~~
+In file included from ../index.c:33:0:
+../string.h:10:12: note: expected 'FILE {aka unsigned char *}' but argument is of type 'int'
+ const void gfprintf( FILE, const char*, ...);
+            ^~~~~~~~
+In file included from ../index.c:32:0:
+../file.h:16:15: warning: passing argument 1 of 'gfprintf' makes pointer from integer without a cast [-Wint-conversion]
+ #define COM2  1      // LCD
+               ^
+../index.c:52:19: note: in expansion of macro 'COM2'
+         gfprintf( COM2, "%cCARD: 1 / CASH: 2", 0xC4);
+                   ^~~~
+In file included from ../index.c:33:0:
+../string.h:10:12: note: expected 'FILE {aka unsigned char *}' but argument is of type 'int'
+ const void gfprintf( FILE, const char*, ...);
+            ^~~~~~~~
+../index.c:49:19: warning: unused variable 'Buf' [-Wunused-variable]
+     static INT8U  Buf[4];
+                   ^~~
+At top level:
+../index.c:49:19: warning: 'Buf' defined but not used [-Wunused-variable]
+Finished building: "../index.c"
+ 
+Building target: "FinalAssignment.out"
+Invoking: GNU Linker
+"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/bin/arm-none-eabi-gcc.exe" -DPART_TM4C123GH6PM -Og -ffunction-sections -fdata-sections -g -gdwarf-3 -gstrict-dwarf -Wall -specs="nosys.specs" -march=armv7e-m -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -Wl,-Map,"FinalAssignment.map" -o"FinalAssignment.out" "./adc.o" "./digiswitch.o" "./file.o" "./gpio.o" "./heap_2.o" "./index.o" "./key.o" "./lcd.o" "./list.o" "./main.o" "./port.o" "./queue.o" "./startup_frt.o" "./status_led.o" "./string.o" "./systick_frt.o" "./tasks.o" -Wl,-T"../tm4c123gh6pm.lds"  
+Finished building target: "FinalAssignment.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project FinalAssignment ****
+
+"C:\\ti\\ccsv8\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+gmake[1]: 'FinalAssignment.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project FinalAssignment ****
+
+"C:\\ti\\ccsv8\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+Building file: "../index.c"
+Invoking: GNU Compiler
+"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/bin/arm-none-eabi-gcc.exe" -c -mcpu=cortex-m4 -march=armv7e-m -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DPART_TM4C123GH6PM -I"C:/Users/jinsk/workspace_v8/Embedded-Programming/FinalAssignment" -I"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/arm-none-eabi/include" -I"C:/Libraries/tm4c" -I"C:/Libraries/frt10/inc" -I"C:/Libraries/frt10/port/TivaM4" -I"C:/Libraries/emp" -Og -ffunction-sections -fdata-sections -g -gdwarf-3 -gstrict-dwarf -Wall -specs="nosys.specs" -MMD -MP -MF"index.d" -MT"index.o"   -o"index.o" "../index.c"
+../index.c:47:6: warning: conflicting types for built-in function 'index' [-Wbuiltin-declaration-mismatch]
+ void index(){
+      ^~~~~
+In file included from ../index.c:32:0:
+../index.c: In function 'index':
+../file.h:17:15: warning: passing argument 1 of 'get_file' makes pointer from integer without a cast [-Wint-conversion]
+ #define COM3  2      // Keyboard
+               ^
+../index.c:50:20: note: in expansion of macro 'COM3'
+     while(get_file(COM3, &ch)){
+                    ^~~~
+../file.h:20:9: note: expected 'FILE {aka unsigned char *}' but argument is of type 'int'
+ BOOLEAN get_file( FILE, INT8U* );
+         ^~~~~~~~
+../file.h:16:15: warning: passing argument 1 of 'gfprintf' makes pointer from integer without a cast [-Wint-conversion]
+ #define COM2  1      // LCD
+               ^
+../index.c:51:19: note: in expansion of macro 'COM2'
+         gfprintf( COM2, "%cSELECT PAYMENT", 0x84);
+                   ^~~~
+In file included from ../index.c:33:0:
+../string.h:10:12: note: expected 'FILE {aka unsigned char *}' but argument is of type 'int'
+ const void gfprintf( FILE, const char*, ...);
+            ^~~~~~~~
+In file included from ../index.c:32:0:
+../file.h:16:15: warning: passing argument 1 of 'gfprintf' makes pointer from integer without a cast [-Wint-conversion]
+ #define COM2  1      // LCD
+               ^
+../index.c:52:19: note: in expansion of macro 'COM2'
+         gfprintf( COM2, "%cCARD: 1 / CASH: 2", 0xC4);
+                   ^~~~
+In file included from ../index.c:33:0:
+../string.h:10:12: note: expected 'FILE {aka unsigned char *}' but argument is of type 'int'
+ const void gfprintf( FILE, const char*, ...);
+            ^~~~~~~~
+../index.c:49:19: warning: unused variable 'Buf' [-Wunused-variable]
+     static INT8U  Buf[4];
+                   ^~~
+At top level:
+../index.c:49:19: warning: 'Buf' defined but not used [-Wunused-variable]
+Finished building: "../index.c"
+ 
+Building file: "../main.c"
+Invoking: GNU Compiler
+"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/bin/arm-none-eabi-gcc.exe" -c -mcpu=cortex-m4 -march=armv7e-m -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DPART_TM4C123GH6PM -I"C:/Users/jinsk/workspace_v8/Embedded-Programming/FinalAssignment" -I"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/arm-none-eabi/include" -I"C:/Libraries/tm4c" -I"C:/Libraries/frt10/inc" -I"C:/Libraries/frt10/port/TivaM4" -I"C:/Libraries/emp" -Og -ffunction-sections -fdata-sections -g -gdwarf-3 -gstrict-dwarf -Wall -specs="nosys.specs" -MMD -MP -MF"main.d" -MT"main.o"   -o"main.o" "../main.c"
+In file included from ../main.c:33:0:
+../index.h:33:6: warning: conflicting types for built-in function 'index' [-Wbuiltin-declaration-mismatch]
+ void index();
+      ^~~~~
+Finished building: "../main.c"
+ 
+Building file: "../key.c"
+Invoking: GNU Compiler
+"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/bin/arm-none-eabi-gcc.exe" -c -mcpu=cortex-m4 -march=armv7e-m -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DPART_TM4C123GH6PM -I"C:/Users/jinsk/workspace_v8/Embedded-Programming/FinalAssignment" -I"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/arm-none-eabi/include" -I"C:/Libraries/tm4c" -I"C:/Libraries/frt10/inc" -I"C:/Libraries/frt10/port/TivaM4" -I"C:/Libraries/emp" -Og -ffunction-sections -fdata-sections -g -gdwarf-3 -gstrict-dwarf -Wall -specs="nosys.specs" -MMD -MP -MF"key.d" -MT"key.o"   -o"key.o" "../key.c"
+In file included from ../key.c:33:0:
+../key.c: In function 'ui_task':
+../file.h:16:15: warning: passing argument 1 of 'gfprintf' makes pointer from integer without a cast [-Wint-conversion]
+ #define COM2  1      // LCD
+               ^
+../key.c:174:13: note: in expansion of macro 'COM2'
+   gfprintf( COM2, "%cSELECT PAYMENT", 0x84);
+             ^~~~
+In file included from ../key.c:34:0:
+../string.h:10:12: note: expected 'FILE {aka unsigned char *}' but argument is of type 'int'
+ const void gfprintf( FILE, const char*, ...);
+            ^~~~~~~~
+In file included from ../key.c:33:0:
+../file.h:17:15: warning: passing argument 1 of 'get_file' makes pointer from integer without a cast [-Wint-conversion]
+ #define COM3  2      // Keyboard
+               ^
+../key.c:179:25: note: in expansion of macro 'COM3'
+           if( get_file( COM3, &ch ))
+                         ^~~~
+../file.h:20:9: note: expected 'FILE {aka unsigned char *}' but argument is of type 'int'
+ BOOLEAN get_file( FILE, INT8U* );
+         ^~~~~~~~
+../file.h:16:15: warning: passing argument 1 of 'gfprintf' makes pointer from integer without a cast [-Wint-conversion]
+ #define COM2  1      // LCD
+               ^
+../key.c:186:29: note: in expansion of macro 'COM2'
+                   gfprintf( COM2, "%c%cS:%c", 0x1B, 0xC4, ch );
+                             ^~~~
+In file included from ../key.c:34:0:
+../string.h:10:12: note: expected 'FILE {aka unsigned char *}' but argument is of type 'int'
+ const void gfprintf( FILE, const char*, ...);
+            ^~~~~~~~
+In file included from ../key.c:33:0:
+../file.h:16:15: warning: passing argument 1 of 'gfprintf' makes pointer from integer without a cast [-Wint-conversion]
+ #define COM2  1      // LCD
+               ^
+../key.c:192:29: note: in expansion of macro 'COM2'
+                   gfprintf( COM2, "%c%c%c O:", 0x1B, 0xC7, ch );
+                             ^~~~
+In file included from ../key.c:34:0:
+../string.h:10:12: note: expected 'FILE {aka unsigned char *}' but argument is of type 'int'
+ const void gfprintf( FILE, const char*, ...);
+            ^~~~~~~~
+In file included from ../key.c:33:0:
+../file.h:16:15: warning: passing argument 1 of 'gfprintf' makes pointer from integer without a cast [-Wint-conversion]
+ #define COM2  1      // LCD
+               ^
+../key.c:198:29: note: in expansion of macro 'COM2'
+                   gfprintf( COM2, "%c%c%c", 0x1B, 0xCB, ch );
+                             ^~~~
+In file included from ../key.c:34:0:
+../string.h:10:12: note: expected 'FILE {aka unsigned char *}' but argument is of type 'int'
+ const void gfprintf( FILE, const char*, ...);
+            ^~~~~~~~
+In file included from ../key.c:33:0:
+../file.h:16:15: warning: passing argument 1 of 'gfprintf' makes pointer from integer without a cast [-Wint-conversion]
+ #define COM2  1      // LCD
+               ^
+../key.c:210:29: note: in expansion of macro 'COM2'
+                   gfprintf( COM2, "%c%c         ", 0x1B, 0xC3 );
+                             ^~~~
+In file included from ../key.c:34:0:
+../string.h:10:12: note: expected 'FILE {aka unsigned char *}' but argument is of type 'int'
+ const void gfprintf( FILE, const char*, ...);
+            ^~~~~~~~
+Finished building: "../key.c"
+ 
+Building target: "FinalAssignment.out"
+Invoking: GNU Linker
+"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/bin/arm-none-eabi-gcc.exe" -DPART_TM4C123GH6PM -Og -ffunction-sections -fdata-sections -g -gdwarf-3 -gstrict-dwarf -Wall -specs="nosys.specs" -march=armv7e-m -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -Wl,-Map,"FinalAssignment.map" -o"FinalAssignment.out" "./adc.o" "./digiswitch.o" "./file.o" "./gpio.o" "./heap_2.o" "./index.o" "./key.o" "./lcd.o" "./list.o" "./main.o" "./port.o" "./queue.o" "./startup_frt.o" "./status_led.o" "./string.o" "./systick_frt.o" "./tasks.o" -Wl,-T"../tm4c123gh6pm.lds"  
+Finished building target: "FinalAssignment.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project FinalAssignment ****
+
+"C:\\ti\\ccsv8\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+Building file: "../key.c"
+Invoking: GNU Compiler
+"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/bin/arm-none-eabi-gcc.exe" -c -mcpu=cortex-m4 -march=armv7e-m -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DPART_TM4C123GH6PM -I"C:/Users/jinsk/workspace_v8/Embedded-Programming/FinalAssignment" -I"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/arm-none-eabi/include" -I"C:/Libraries/tm4c" -I"C:/Libraries/frt10/inc" -I"C:/Libraries/frt10/port/TivaM4" -I"C:/Libraries/emp" -Og -ffunction-sections -fdata-sections -g -gdwarf-3 -gstrict-dwarf -Wall -specs="nosys.specs" -MMD -MP -MF"key.d" -MT"key.o"   -o"key.o" "../key.c"
+In file included from ../key.c:33:0:
+../key.c: In function 'ui_task':
+../file.h:16:15: warning: passing argument 1 of 'gfprintf' makes pointer from integer without a cast [-Wint-conversion]
+ #define COM2  1      // LCD
+               ^
+../key.c:174:13: note: in expansion of macro 'COM2'
+   gfprintf( COM2, "%cCARD: 1   CASH: 2", 0x84);
+             ^~~~
+In file included from ../key.c:34:0:
+../string.h:10:12: note: expected 'FILE {aka unsigned char *}' but argument is of type 'int'
+ const void gfprintf( FILE, const char*, ...);
+            ^~~~~~~~
+In file included from ../key.c:33:0:
+../file.h:17:15: warning: passing argument 1 of 'get_file' makes pointer from integer without a cast [-Wint-conversion]
+ #define COM3  2      // Keyboard
+               ^
+../key.c:179:25: note: in expansion of macro 'COM3'
+           if( get_file( COM3, &ch ))
+                         ^~~~
+../file.h:20:9: note: expected 'FILE {aka unsigned char *}' but argument is of type 'int'
+ BOOLEAN get_file( FILE, INT8U* );
+         ^~~~~~~~
+../file.h:16:15: warning: passing argument 1 of 'gfprintf' makes pointer from integer without a cast [-Wint-conversion]
+ #define COM2  1      // LCD
+               ^
+../key.c:186:29: note: in expansion of macro 'COM2'
+                   gfprintf( COM2, "%c%cS:%c", 0x1B, 0xC4, ch );
+                             ^~~~
+In file included from ../key.c:34:0:
+../string.h:10:12: note: expected 'FILE {aka unsigned char *}' but argument is of type 'int'
+ const void gfprintf( FILE, const char*, ...);
+            ^~~~~~~~
+In file included from ../key.c:33:0:
+../file.h:16:15: warning: passing argument 1 of 'gfprintf' makes pointer from integer without a cast [-Wint-conversion]
+ #define COM2  1      // LCD
+               ^
+../key.c:192:29: note: in expansion of macro 'COM2'
+                   gfprintf( COM2, "%c%c%c O:", 0x1B, 0xC7, ch );
+                             ^~~~
+In file included from ../key.c:34:0:
+../string.h:10:12: note: expected 'FILE {aka unsigned char *}' but argument is of type 'int'
+ const void gfprintf( FILE, const char*, ...);
+            ^~~~~~~~
+In file included from ../key.c:33:0:
+../file.h:16:15: warning: passing argument 1 of 'gfprintf' makes pointer from integer without a cast [-Wint-conversion]
+ #define COM2  1      // LCD
+               ^
+../key.c:198:29: note: in expansion of macro 'COM2'
+                   gfprintf( COM2, "%c%c%c", 0x1B, 0xCB, ch );
+                             ^~~~
+In file included from ../key.c:34:0:
+../string.h:10:12: note: expected 'FILE {aka unsigned char *}' but argument is of type 'int'
+ const void gfprintf( FILE, const char*, ...);
+            ^~~~~~~~
+In file included from ../key.c:33:0:
+../file.h:16:15: warning: passing argument 1 of 'gfprintf' makes pointer from integer without a cast [-Wint-conversion]
+ #define COM2  1      // LCD
+               ^
+../key.c:210:29: note: in expansion of macro 'COM2'
+                   gfprintf( COM2, "%c%c         ", 0x1B, 0xC3 );
+                             ^~~~
+In file included from ../key.c:34:0:
+../string.h:10:12: note: expected 'FILE {aka unsigned char *}' but argument is of type 'int'
+ const void gfprintf( FILE, const char*, ...);
+            ^~~~~~~~
+Finished building: "../key.c"
+ 
+Building target: "FinalAssignment.out"
+Invoking: GNU Linker
+"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/bin/arm-none-eabi-gcc.exe" -DPART_TM4C123GH6PM -Og -ffunction-sections -fdata-sections -g -gdwarf-3 -gstrict-dwarf -Wall -specs="nosys.specs" -march=armv7e-m -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -Wl,-Map,"FinalAssignment.map" -o"FinalAssignment.out" "./adc.o" "./digiswitch.o" "./file.o" "./gpio.o" "./heap_2.o" "./index.o" "./key.o" "./lcd.o" "./list.o" "./main.o" "./port.o" "./queue.o" "./startup_frt.o" "./status_led.o" "./string.o" "./systick_frt.o" "./tasks.o" -Wl,-T"../tm4c123gh6pm.lds"  
+Finished building target: "FinalAssignment.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project FinalAssignment ****
+
+"C:\\ti\\ccsv8\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+Building file: "../key.c"
+Invoking: GNU Compiler
+"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/bin/arm-none-eabi-gcc.exe" -c -mcpu=cortex-m4 -march=armv7e-m -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DPART_TM4C123GH6PM -I"C:/Users/jinsk/workspace_v8/Embedded-Programming/FinalAssignment" -I"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/arm-none-eabi/include" -I"C:/Libraries/tm4c" -I"C:/Libraries/frt10/inc" -I"C:/Libraries/frt10/port/TivaM4" -I"C:/Libraries/emp" -Og -ffunction-sections -fdata-sections -g -gdwarf-3 -gstrict-dwarf -Wall -specs="nosys.specs" -MMD -MP -MF"key.d" -MT"key.o"   -o"key.o" "../key.c"
+In file included from ../key.c:33:0:
+../key.c: In function 'ui_task':
+../file.h:16:15: warning: passing argument 1 of 'gfprintf' makes pointer from integer without a cast [-Wint-conversion]
+ #define COM2  1      // LCD
+               ^
+../key.c:174:13: note: in expansion of macro 'COM2'
+   gfprintf( COM2, "%cCARD: 1 CASH: 2", 0x84);
+             ^~~~
+In file included from ../key.c:34:0:
+../string.h:10:12: note: expected 'FILE {aka unsigned char *}' but argument is of type 'int'
+ const void gfprintf( FILE, const char*, ...);
+            ^~~~~~~~
+In file included from ../key.c:33:0:
+../file.h:17:15: warning: passing argument 1 of 'get_file' makes pointer from integer without a cast [-Wint-conversion]
+ #define COM3  2      // Keyboard
+               ^
+../key.c:179:25: note: in expansion of macro 'COM3'
+           if( get_file( COM3, &ch ))
+                         ^~~~
+../file.h:20:9: note: expected 'FILE {aka unsigned char *}' but argument is of type 'int'
+ BOOLEAN get_file( FILE, INT8U* );
+         ^~~~~~~~
+../file.h:16:15: warning: passing argument 1 of 'gfprintf' makes pointer from integer without a cast [-Wint-conversion]
+ #define COM2  1      // LCD
+               ^
+../key.c:186:29: note: in expansion of macro 'COM2'
+                   gfprintf( COM2, "%c%cS:%c", 0x1B, 0xC4, ch );
+                             ^~~~
+In file included from ../key.c:34:0:
+../string.h:10:12: note: expected 'FILE {aka unsigned char *}' but argument is of type 'int'
+ const void gfprintf( FILE, const char*, ...);
+            ^~~~~~~~
+In file included from ../key.c:33:0:
+../file.h:16:15: warning: passing argument 1 of 'gfprintf' makes pointer from integer without a cast [-Wint-conversion]
+ #define COM2  1      // LCD
+               ^
+../key.c:192:29: note: in expansion of macro 'COM2'
+                   gfprintf( COM2, "%c%c%c O:", 0x1B, 0xC7, ch );
+                             ^~~~
+In file included from ../key.c:34:0:
+../string.h:10:12: note: expected 'FILE {aka unsigned char *}' but argument is of type 'int'
+ const void gfprintf( FILE, const char*, ...);
+            ^~~~~~~~
+In file included from ../key.c:33:0:
+../file.h:16:15: warning: passing argument 1 of 'gfprintf' makes pointer from integer without a cast [-Wint-conversion]
+ #define COM2  1      // LCD
+               ^
+../key.c:198:29: note: in expansion of macro 'COM2'
+                   gfprintf( COM2, "%c%c%c", 0x1B, 0xCB, ch );
+                             ^~~~
+In file included from ../key.c:34:0:
+../string.h:10:12: note: expected 'FILE {aka unsigned char *}' but argument is of type 'int'
+ const void gfprintf( FILE, const char*, ...);
+            ^~~~~~~~
+In file included from ../key.c:33:0:
+../file.h:16:15: warning: passing argument 1 of 'gfprintf' makes pointer from integer without a cast [-Wint-conversion]
+ #define COM2  1      // LCD
+               ^
+../key.c:210:29: note: in expansion of macro 'COM2'
+                   gfprintf( COM2, "%c%c         ", 0x1B, 0xC3 );
+                             ^~~~
+In file included from ../key.c:34:0:
+../string.h:10:12: note: expected 'FILE {aka unsigned char *}' but argument is of type 'int'
+ const void gfprintf( FILE, const char*, ...);
+            ^~~~~~~~
+Finished building: "../key.c"
+ 
+Building target: "FinalAssignment.out"
+Invoking: GNU Linker
+"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/bin/arm-none-eabi-gcc.exe" -DPART_TM4C123GH6PM -Og -ffunction-sections -fdata-sections -g -gdwarf-3 -gstrict-dwarf -Wall -specs="nosys.specs" -march=armv7e-m -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -Wl,-Map,"FinalAssignment.map" -o"FinalAssignment.out" "./adc.o" "./digiswitch.o" "./file.o" "./gpio.o" "./heap_2.o" "./index.o" "./key.o" "./lcd.o" "./list.o" "./main.o" "./port.o" "./queue.o" "./startup_frt.o" "./status_led.o" "./string.o" "./systick_frt.o" "./tasks.o" -Wl,-T"../tm4c123gh6pm.lds"  
+Finished building target: "FinalAssignment.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project FinalAssignment ****
+
+"C:\\ti\\ccsv8\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+Building file: "../key.c"
+Invoking: GNU Compiler
+"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/bin/arm-none-eabi-gcc.exe" -c -mcpu=cortex-m4 -march=armv7e-m -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DPART_TM4C123GH6PM -I"C:/Users/jinsk/workspace_v8/Embedded-Programming/FinalAssignment" -I"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/arm-none-eabi/include" -I"C:/Libraries/tm4c" -I"C:/Libraries/frt10/inc" -I"C:/Libraries/frt10/port/TivaM4" -I"C:/Libraries/emp" -Og -ffunction-sections -fdata-sections -g -gdwarf-3 -gstrict-dwarf -Wall -specs="nosys.specs" -MMD -MP -MF"key.d" -MT"key.o"   -o"key.o" "../key.c"
+In file included from ../key.c:33:0:
+../key.c: In function 'ui_task':
+../file.h:16:15: warning: passing argument 1 of 'gfprintf' makes pointer from integer without a cast [-Wint-conversion]
+ #define COM2  1      // LCD
+               ^
+../key.c:174:13: note: in expansion of macro 'COM2'
+   gfprintf( COM2, "%cCARD:1 CASH:2", 0x84);
+             ^~~~
+In file included from ../key.c:34:0:
+../string.h:10:12: note: expected 'FILE {aka unsigned char *}' but argument is of type 'int'
+ const void gfprintf( FILE, const char*, ...);
+            ^~~~~~~~
+In file included from ../key.c:33:0:
+../file.h:17:15: warning: passing argument 1 of 'get_file' makes pointer from integer without a cast [-Wint-conversion]
+ #define COM3  2      // Keyboard
+               ^
+../key.c:179:25: note: in expansion of macro 'COM3'
+           if( get_file( COM3, &ch ))
+                         ^~~~
+../file.h:20:9: note: expected 'FILE {aka unsigned char *}' but argument is of type 'int'
+ BOOLEAN get_file( FILE, INT8U* );
+         ^~~~~~~~
+../file.h:16:15: warning: passing argument 1 of 'gfprintf' makes pointer from integer without a cast [-Wint-conversion]
+ #define COM2  1      // LCD
+               ^
+../key.c:186:29: note: in expansion of macro 'COM2'
+                   gfprintf( COM2, "%c%cS:%c", 0x1B, 0xC4, ch );
+                             ^~~~
+In file included from ../key.c:34:0:
+../string.h:10:12: note: expected 'FILE {aka unsigned char *}' but argument is of type 'int'
+ const void gfprintf( FILE, const char*, ...);
+            ^~~~~~~~
+In file included from ../key.c:33:0:
+../file.h:16:15: warning: passing argument 1 of 'gfprintf' makes pointer from integer without a cast [-Wint-conversion]
+ #define COM2  1      // LCD
+               ^
+../key.c:192:29: note: in expansion of macro 'COM2'
+                   gfprintf( COM2, "%c%c%c O:", 0x1B, 0xC7, ch );
+                             ^~~~
+In file included from ../key.c:34:0:
+../string.h:10:12: note: expected 'FILE {aka unsigned char *}' but argument is of type 'int'
+ const void gfprintf( FILE, const char*, ...);
+            ^~~~~~~~
+In file included from ../key.c:33:0:
+../file.h:16:15: warning: passing argument 1 of 'gfprintf' makes pointer from integer without a cast [-Wint-conversion]
+ #define COM2  1      // LCD
+               ^
+../key.c:198:29: note: in expansion of macro 'COM2'
+                   gfprintf( COM2, "%c%c%c", 0x1B, 0xCB, ch );
+                             ^~~~
+In file included from ../key.c:34:0:
+../string.h:10:12: note: expected 'FILE {aka unsigned char *}' but argument is of type 'int'
+ const void gfprintf( FILE, const char*, ...);
+            ^~~~~~~~
+In file included from ../key.c:33:0:
+../file.h:16:15: warning: passing argument 1 of 'gfprintf' makes pointer from integer without a cast [-Wint-conversion]
+ #define COM2  1      // LCD
+               ^
+../key.c:210:29: note: in expansion of macro 'COM2'
+                   gfprintf( COM2, "%c%c         ", 0x1B, 0xC3 );
+                             ^~~~
+In file included from ../key.c:34:0:
+../string.h:10:12: note: expected 'FILE {aka unsigned char *}' but argument is of type 'int'
+ const void gfprintf( FILE, const char*, ...);
+            ^~~~~~~~
+Finished building: "../key.c"
+ 
+Building target: "FinalAssignment.out"
+Invoking: GNU Linker
+"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/bin/arm-none-eabi-gcc.exe" -DPART_TM4C123GH6PM -Og -ffunction-sections -fdata-sections -g -gdwarf-3 -gstrict-dwarf -Wall -specs="nosys.specs" -march=armv7e-m -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -Wl,-Map,"FinalAssignment.map" -o"FinalAssignment.out" "./adc.o" "./digiswitch.o" "./file.o" "./gpio.o" "./heap_2.o" "./index.o" "./key.o" "./lcd.o" "./list.o" "./main.o" "./port.o" "./queue.o" "./startup_frt.o" "./status_led.o" "./string.o" "./systick_frt.o" "./tasks.o" -Wl,-T"../tm4c123gh6pm.lds"  
+Finished building target: "FinalAssignment.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project FinalAssignment ****
+
+"C:\\ti\\ccsv8\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+Building file: "../key.c"
+Invoking: GNU Compiler
+"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/bin/arm-none-eabi-gcc.exe" -c -mcpu=cortex-m4 -march=armv7e-m -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DPART_TM4C123GH6PM -I"C:/Users/jinsk/workspace_v8/Embedded-Programming/FinalAssignment" -I"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/arm-none-eabi/include" -I"C:/Libraries/tm4c" -I"C:/Libraries/frt10/inc" -I"C:/Libraries/frt10/port/TivaM4" -I"C:/Libraries/emp" -Og -ffunction-sections -fdata-sections -g -gdwarf-3 -gstrict-dwarf -Wall -specs="nosys.specs" -MMD -MP -MF"key.d" -MT"key.o"   -o"key.o" "../key.c"
+In file included from ../key.c:33:0:
+../key.c: In function 'ui_task':
+../file.h:16:15: warning: passing argument 1 of 'gfprintf' makes pointer from integer without a cast [-Wint-conversion]
+ #define COM2  1      // LCD
+               ^
+../key.c:174:13: note: in expansion of macro 'COM2'
+   gfprintf( COM2, "%cCARD:1 CASH:2", 0x84);
+             ^~~~
+In file included from ../key.c:34:0:
+../string.h:10:12: note: expected 'FILE {aka unsigned char *}' but argument is of type 'int'
+ const void gfprintf( FILE, const char*, ...);
+            ^~~~~~~~
+In file included from ../key.c:33:0:
+../file.h:17:15: warning: passing argument 1 of 'get_file' makes pointer from integer without a cast [-Wint-conversion]
+ #define COM3  2      // Keyboard
+               ^
+../key.c:179:25: note: in expansion of macro 'COM3'
+           if( get_file( COM3, &ch ))
+                         ^~~~
+../file.h:20:9: note: expected 'FILE {aka unsigned char *}' but argument is of type 'int'
+ BOOLEAN get_file( FILE, INT8U* );
+         ^~~~~~~~
+../file.h:16:15: warning: passing argument 1 of 'gfprintf' makes pointer from integer without a cast [-Wint-conversion]
+ #define COM2  1      // LCD
+               ^
+../key.c:186:29: note: in expansion of macro 'COM2'
+                   gfprintf( COM2, "%c%c%c", 0x1B, 0xC4, ch );
+                             ^~~~
+In file included from ../key.c:34:0:
+../string.h:10:12: note: expected 'FILE {aka unsigned char *}' but argument is of type 'int'
+ const void gfprintf( FILE, const char*, ...);
+            ^~~~~~~~
+In file included from ../key.c:33:0:
+../file.h:16:15: warning: passing argument 1 of 'gfprintf' makes pointer from integer without a cast [-Wint-conversion]
+ #define COM2  1      // LCD
+               ^
+../key.c:192:29: note: in expansion of macro 'COM2'
+                   gfprintf( COM2, "%c%c%c", 0x1B, 0xC4, ch );
+                             ^~~~
+In file included from ../key.c:34:0:
+../string.h:10:12: note: expected 'FILE {aka unsigned char *}' but argument is of type 'int'
+ const void gfprintf( FILE, const char*, ...);
+            ^~~~~~~~
+../key.c:173:17: warning: variable 'Buf' set but not used [-Wunused-but-set-variable]
+   static INT8U  Buf[4];
+                 ^~~
+Finished building: "../key.c"
+ 
+Building target: "FinalAssignment.out"
+Invoking: GNU Linker
+"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/bin/arm-none-eabi-gcc.exe" -DPART_TM4C123GH6PM -Og -ffunction-sections -fdata-sections -g -gdwarf-3 -gstrict-dwarf -Wall -specs="nosys.specs" -march=armv7e-m -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -Wl,-Map,"FinalAssignment.map" -o"FinalAssignment.out" "./adc.o" "./digiswitch.o" "./file.o" "./gpio.o" "./heap_2.o" "./index.o" "./key.o" "./lcd.o" "./list.o" "./main.o" "./port.o" "./queue.o" "./startup_frt.o" "./status_led.o" "./string.o" "./systick_frt.o" "./tasks.o" -Wl,-T"../tm4c123gh6pm.lds"  
+Finished building target: "FinalAssignment.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project FinalAssignment ****
+
+"C:\\ti\\ccsv8\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+Building file: "../key.c"
+Invoking: GNU Compiler
+"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/bin/arm-none-eabi-gcc.exe" -c -mcpu=cortex-m4 -march=armv7e-m -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DPART_TM4C123GH6PM -I"C:/Users/jinsk/workspace_v8/Embedded-Programming/FinalAssignment" -I"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/arm-none-eabi/include" -I"C:/Libraries/tm4c" -I"C:/Libraries/frt10/inc" -I"C:/Libraries/frt10/port/TivaM4" -I"C:/Libraries/emp" -Og -ffunction-sections -fdata-sections -g -gdwarf-3 -gstrict-dwarf -Wall -specs="nosys.specs" -MMD -MP -MF"key.d" -MT"key.o"   -o"key.o" "../key.c"
+In file included from ../key.c:33:0:
+../key.c: In function 'ui_task':
+../file.h:16:15: warning: passing argument 1 of 'gfprintf' makes pointer from integer without a cast [-Wint-conversion]
+ #define COM2  1      // LCD
+               ^
+../key.c:174:13: note: in expansion of macro 'COM2'
+   gfprintf( COM2, "%cCARD:1 CASH:2", 0x84);
+             ^~~~
+In file included from ../key.c:34:0:
+../string.h:10:12: note: expected 'FILE {aka unsigned char *}' but argument is of type 'int'
+ const void gfprintf( FILE, const char*, ...);
+            ^~~~~~~~
+In file included from ../key.c:33:0:
+../file.h:17:15: warning: passing argument 1 of 'get_file' makes pointer from integer without a cast [-Wint-conversion]
+ #define COM3  2      // Keyboard
+               ^
+../key.c:179:25: note: in expansion of macro 'COM3'
+           if( get_file( COM3, &ch ))
+                         ^~~~
+../file.h:20:9: note: expected 'FILE {aka unsigned char *}' but argument is of type 'int'
+ BOOLEAN get_file( FILE, INT8U* );
+         ^~~~~~~~
+../file.h:16:15: warning: passing argument 1 of 'gfprintf' makes pointer from integer without a cast [-Wint-conversion]
+ #define COM2  1      // LCD
+               ^
+../key.c:186:29: note: in expansion of macro 'COM2'
+                   gfprintf( COM2, "%c%cS:%c", 0x1B, 0xC4, ch );
+                             ^~~~
+In file included from ../key.c:34:0:
+../string.h:10:12: note: expected 'FILE {aka unsigned char *}' but argument is of type 'int'
+ const void gfprintf( FILE, const char*, ...);
+            ^~~~~~~~
+In file included from ../key.c:33:0:
+../file.h:16:15: warning: passing argument 1 of 'gfprintf' makes pointer from integer without a cast [-Wint-conversion]
+ #define COM2  1      // LCD
+               ^
+../key.c:192:29: note: in expansion of macro 'COM2'
+                   gfprintf( COM2, "%c%c%c O:", 0x1B, 0xC7, ch );
+                             ^~~~
+In file included from ../key.c:34:0:
+../string.h:10:12: note: expected 'FILE {aka unsigned char *}' but argument is of type 'int'
+ const void gfprintf( FILE, const char*, ...);
+            ^~~~~~~~
+In file included from ../key.c:33:0:
+../file.h:16:15: warning: passing argument 1 of 'gfprintf' makes pointer from integer without a cast [-Wint-conversion]
+ #define COM2  1      // LCD
+               ^
+../key.c:198:29: note: in expansion of macro 'COM2'
+                   gfprintf( COM2, "%c%c%c", 0x1B, 0xCB, ch );
+                             ^~~~
+In file included from ../key.c:34:0:
+../string.h:10:12: note: expected 'FILE {aka unsigned char *}' but argument is of type 'int'
+ const void gfprintf( FILE, const char*, ...);
+            ^~~~~~~~
+In file included from ../key.c:33:0:
+../file.h:16:15: warning: passing argument 1 of 'gfprintf' makes pointer from integer without a cast [-Wint-conversion]
+ #define COM2  1      // LCD
+               ^
+../key.c:210:29: note: in expansion of macro 'COM2'
+                   gfprintf( COM2, "%c%c         ", 0x1B, 0xC3 );
+                             ^~~~
+In file included from ../key.c:34:0:
+../string.h:10:12: note: expected 'FILE {aka unsigned char *}' but argument is of type 'int'
+ const void gfprintf( FILE, const char*, ...);
+            ^~~~~~~~
+Finished building: "../key.c"
+ 
+Building target: "FinalAssignment.out"
+Invoking: GNU Linker
+"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/bin/arm-none-eabi-gcc.exe" -DPART_TM4C123GH6PM -Og -ffunction-sections -fdata-sections -g -gdwarf-3 -gstrict-dwarf -Wall -specs="nosys.specs" -march=armv7e-m -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -Wl,-Map,"FinalAssignment.map" -o"FinalAssignment.out" "./adc.o" "./digiswitch.o" "./file.o" "./gpio.o" "./heap_2.o" "./index.o" "./key.o" "./lcd.o" "./list.o" "./main.o" "./port.o" "./queue.o" "./startup_frt.o" "./status_led.o" "./string.o" "./systick_frt.o" "./tasks.o" -Wl,-T"../tm4c123gh6pm.lds"  
+Finished building target: "FinalAssignment.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project FinalAssignment ****
+
+"C:\\ti\\ccsv8\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+Building file: "../key.c"
+Invoking: GNU Compiler
+"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/bin/arm-none-eabi-gcc.exe" -c -mcpu=cortex-m4 -march=armv7e-m -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DPART_TM4C123GH6PM -I"C:/Users/jinsk/workspace_v8/Embedded-Programming/FinalAssignment" -I"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/arm-none-eabi/include" -I"C:/Libraries/tm4c" -I"C:/Libraries/frt10/inc" -I"C:/Libraries/frt10/port/TivaM4" -I"C:/Libraries/emp" -Og -ffunction-sections -fdata-sections -g -gdwarf-3 -gstrict-dwarf -Wall -specs="nosys.specs" -MMD -MP -MF"key.d" -MT"key.o"   -o"key.o" "../key.c"
+In file included from ../key.c:33:0:
+../key.c: In function 'ui_task':
+../file.h:16:15: warning: passing argument 1 of 'gfprintf' makes pointer from integer without a cast [-Wint-conversion]
+ #define COM2  1      // LCD
+               ^
+../key.c:174:13: note: in expansion of macro 'COM2'
+   gfprintf( COM2, "%cCARD:1 CASH:2", 0x84);
+             ^~~~
+In file included from ../key.c:34:0:
+../string.h:10:12: note: expected 'FILE {aka unsigned char *}' but argument is of type 'int'
+ const void gfprintf( FILE, const char*, ...);
+            ^~~~~~~~
+In file included from ../key.c:33:0:
+../file.h:17:15: warning: passing argument 1 of 'get_file' makes pointer from integer without a cast [-Wint-conversion]
+ #define COM3  2      // Keyboard
+               ^
+../key.c:179:25: note: in expansion of macro 'COM3'
+           if( get_file( COM3, &ch ))
+                         ^~~~
+../file.h:20:9: note: expected 'FILE {aka unsigned char *}' but argument is of type 'int'
+ BOOLEAN get_file( FILE, INT8U* );
+         ^~~~~~~~
+../file.h:16:15: warning: passing argument 1 of 'gfprintf' makes pointer from integer without a cast [-Wint-conversion]
+ #define COM2  1      // LCD
+               ^
+../key.c:186:29: note: in expansion of macro 'COM2'
+                   gfprintf( COM2, "%c%cS:%c", 0x1B, 0xC4, ch );
+                             ^~~~
+In file included from ../key.c:34:0:
+../string.h:10:12: note: expected 'FILE {aka unsigned char *}' but argument is of type 'int'
+ const void gfprintf( FILE, const char*, ...);
+            ^~~~~~~~
+In file included from ../key.c:33:0:
+../file.h:16:15: warning: passing argument 1 of 'gfprintf' makes pointer from integer without a cast [-Wint-conversion]
+ #define COM2  1      // LCD
+               ^
+../key.c:192:29: note: in expansion of macro 'COM2'
+                   gfprintf( COM2, "%c%c%c O:", 0x1B, 0xC7, ch );
+                             ^~~~
+In file included from ../key.c:34:0:
+../string.h:10:12: note: expected 'FILE {aka unsigned char *}' but argument is of type 'int'
+ const void gfprintf( FILE, const char*, ...);
+            ^~~~~~~~
+In file included from ../key.c:33:0:
+../file.h:16:15: warning: passing argument 1 of 'gfprintf' makes pointer from integer without a cast [-Wint-conversion]
+ #define COM2  1      // LCD
+               ^
+../key.c:198:29: note: in expansion of macro 'COM2'
+                   gfprintf( COM2, "%c%c%c", 0x1B, 0xCB, ch );
+                             ^~~~
+In file included from ../key.c:34:0:
+../string.h:10:12: note: expected 'FILE {aka unsigned char *}' but argument is of type 'int'
+ const void gfprintf( FILE, const char*, ...);
+            ^~~~~~~~
+../key.c:173:17: warning: variable 'Buf' set but not used [-Wunused-but-set-variable]
+   static INT8U  Buf[4];
+                 ^~~
+Finished building: "../key.c"
+ 
+Building target: "FinalAssignment.out"
+Invoking: GNU Linker
+"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/bin/arm-none-eabi-gcc.exe" -DPART_TM4C123GH6PM -Og -ffunction-sections -fdata-sections -g -gdwarf-3 -gstrict-dwarf -Wall -specs="nosys.specs" -march=armv7e-m -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -Wl,-Map,"FinalAssignment.map" -o"FinalAssignment.out" "./adc.o" "./digiswitch.o" "./file.o" "./gpio.o" "./heap_2.o" "./index.o" "./key.o" "./lcd.o" "./list.o" "./main.o" "./port.o" "./queue.o" "./startup_frt.o" "./status_led.o" "./string.o" "./systick_frt.o" "./tasks.o" -Wl,-T"../tm4c123gh6pm.lds"  
+Finished building target: "FinalAssignment.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project FinalAssignment ****
+
+"C:\\ti\\ccsv8\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+Building file: "../key.c"
+Invoking: GNU Compiler
+"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/bin/arm-none-eabi-gcc.exe" -c -mcpu=cortex-m4 -march=armv7e-m -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DPART_TM4C123GH6PM -I"C:/Users/jinsk/workspace_v8/Embedded-Programming/FinalAssignment" -I"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/arm-none-eabi/include" -I"C:/Libraries/tm4c" -I"C:/Libraries/frt10/inc" -I"C:/Libraries/frt10/port/TivaM4" -I"C:/Libraries/emp" -Og -ffunction-sections -fdata-sections -g -gdwarf-3 -gstrict-dwarf -Wall -specs="nosys.specs" -MMD -MP -MF"key.d" -MT"key.o"   -o"key.o" "../key.c"
+In file included from ../key.c:33:0:
+../key.c: In function 'ui_task':
+../file.h:16:15: warning: passing argument 1 of 'gfprintf' makes pointer from integer without a cast [-Wint-conversion]
+ #define COM2  1      // LCD
+               ^
+../key.c:174:13: note: in expansion of macro 'COM2'
+   gfprintf( COM2, "%cCARD:1 CASH:2", 0x84);
+             ^~~~
+In file included from ../key.c:34:0:
+../string.h:10:12: note: expected 'FILE {aka unsigned char *}' but argument is of type 'int'
+ const void gfprintf( FILE, const char*, ...);
+            ^~~~~~~~
+In file included from ../key.c:33:0:
+../file.h:17:15: warning: passing argument 1 of 'get_file' makes pointer from integer without a cast [-Wint-conversion]
+ #define COM3  2      // Keyboard
+               ^
+../key.c:179:25: note: in expansion of macro 'COM3'
+           if( get_file( COM3, &ch ))
+                         ^~~~
+../file.h:20:9: note: expected 'FILE {aka unsigned char *}' but argument is of type 'int'
+ BOOLEAN get_file( FILE, INT8U* );
+         ^~~~~~~~
+../file.h:16:15: warning: passing argument 1 of 'gfprintf' makes pointer from integer without a cast [-Wint-conversion]
+ #define COM2  1      // LCD
+               ^
+../key.c:186:29: note: in expansion of macro 'COM2'
+                   gfprintf( COM2, "%c%cS:%c", 0x1B, 0xC4, ch );
+                             ^~~~
+In file included from ../key.c:34:0:
+../string.h:10:12: note: expected 'FILE {aka unsigned char *}' but argument is of type 'int'
+ const void gfprintf( FILE, const char*, ...);
+            ^~~~~~~~
+In file included from ../key.c:33:0:
+../file.h:16:15: warning: passing argument 1 of 'gfprintf' makes pointer from integer without a cast [-Wint-conversion]
+ #define COM2  1      // LCD
+               ^
+../key.c:192:29: note: in expansion of macro 'COM2'
+                   gfprintf( COM2, "%c%c%c O:", 0x1B, 0xC7, ch );
+                             ^~~~
+In file included from ../key.c:34:0:
+../string.h:10:12: note: expected 'FILE {aka unsigned char *}' but argument is of type 'int'
+ const void gfprintf( FILE, const char*, ...);
+            ^~~~~~~~
+In file included from ../key.c:33:0:
+../file.h:16:15: warning: passing argument 1 of 'gfprintf' makes pointer from integer without a cast [-Wint-conversion]
+ #define COM2  1      // LCD
+               ^
+../key.c:198:29: note: in expansion of macro 'COM2'
+                   gfprintf( COM2, "%c%c%c", 0x1B, 0xCB, ch );
+                             ^~~~
+In file included from ../key.c:34:0:
+../string.h:10:12: note: expected 'FILE {aka unsigned char *}' but argument is of type 'int'
+ const void gfprintf( FILE, const char*, ...);
+            ^~~~~~~~
+In file included from ../key.c:33:0:
+../file.h:16:15: warning: passing argument 1 of 'gfprintf' makes pointer from integer without a cast [-Wint-conversion]
+ #define COM2  1      // LCD
+               ^
+../key.c:210:29: note: in expansion of macro 'COM2'
+                   gfprintf( COM2, "%c%c         ", 0x1B, 0xC3 );
+                             ^~~~
+In file included from ../key.c:34:0:
+../string.h:10:12: note: expected 'FILE {aka unsigned char *}' but argument is of type 'int'
+ const void gfprintf( FILE, const char*, ...);
+            ^~~~~~~~
+Finished building: "../key.c"
+ 
+Building target: "FinalAssignment.out"
+Invoking: GNU Linker
+"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/bin/arm-none-eabi-gcc.exe" -DPART_TM4C123GH6PM -Og -ffunction-sections -fdata-sections -g -gdwarf-3 -gstrict-dwarf -Wall -specs="nosys.specs" -march=armv7e-m -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -Wl,-Map,"FinalAssignment.map" -o"FinalAssignment.out" "./adc.o" "./digiswitch.o" "./file.o" "./gpio.o" "./heap_2.o" "./index.o" "./key.o" "./lcd.o" "./list.o" "./main.o" "./port.o" "./queue.o" "./startup_frt.o" "./status_led.o" "./string.o" "./systick_frt.o" "./tasks.o" -Wl,-T"../tm4c123gh6pm.lds"  
+Finished building target: "FinalAssignment.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project FinalAssignment ****
+
+"C:\\ti\\ccsv8\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+Building file: "../adc.c"
+Invoking: GNU Compiler
+"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/bin/arm-none-eabi-gcc.exe" -c -mcpu=cortex-m4 -march=armv7e-m -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DPART_TM4C123GH6PM -I"C:/Users/jinsk/workspace_v8/Embedded-Programming/FinalAssignment" -I"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/arm-none-eabi/include" -I"C:/Libraries/tm4c" -I"C:/Libraries/frt10/inc" -I"C:/Libraries/frt10/port/TivaM4" -I"C:/Libraries/emp" -Og -ffunction-sections -fdata-sections -g -gdwarf-3 -gstrict-dwarf -Wall -specs="nosys.specs" -MMD -MP -MF"adc.d" -MT"adc.o"   -o"adc.o" "../adc.c"
+../adc.c:13:1: warning: return type defaults to 'int' [-Wimplicit-int]
+ init_adc()
+ ^~~~~~~~
+../adc.c: In function 'init_adc':
+../adc.c:42:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+Finished building: "../adc.c"
+ 
+Building file: "../analog.c"
+Invoking: GNU Compiler
+"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/bin/arm-none-eabi-gcc.exe" -c -mcpu=cortex-m4 -march=armv7e-m -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DPART_TM4C123GH6PM -I"C:/Users/jinsk/workspace_v8/Embedded-Programming/FinalAssignment" -I"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/arm-none-eabi/include" -I"C:/Libraries/tm4c" -I"C:/Libraries/frt10/inc" -I"C:/Libraries/frt10/port/TivaM4" -I"C:/Libraries/emp" -Og -ffunction-sections -fdata-sections -g -gdwarf-3 -gstrict-dwarf -Wall -specs="nosys.specs" -MMD -MP -MF"analog.d" -MT"analog.o"   -o"analog.o" "../analog.c"
+../analog.c: In function 'ai_task':
+../analog.c:16:24: warning: implicit declaration of function 'get_adc' [-Wimplicit-function-declaration]
+             ai_value = get_adc();                       // get the value from the adc
+                        ^~~~~~~
+Finished building: "../analog.c"
+ 
+Building file: "../digiswitch.c"
+Invoking: GNU Compiler
+"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/bin/arm-none-eabi-gcc.exe" -c -mcpu=cortex-m4 -march=armv7e-m -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DPART_TM4C123GH6PM -I"C:/Users/jinsk/workspace_v8/Embedded-Programming/FinalAssignment" -I"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/arm-none-eabi/include" -I"C:/Libraries/tm4c" -I"C:/Libraries/frt10/inc" -I"C:/Libraries/frt10/port/TivaM4" -I"C:/Libraries/emp" -Og -ffunction-sections -fdata-sections -g -gdwarf-3 -gstrict-dwarf -Wall -specs="nosys.specs" -MMD -MP -MF"digiswitch.d" -MT"digiswitch.o"   -o"digiswitch.o" "../digiswitch.c"
+In file included from ../digiswitch.c:31:0:
+../digiswitch.c: In function 'driver':
+../file.h:16:15: warning: passing argument 1 of 'gfprintf' makes pointer from integer without a cast [-Wint-conversion]
+ #define COM2  1      // LCD
+               ^
+../digiswitch.c:104:27: note: in expansion of macro 'COM2'
+                 gfprintf( COM2, "%c%cANGLE:%03u CW", 0x1B, 0x84, (counter*12)%360);
+                           ^~~~
+In file included from ../digiswitch.c:32:0:
+../string.h:10:12: note: expected 'FILE {aka unsigned char *}' but argument is of type 'int'
+ const void gfprintf( FILE, const char*, ...);
+            ^~~~~~~~
+In file included from ../digiswitch.c:31:0:
+../file.h:16:15: warning: passing argument 1 of 'gfprintf' makes pointer from integer without a cast [-Wint-conversion]
+ #define COM2  1      // LCD
+               ^
+../digiswitch.c:107:27: note: in expansion of macro 'COM2'
+                 gfprintf( COM2, "%c%cANGLE:%03uCCW", 0x1B, 0x84, (counter*12)%360);
+                           ^~~~
+In file included from ../digiswitch.c:32:0:
+../string.h:10:12: note: expected 'FILE {aka unsigned char *}' but argument is of type 'int'
+ const void gfprintf( FILE, const char*, ...);
+            ^~~~~~~~
+In file included from ../digiswitch.c:31:0:
+../file.h:16:15: warning: passing argument 1 of 'gfprintf' makes pointer from integer without a cast [-Wint-conversion]
+ #define COM2  1      // LCD
+               ^
+../digiswitch.c:125:19: note: in expansion of macro 'COM2'
+         gfprintf( COM2, "%c%cPRESSED", 0x1B, 0xC4, btn_Pushed );
+                   ^~~~
+In file included from ../digiswitch.c:32:0:
+../string.h:10:12: note: expected 'FILE {aka unsigned char *}' but argument is of type 'int'
+ const void gfprintf( FILE, const char*, ...);
+            ^~~~~~~~
+In file included from ../digiswitch.c:31:0:
+../file.h:16:15: warning: passing argument 1 of 'gfprintf' makes pointer from integer without a cast [-Wint-conversion]
+ #define COM2  1      // LCD
+               ^
+../digiswitch.c:128:19: note: in expansion of macro 'COM2'
+         gfprintf( COM2, "%c%cUNPRESS", 0x1B, 0xC4, btn_Pushed );
+                   ^~~~
+In file included from ../digiswitch.c:32:0:
+../string.h:10:12: note: expected 'FILE {aka unsigned char *}' but argument is of type 'int'
+ const void gfprintf( FILE, const char*, ...);
+            ^~~~~~~~
+Finished building: "../digiswitch.c"
+ 
+Building file: "../file.c"
+Invoking: GNU Compiler
+"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/bin/arm-none-eabi-gcc.exe" -c -mcpu=cortex-m4 -march=armv7e-m -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DPART_TM4C123GH6PM -I"C:/Users/jinsk/workspace_v8/Embedded-Programming/FinalAssignment" -I"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/arm-none-eabi/include" -I"C:/Libraries/tm4c" -I"C:/Libraries/frt10/inc" -I"C:/Libraries/frt10/port/TivaM4" -I"C:/Libraries/emp" -Og -ffunction-sections -fdata-sections -g -gdwarf-3 -gstrict-dwarf -Wall -specs="nosys.specs" -MMD -MP -MF"file.d" -MT"file.o"   -o"file.o" "../file.c"
+../file.c: In function 'put_file':
+../file.c:49:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+Finished building: "../file.c"
+ 
+Building file: "../gpio.c"
+Invoking: GNU Compiler
+"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/bin/arm-none-eabi-gcc.exe" -c -mcpu=cortex-m4 -march=armv7e-m -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DPART_TM4C123GH6PM -I"C:/Users/jinsk/workspace_v8/Embedded-Programming/FinalAssignment" -I"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/arm-none-eabi/include" -I"C:/Libraries/tm4c" -I"C:/Libraries/frt10/inc" -I"C:/Libraries/frt10/port/TivaM4" -I"C:/Libraries/emp" -Og -ffunction-sections -fdata-sections -g -gdwarf-3 -gstrict-dwarf -Wall -specs="nosys.specs" -MMD -MP -MF"gpio.d" -MT"gpio.o"   -o"gpio.o" "../gpio.c"
+../gpio.c: In function 'init_gpio':
+../gpio.c:40:7: warning: variable 'dummy' set but not used [-Wunused-but-set-variable]
+   int dummy;
+       ^~~~~
+Finished building: "../gpio.c"
+ 
+Building file: "C:/Libraries/frt10/port/MemMang/heap_2.c"
+Invoking: GNU Compiler
+"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/bin/arm-none-eabi-gcc.exe" -c -mcpu=cortex-m4 -march=armv7e-m -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DPART_TM4C123GH6PM -I"C:/Users/jinsk/workspace_v8/Embedded-Programming/FinalAssignment" -I"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/arm-none-eabi/include" -I"C:/Libraries/tm4c" -I"C:/Libraries/frt10/inc" -I"C:/Libraries/frt10/port/TivaM4" -I"C:/Libraries/emp" -Og -ffunction-sections -fdata-sections -g -gdwarf-3 -gstrict-dwarf -Wall -specs="nosys.specs" -MMD -MP -MF"heap_2.d" -MT"heap_2.o"   -o"heap_2.o" "C:/Libraries/frt10/port/MemMang/heap_2.c"
+Finished building: "C:/Libraries/frt10/port/MemMang/heap_2.c"
+ 
+Building file: "../key.c"
+Invoking: GNU Compiler
+"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/bin/arm-none-eabi-gcc.exe" -c -mcpu=cortex-m4 -march=armv7e-m -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DPART_TM4C123GH6PM -I"C:/Users/jinsk/workspace_v8/Embedded-Programming/FinalAssignment" -I"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/arm-none-eabi/include" -I"C:/Libraries/tm4c" -I"C:/Libraries/frt10/inc" -I"C:/Libraries/frt10/port/TivaM4" -I"C:/Libraries/emp" -Og -ffunction-sections -fdata-sections -g -gdwarf-3 -gstrict-dwarf -Wall -specs="nosys.specs" -MMD -MP -MF"key.d" -MT"key.o"   -o"key.o" "../key.c"
+Finished building: "../key.c"
+ 
+Building file: "../lcd.c"
+Invoking: GNU Compiler
+"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/bin/arm-none-eabi-gcc.exe" -c -mcpu=cortex-m4 -march=armv7e-m -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DPART_TM4C123GH6PM -I"C:/Users/jinsk/workspace_v8/Embedded-Programming/FinalAssignment" -I"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/arm-none-eabi/include" -I"C:/Libraries/tm4c" -I"C:/Libraries/frt10/inc" -I"C:/Libraries/frt10/port/TivaM4" -I"C:/Libraries/emp" -Og -ffunction-sections -fdata-sections -g -gdwarf-3 -gstrict-dwarf -Wall -specs="nosys.specs" -MMD -MP -MF"lcd.d" -MT"lcd.o"   -o"lcd.o" "../lcd.c"
+In file included from ../lcd.c:26:0:
+../lcd.c: In function 'clr_LCD':
+../file.h:16:15: warning: passing argument 1 of 'gfprintf' makes pointer from integer without a cast [-Wint-conversion]
+ #define COM2  1      // LCD
+               ^
+../lcd.c:205:12: note: in expansion of macro 'COM2'
+   gfprintf(COM2, "%c%c                                                                                       ", 0x1B, 0x80);
+            ^~~~
+In file included from ../lcd.c:27:0:
+../string.h:10:12: note: expected 'FILE {aka unsigned char *}' but argument is of type 'int'
+ const void gfprintf( FILE, const char*, ...);
+            ^~~~~~~~
+Finished building: "../lcd.c"
+ 
+Building file: "C:/Libraries/frt10/src/list.c"
+Invoking: GNU Compiler
+"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/bin/arm-none-eabi-gcc.exe" -c -mcpu=cortex-m4 -march=armv7e-m -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DPART_TM4C123GH6PM -I"C:/Users/jinsk/workspace_v8/Embedded-Programming/FinalAssignment" -I"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/arm-none-eabi/include" -I"C:/Libraries/tm4c" -I"C:/Libraries/frt10/inc" -I"C:/Libraries/frt10/port/TivaM4" -I"C:/Libraries/emp" -Og -ffunction-sections -fdata-sections -g -gdwarf-3 -gstrict-dwarf -Wall -specs="nosys.specs" -MMD -MP -MF"list.d" -MT"list.o"   -o"list.o" "C:/Libraries/frt10/src/list.c"
+Finished building: "C:/Libraries/frt10/src/list.c"
+ 
+Building file: "../main.c"
+Invoking: GNU Compiler
+"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/bin/arm-none-eabi-gcc.exe" -c -mcpu=cortex-m4 -march=armv7e-m -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DPART_TM4C123GH6PM -I"C:/Users/jinsk/workspace_v8/Embedded-Programming/FinalAssignment" -I"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/arm-none-eabi/include" -I"C:/Libraries/tm4c" -I"C:/Libraries/frt10/inc" -I"C:/Libraries/frt10/port/TivaM4" -I"C:/Libraries/emp" -Og -ffunction-sections -fdata-sections -g -gdwarf-3 -gstrict-dwarf -Wall -specs="nosys.specs" -MMD -MP -MF"main.d" -MT"main.o"   -o"main.o" "../main.c"
+../main.c: In function 'setupHardware':
+../main.c:66:5: warning: implicit declaration of function 'init_adc'; did you mean 'init_gpio'? [-Wimplicit-function-declaration]
+     init_adc();
+     ^~~~~~~~
+     init_gpio
+../main.c:67:5: warning: implicit declaration of function 'init_files'; did you mean 'init_gpio'? [-Wimplicit-function-declaration]
+     init_files();
+     ^~~~~~~~~~
+     init_gpio
+Finished building: "../main.c"
+ 
+Building file: "C:/Libraries/frt10/port/TivaM4/port.c"
+Invoking: GNU Compiler
+"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/bin/arm-none-eabi-gcc.exe" -c -mcpu=cortex-m4 -march=armv7e-m -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DPART_TM4C123GH6PM -I"C:/Users/jinsk/workspace_v8/Embedded-Programming/FinalAssignment" -I"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/arm-none-eabi/include" -I"C:/Libraries/tm4c" -I"C:/Libraries/frt10/inc" -I"C:/Libraries/frt10/port/TivaM4" -I"C:/Libraries/emp" -Og -ffunction-sections -fdata-sections -g -gdwarf-3 -gstrict-dwarf -Wall -specs="nosys.specs" -MMD -MP -MF"port.d" -MT"port.o"   -o"port.o" "C:/Libraries/frt10/port/TivaM4/port.c"
+Finished building: "C:/Libraries/frt10/port/TivaM4/port.c"
+ 
+Building file: "../scale.c"
+Invoking: GNU Compiler
+"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/bin/arm-none-eabi-gcc.exe" -c -mcpu=cortex-m4 -march=armv7e-m -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DPART_TM4C123GH6PM -I"C:/Users/jinsk/workspace_v8/Embedded-Programming/FinalAssignment" -I"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/arm-none-eabi/include" -I"C:/Libraries/tm4c" -I"C:/Libraries/frt10/inc" -I"C:/Libraries/frt10/port/TivaM4" -I"C:/Libraries/emp" -Og -ffunction-sections -fdata-sections -g -gdwarf-3 -gstrict-dwarf -Wall -specs="nosys.specs" -MMD -MP -MF"scale.d" -MT"scale.o"   -o"scale.o" "../scale.c"
+Finished building: "../scale.c"
+ 
+Building file: "C:/Libraries/frt10/src/queue.c"
+Invoking: GNU Compiler
+"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/bin/arm-none-eabi-gcc.exe" -c -mcpu=cortex-m4 -march=armv7e-m -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DPART_TM4C123GH6PM -I"C:/Users/jinsk/workspace_v8/Embedded-Programming/FinalAssignment" -I"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/arm-none-eabi/include" -I"C:/Libraries/tm4c" -I"C:/Libraries/frt10/inc" -I"C:/Libraries/frt10/port/TivaM4" -I"C:/Libraries/emp" -Og -ffunction-sections -fdata-sections -g -gdwarf-3 -gstrict-dwarf -Wall -specs="nosys.specs" -MMD -MP -MF"queue.d" -MT"queue.o"   -o"queue.o" "C:/Libraries/frt10/src/queue.c"
+C:/Libraries/frt10/src/queue.c: In function 'prvCopyDataToQueue':
+C:/Libraries/frt10/src/queue.c:2098:12: warning: implicit declaration of function 'memcpy' [-Wimplicit-function-declaration]
+   ( void ) memcpy( ( void * ) pxQueue->pcWriteTo, pvItemToQueue, ( size_t ) pxQueue->uxItemSize ); /*lint !e961 !e418 !e9087 MISRA exception as the casts are only redundant for some ports, plus previous logic ensures a null pointer can only be passed to memcpy() if the copy size is 0.  Cast to void required by function signature and safe as no alignment requirement and copy length specified in bytes. */
+            ^~~~~~
+C:/Libraries/frt10/src/queue.c:2098:12: warning: incompatible implicit declaration of built-in function 'memcpy'
+C:/Libraries/frt10/src/queue.c:2098:12: note: include '<string.h>' or provide a declaration of 'memcpy'
+C:/Libraries/frt10/src/queue.c:2111:12: warning: incompatible implicit declaration of built-in function 'memcpy'
+   ( void ) memcpy( ( void * ) pxQueue->u.xQueue.pcReadFrom, pvItemToQueue, ( size_t ) pxQueue->uxItemSize ); /*lint !e961 !e9087 !e418 MISRA exception as the casts are only redundant for some ports.  Cast to void required by function signature and safe as no alignment requirement and copy length specified in bytes.  Assert checks null pointer only used when length is 0. */
+            ^~~~~~
+C:/Libraries/frt10/src/queue.c:2111:12: note: include '<string.h>' or provide a declaration of 'memcpy'
+C:/Libraries/frt10/src/queue.c: In function 'prvCopyDataFromQueue':
+C:/Libraries/frt10/src/queue.c:2162:12: warning: incompatible implicit declaration of built-in function 'memcpy'
+   ( void ) memcpy( ( void * ) pvBuffer, ( void * ) pxQueue->u.xQueue.pcReadFrom, ( size_t ) pxQueue->uxItemSize ); /*lint !e961 !e418 !e9087 MISRA exception as the casts are only redundant for some ports.  Also previous logic ensures a null pointer can only be passed to memcpy() when the count is 0.  Cast to void required by function signature and safe as no alignment requirement and copy length specified in bytes. */
+            ^~~~~~
+C:/Libraries/frt10/src/queue.c:2162:12: note: include '<string.h>' or provide a declaration of 'memcpy'
+Finished building: "C:/Libraries/frt10/src/queue.c"
+ 
+Building file: "C:/Libraries/frt10/port/TivaM4/startup_frt.c"
+Invoking: GNU Compiler
+"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/bin/arm-none-eabi-gcc.exe" -c -mcpu=cortex-m4 -march=armv7e-m -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DPART_TM4C123GH6PM -I"C:/Users/jinsk/workspace_v8/Embedded-Programming/FinalAssignment" -I"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/arm-none-eabi/include" -I"C:/Libraries/tm4c" -I"C:/Libraries/frt10/inc" -I"C:/Libraries/frt10/port/TivaM4" -I"C:/Libraries/emp" -Og -ffunction-sections -fdata-sections -g -gdwarf-3 -gstrict-dwarf -Wall -specs="nosys.specs" -MMD -MP -MF"startup_frt.d" -MT"startup_frt.o"   -o"startup_frt.o" "C:/Libraries/frt10/port/TivaM4/startup_frt.c"
+Finished building: "C:/Libraries/frt10/port/TivaM4/startup_frt.c"
+ 
+Building file: "../status_led.c"
+Invoking: GNU Compiler
+"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/bin/arm-none-eabi-gcc.exe" -c -mcpu=cortex-m4 -march=armv7e-m -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DPART_TM4C123GH6PM -I"C:/Users/jinsk/workspace_v8/Embedded-Programming/FinalAssignment" -I"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/arm-none-eabi/include" -I"C:/Libraries/tm4c" -I"C:/Libraries/frt10/inc" -I"C:/Libraries/frt10/port/TivaM4" -I"C:/Libraries/emp" -Og -ffunction-sections -fdata-sections -g -gdwarf-3 -gstrict-dwarf -Wall -specs="nosys.specs" -MMD -MP -MF"status_led.d" -MT"status_led.o"   -o"status_led.o" "../status_led.c"
+../status_led.c: In function 'status_led_init':
+../status_led.c:49:9: warning: variable 'dummy' set but not used [-Wunused-but-set-variable]
+   INT8S dummy;
+         ^~~~~
+Finished building: "../status_led.c"
+ 
+Building file: "C:/Libraries/frt10/port/TivaM4/systick_frt.c"
+Invoking: GNU Compiler
+"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/bin/arm-none-eabi-gcc.exe" -c -mcpu=cortex-m4 -march=armv7e-m -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DPART_TM4C123GH6PM -I"C:/Users/jinsk/workspace_v8/Embedded-Programming/FinalAssignment" -I"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/arm-none-eabi/include" -I"C:/Libraries/tm4c" -I"C:/Libraries/frt10/inc" -I"C:/Libraries/frt10/port/TivaM4" -I"C:/Libraries/emp" -Og -ffunction-sections -fdata-sections -g -gdwarf-3 -gstrict-dwarf -Wall -specs="nosys.specs" -MMD -MP -MF"systick_frt.d" -MT"systick_frt.o"   -o"systick_frt.o" "C:/Libraries/frt10/port/TivaM4/systick_frt.c"
+C:/Libraries/frt10/port/TivaM4/systick_frt.c: In function 'init_systick':
+C:/Libraries/frt10/port/TivaM4/systick_frt.c:75:63: warning: result of '126 << 29' requires 37 bits to represent, but 'int' only has 32 bits [-Wshift-overflow=]
+   NVIC_SYS_PRI3_R |= (NVIC_SYS_PRI3_TICK_M & (SYSTICK_PRIORITY<<NVIC_SYS_PRI3_TICK_S));
+                                                               ^~
+Finished building: "C:/Libraries/frt10/port/TivaM4/systick_frt.c"
+ 
+Building file: "../string.c"
+Invoking: GNU Compiler
+"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/bin/arm-none-eabi-gcc.exe" -c -mcpu=cortex-m4 -march=armv7e-m -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DPART_TM4C123GH6PM -I"C:/Users/jinsk/workspace_v8/Embedded-Programming/FinalAssignment" -I"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/arm-none-eabi/include" -I"C:/Libraries/tm4c" -I"C:/Libraries/frt10/inc" -I"C:/Libraries/frt10/port/TivaM4" -I"C:/Libraries/emp" -Og -ffunction-sections -fdata-sections -g -gdwarf-3 -gstrict-dwarf -Wall -specs="nosys.specs" -MMD -MP -MF"string.d" -MT"string.o"   -o"string.o" "../string.c"
+../string.c: In function 'putc1':
+../string.c:17:11: warning: comparison between pointer and integer
+   if( *fp < 0x20000000 )           // It is a file
+           ^
+../string.c: In function 'gprint':
+../string.c:143:9: warning: unused variable 'pParam' [-Wunused-variable]
+   void *pParam;
+         ^~~~~~
+Finished building: "../string.c"
+ 
+Building file: "../ui.c"
+Invoking: GNU Compiler
+"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/bin/arm-none-eabi-gcc.exe" -c -mcpu=cortex-m4 -march=armv7e-m -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DPART_TM4C123GH6PM -I"C:/Users/jinsk/workspace_v8/Embedded-Programming/FinalAssignment" -I"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/arm-none-eabi/include" -I"C:/Libraries/tm4c" -I"C:/Libraries/frt10/inc" -I"C:/Libraries/frt10/port/TivaM4" -I"C:/Libraries/emp" -Og -ffunction-sections -fdata-sections -g -gdwarf-3 -gstrict-dwarf -Wall -specs="nosys.specs" -MMD -MP -MF"ui.d" -MT"ui.o"   -o"ui.o" "../ui.c"
+In file included from ../string.h:7:0,
+                 from ../ui.c:5:
+../ui.c: In function 'ui_task':
+../file.h:16:15: warning: passing argument 1 of 'gfprintf' makes pointer from integer without a cast [-Wint-conversion]
+ #define COM2  1      // LCD
+               ^
+../ui.c:28:18: note: in expansion of macro 'COM2'
+         gfprintf(COM2, "%c%cValue: %05u", 0x1B, 0x80, adjusted_value);  // the adjusted value is shown on the first line of the display. this is done outside the state machine so it's displayed all the time
+                  ^~~~
+In file included from ../ui.c:5:0:
+../string.h:10:12: note: expected 'FILE {aka unsigned char *}' but argument is of type 'int'
+ const void gfprintf( FILE, const char*, ...);
+            ^~~~~~~~
+In file included from ../string.h:7:0,
+                 from ../ui.c:5:
+../file.h:16:15: warning: passing argument 1 of 'gfprintf' makes pointer from integer without a cast [-Wint-conversion]
+ #define COM2  1      // LCD
+               ^
+../ui.c:32:22: note: in expansion of macro 'COM2'
+             gfprintf(COM2, "%c%cScale:         ", 0x1B, 0xA8);          // "Scale:" is printed on the second line of the display
+                      ^~~~
+In file included from ../ui.c:5:0:
+../string.h:10:12: note: expected 'FILE {aka unsigned char *}' but argument is of type 'int'
+ const void gfprintf( FILE, const char*, ...);
+            ^~~~~~~~
+In file included from ../string.h:7:0,
+                 from ../ui.c:5:
+../file.h:16:15: warning: passing argument 1 of 'gfprintf' makes pointer from integer without a cast [-Wint-conversion]
+ #define COM2  1      // LCD
+               ^
+../ui.c:41:22: note: in expansion of macro 'COM2'
+             gfprintf(COM2, "%c%cOffset:", 0x1B, 0xA8);                  // "Offset:" is printed on the second line of the display
+                      ^~~~
+In file included from ../ui.c:5:0:
+../string.h:10:12: note: expected 'FILE {aka unsigned char *}' but argument is of type 'int'
+ const void gfprintf( FILE, const char*, ...);
+            ^~~~~~~~
+In file included from ../string.h:7:0,
+                 from ../ui.c:5:
+../file.h:16:15: warning: passing argument 1 of 'gfprintf' makes pointer from integer without a cast [-Wint-conversion]
+ #define COM2  1      // LCD
+               ^
+../ui.c:45:26: note: in expansion of macro 'COM2'
+                 gfprintf(COM2, "%c%c%c", 0x1B, 0xC9, key);              // the digit is printed on the second line (after "Offset:")
+                          ^~~~
+In file included from ../ui.c:5:0:
+../string.h:10:12: note: expected 'FILE {aka unsigned char *}' but argument is of type 'int'
+ const void gfprintf( FILE, const char*, ...);
+            ^~~~~~~~
+In file included from ../string.h:7:0,
+                 from ../ui.c:5:
+../file.h:16:15: warning: passing argument 1 of 'gfprintf' makes pointer from integer without a cast [-Wint-conversion]
+ #define COM2  1      // LCD
+               ^
+../ui.c:54:26: note: in expansion of macro 'COM2'
+                 gfprintf(COM2, "%c%c%c", 0x1B, 0xCA, key);
+                          ^~~~
+In file included from ../ui.c:5:0:
+../string.h:10:12: note: expected 'FILE {aka unsigned char *}' but argument is of type 'int'
+ const void gfprintf( FILE, const char*, ...);
+            ^~~~~~~~
+In file included from ../string.h:7:0,
+                 from ../ui.c:5:
+../file.h:16:15: warning: passing argument 1 of 'gfprintf' makes pointer from integer without a cast [-Wint-conversion]
+ #define COM2  1      // LCD
+               ^
+../ui.c:63:26: note: in expansion of macro 'COM2'
+                 gfprintf(COM2, "%c%c%c", 0x1B, 0xCB, key);
+                          ^~~~
+In file included from ../ui.c:5:0:
+../string.h:10:12: note: expected 'FILE {aka unsigned char *}' but argument is of type 'int'
+ const void gfprintf( FILE, const char*, ...);
+            ^~~~~~~~
+Finished building: "../ui.c"
+ 
+Building file: "C:/Libraries/frt10/src/tasks.c"
+Invoking: GNU Compiler
+"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/bin/arm-none-eabi-gcc.exe" -c -mcpu=cortex-m4 -march=armv7e-m -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DPART_TM4C123GH6PM -I"C:/Users/jinsk/workspace_v8/Embedded-Programming/FinalAssignment" -I"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/arm-none-eabi/include" -I"C:/Libraries/tm4c" -I"C:/Libraries/frt10/inc" -I"C:/Libraries/frt10/port/TivaM4" -I"C:/Libraries/emp" -Og -ffunction-sections -fdata-sections -g -gdwarf-3 -gstrict-dwarf -Wall -specs="nosys.specs" -MMD -MP -MF"tasks.d" -MT"tasks.o"   -o"tasks.o" "C:/Libraries/frt10/src/tasks.c"
+Finished building: "C:/Libraries/frt10/src/tasks.c"
+ 
+Building target: "FinalAssignment.out"
+Invoking: GNU Linker
+"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/bin/arm-none-eabi-gcc.exe" -DPART_TM4C123GH6PM -Og -ffunction-sections -fdata-sections -g -gdwarf-3 -gstrict-dwarf -Wall -specs="nosys.specs" -march=armv7e-m -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -Wl,-Map,"FinalAssignment.map" -o"FinalAssignment.out" "./adc.o" "./analog.o" "./digiswitch.o" "./file.o" "./gpio.o" "./heap_2.o" "./key.o" "./lcd.o" "./list.o" "./main.o" "./port.o" "./queue.o" "./scale.o" "./startup_frt.o" "./status_led.o" "./string.o" "./systick_frt.o" "./tasks.o" "./ui.o" -Wl,-T"../tm4c123gh6pm.lds"  
+Finished building target: "FinalAssignment.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project FinalAssignment ****
+
+"C:\\ti\\ccsv8\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+gmake[1]: 'FinalAssignment.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project FinalAssignment ****
+
+"C:\\ti\\ccsv8\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+gmake[1]: 'FinalAssignment.out' is up to date.
+
+**** Build Finished ****
