@@ -53,7 +53,8 @@ INT8U btn_State;
 INT8U current_Dir=1;//CCW or CW
 INT8U CCW = 0;//can be used later as an indicator for the driver
 INT8U CW = 1;//can be used later as an indicator for the driver
-INT8U counter = 120;
+INT8U counter = 0;
+INT8U anticounter =0;
 
 INT8U btn_Pushed;//if button is pushed, digit is set to 1, otherwise it is set to 0
 
@@ -81,36 +82,29 @@ void driver()
 
             if(A==B){
                 if(YY==1){
-                    counter--;
-                    current_Dir=CCW;
+                    anticounter++;
                 }
                 else if(YY==2){
                     counter++;
-                    current_Dir=CW;
                 }
             }
 
             else{
                 if(YY==1){
                     counter++;
-                    current_Dir=CW;
                  }
                 else if(YY==2){
-                    counter--;
-                    current_Dir=CCW;
+                    anticounter++;
                 }
             }
-            if(current_Dir){
-                gfprintf( COM2, "%c%cANGLE:%03u CW", 0x1B, 0x84, (counter*12)%360);
-            }
-            else{
-                gfprintf( COM2, "%c%cANGLE:%03uCCW", 0x1B, 0x84, (counter*12)%360);
-            }
+
+                gfprintf(COM2, "%c%cCREDIT:%5uDKK", 0x1B, 0xA8,counter*50-anticounter*5);
+
             LAST_AB=AB;
         }
 
 
-
+/*
         btn_State = GPIO_PORTA_DATA_R & 0x80;
 
         if (btn_State == 0) {
@@ -127,7 +121,7 @@ void driver()
         else{
         gfprintf( COM2, "%c%cUNPRESS", 0x1B, 0xC4, btn_Pushed );
         }
-
+*/
 
         vTaskDelay(5 / portTICK_RATE_MS);
     }
