@@ -34,6 +34,7 @@
 #include "scale.h"
 #include "analog.h"
 #include "button.h"
+#include "file.h"
 /*****************************    Defines    *******************************/
 #define CARD 1
 #define CASH 2
@@ -98,6 +99,15 @@ void gas_pump()
     if(key_input == CARD){
         if( button_pushed()){
             //print out information
+			counter_leds( 1 );//RED LIGHT
+            if (lever() == 4){
+                counter(key_input, gas_price);
+            }
+        }
+    }else if(key_input == CASH){
+        if( button_pushed()){
+            //print out information
+			counter_leds( 1 );//RED LIGHT
             if (lever() == 4){
                 counter(key_input, gas_price);
             }
