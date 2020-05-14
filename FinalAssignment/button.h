@@ -36,6 +36,7 @@ INT8U lever(void);
 *   Function : Test function
 ******************************************************************************/
 INT8U button_pushed();
+INT8U button_pushed_SW2();
 
 /****************************** End Of Module *******************************/
 #endif /*BUTTON_H_*/

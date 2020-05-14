@@ -41,6 +41,11 @@ INT8U button_pushed()
   return( !(GPIO_PORTF_DATA_R & 0x10) );  // SW1 at PF4
 }
 
+INT8U button_pushed_SW2()
+{
+  return( !(GPIO_PORTF_DATA_R & 0x01) );  // SW2 at PF0
+}
+
 INT8U lever(void)
 /*****************************************************************************
 *   Input    :
@@ -55,7 +60,7 @@ INT8U lever(void)
   switch( button_state )
   {
     case BS_IDLE:
-	    if( button_pushed( ))		// if button pushed
+	    if( button_pushed_SW2( ))		// if button pushed
 	    {
   	    button_state = BS_FIRST_PUSH;
 		    button_timer = TIM_2_SEC;		// start timer = 2 sek;
@@ -69,7 +74,7 @@ INT8U lever(void)
 	    }
 	    else
 	    {
-        if(  !button_pushed( ) )	// if button released
+        if(  !button_pushed_SW2( ) )	// if button released
 		    {
 	        button_state = BS_FIRST_RELEASE;
 		      button_timer = TIM_50_SEC;	// start timer = 50 sek;
@@ -84,7 +89,7 @@ INT8U lever(void)
 	    }
 	    else
 	    {
-        if(  button_pushed(  ))		// if button pressed
+        if(  button_pushed_SW2(  ))		// if button pressed
 		    {
 	        button_state = BS_SECOND_PUSH;
 		      button_timer = TIM_2_SEC;		// start timer = 2 sek;
@@ -99,7 +104,7 @@ INT8U lever(void)
 	    }
 	    else
 	    {
-        if( ! button_pushed( ) )					// if button released
+        if( ! button_pushed_SW2( ) )					// if button released
 		    {
 	        button_state = BS_IDLE;
 		      button_event = BE_DOUBBLE_PUSH;
@@ -107,13 +112,13 @@ INT8U lever(void)
 	    }
 	    break;
     case BS_LONG_PUSH:
-      if( ! button_pushed(  ) )					// if button released
+      if( ! button_pushed_SW2(  ) )					// if button released
 	      button_state = BS_IDLE;
 	    break;
     default:
       break;
   }
-  return( button_event );
+  return( button_state );
 }
 
 /****************************** End Of Module *******************************/

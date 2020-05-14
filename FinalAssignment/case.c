@@ -41,19 +41,23 @@
 #define LEADFREE95  2
 #define DIESEL 3
 
+INT8U key_input;
+INT8U gas_choice;
+INT8U gas_price;
+
 void case_int()
 {
-	INT8U key_input = get_keyboad();//this is supposed to read the keypad input and return a number
+	key_input = get_keyboad();//this is supposed to read the keypad input and return a number
 
 	switch(key_input){
 		case CARD://1 is CARD
 			CARD_PIN = ;//here should exists a string read from the keypad, which will be later used to verify the CAR NUMBER AND PIN; this number should be a 12-digit number, where the 8 and 12 digit is compared
 			CARD_NUM = CARD_PIN >> 16;
 			if (0x0001 & CARD_PIN != 0x0001 & CARD_NUM){
-				gfprintf(COM2, "GAS TYPE:"); //display the gas prices
-				gfprintf(COM2, "1: #92 = 8.49; 2: #95 = 8.79; 3: DIESEL = 8.12");
-				INT8U gas_choice = get_keyboard();//read from keypad
-				INT8U gas_price = 0;
+				gfprintf(COM2, "%c%cGAS TYPE:",0x1B, 0x80); //display the gas prices
+				gfprintf(COM2, "%c%c1: #92 = 8.49; 2: #95 = 8.79; 3: DIESEL = 8.12",0x1B, 0x80);
+				gas_choice = get_keyboard();//read from keypad
+				gas_price = 0;
 				switch(gas_choice){
 					case LEADFREE92://#92
 						gas_price = 8.49;
@@ -69,10 +73,10 @@ void case_int()
 			break;
 		case CASH:// 2 is CASH
 			digi_price();//read digiswitch
-			gfprintf(COM2, "GAS TYPE:"); //display the gas prices
-			gfprintf(COM2, "1: #92 = 8.49; 2: #95 = 8.79; 3: DIESEL = 8.12");//display the gas prices
-			INT8U gas_choice = get_keyboard();//read from keypad
-			INT8U gas_price = 0;
+            gfprintf(COM2, "%c%cGAS TYPE:",0x1B, 0x80); //display the gas prices
+            gfprintf(COM2, "%c%c1: #92 = 8.49; 2: #95 = 8.79; 3: DIESEL = 8.12",0x1B, 0x80);
+			gas_choice = get_keyboard();//read from keypad
+			gas_price = 0;
 			switch(gas_choice){
 				case LEADFREE92://#92
 					gas_price = 8.49;
@@ -93,7 +97,10 @@ void gas_pump()
 	case_int();
     if(key_input == CARD){
         if( button_pushed()){
-            
+            //print out information
+            if (lever() == 4){
+                counter(key_input, gas_price);
+            }
         }
     }
 	
