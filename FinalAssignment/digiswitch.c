@@ -54,6 +54,7 @@ INT8U current_Dir=1;//CCW or CW
 INT8U CCW = 0;//can be used later as an indicator for the driver
 INT8U CW = 1;//can be used later as an indicator for the driver
 INT8U counter = 120;
+INT8U total_price = 0;
 
 INT8U btn_Pushed;//if button is pushed, digit is set to 1, otherwise it is set to 0
 
@@ -133,6 +134,59 @@ void driver()
     }
 }
 
+void digi_price()
+/*****************************************************************************
+*   Input    :
+*   Output   :
+*   Function :
+******************************************************************************/
+{
+    //LAST_A=(GPIO_PORTA_DATA_R & 0x20)/0x20;
+    LAST_AB = (GPIO_PORTA_DATA_R & 0x60)/0x20;
+    while (1) {
+
+        A = (GPIO_PORTA_DATA_R & 0x20)/0x20;//read the current state of input A
+        B = (GPIO_PORTA_DATA_R & 0x40)/0x40;//read the current state of input B
+        AB = (GPIO_PORTA_DATA_R & 0x60)/0x20;
+
+        if(AB!=LAST_AB){
+
+            YY=AB^LAST_AB;
+
+            if(A==B){
+                if(YY==1){
+                    total_price+=10;
+                    current_Dir=CCW;
+                }
+                else if(YY==2){
+                    total_price+=100;
+                    current_Dir=CW;
+                }
+            }
+
+            else{
+                if(YY==1){
+                    total_price+=100;
+                    current_Dir=CW;
+                 }
+                else if(YY==2){
+                    total_price+=10;
+                    current_Dir=CCW;
+                }
+            }
+            if(current_Dir){
+                gfprintf( COM2, "%c%cCHARGE:%03u", 0x1B, 0x84, total_price);
+            }
+            else{
+                gfprintf( COM2, "%c%cCHARGE:%03u", 0x1B, 0x84, total_price);
+            }
+            LAST_AB=AB;
+        }
+
+
+        vTaskDelay(5 / portTICK_RATE_MS);
+    }
+}
 
 /*****************************************************************************
 

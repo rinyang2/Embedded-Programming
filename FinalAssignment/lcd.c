@@ -50,7 +50,7 @@ const INT8U LCD_init_sequense[]=
   0x0C,		// Display ON, Cursor OFF, Blink OFF
   0x06,		// Cursor Increment
   0x01,		// Clear Display
-  0x02,     	// Home
+  0x02,   // Home
   0xFF		// stop
 }; 
 
