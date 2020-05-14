@@ -16,7 +16,7 @@ void ui_task(void *pvParameters)
 {
     INT8U temp =0;
     INT8U cnt =12;
-    INT8U buf[12]={0,};
+    INT8U buf[12]=0;
     while(1){
         INT8U key = 0;
         key = get_keyboard();
@@ -26,10 +26,12 @@ void ui_task(void *pvParameters)
             driver();
         }
         else if(key=='2'){
-            switch(temp){
-            case 0:key = get_keyboard();  break;
-            case 1:key = get_keyboard();
-            }
+             while(cnt--){
+                 key = get_keyboard();
+                 buf[temp]=key;
+                 gfprintf(COM2, "%c%c%c", 0x1B, 0xC0+temp, buf[temp]);
+                 temp++;
+             }
 
 
         }
