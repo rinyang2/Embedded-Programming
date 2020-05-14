@@ -33,6 +33,7 @@
 #include "semphr.h"
 #include "scale.h"
 #include "analog.h"
+#include "button.h"
 
 
 /*****************************    Defines    *******************************/
@@ -66,6 +67,7 @@ static void setupHardware(void)
     init_adc();
     init_files();
 }
+<<<<<<< HEAD
 /*
 int void case_int()
 {
@@ -113,6 +115,10 @@ int void case_int()
 	}
 }
 */
+=======
+
+
+>>>>>>> 7facc3fd44c6b01bdd6442198123a44e964b3318
 int main(void)
 /*****************************************************************************
 *   Input    :
