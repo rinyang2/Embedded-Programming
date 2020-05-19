@@ -54,12 +54,14 @@ INT8U read_card()
 ******************************************************************************/
 {
     INT8U ui_state = 0;
-
+    INT8U valid=0;
 
     while(1)
     {
         INT8U key = 0;
-        gfprintf(COM2, "%c%cENTER CARD NUM", 0x1B, 0x80);
+        gfprintf(COM2, "%c%cCARD     PIN ", 0x1B, 0x80);
+
+
         switch(ui_state)
         {
         case 0:
@@ -124,54 +126,48 @@ INT8U read_card()
             {
                 gfprintf(COM2, "%c%c%c", 0x1B, 0xC0+ui_state, key);
                 ui_state = 8;
+                valid = key-'0'; //last digit of card number
             }
-            return key-'0';
+            break;
+
+
+        case 8:
+            key = get_keyboard();
+            if( key >= '0' && key <= '9')
+            {
+                gfprintf(COM2, "%c%c%c", 0x1B, 0xC1+ui_state, key);
+                ui_state = 9;
+            }
+            break;
+        case 9:
+            key = get_keyboard();
+            if( key >= '0' && key <= '9')
+            {
+                gfprintf(COM2, "%c%c%c", 0x1B, 0xC1+ui_state, key);
+                ui_state = 10;
+            }
+            break;
+        case 10:
+            key = get_keyboard();
+            if( key >= '0' && key <= '9')
+            {
+                gfprintf(COM2, "%c%c%c", 0x1B, 0xC1+ui_state, key);
+                ui_state = 11;
+            }
+            break;
+        case 11:
+            key = get_keyboard();
+            if( key >= '0' && key <= '9')
+            {
+                gfprintf(COM2, "%c%c%c", 0x1B, 0xC1+ui_state, key);
+                ui_state = 12;
+                valid += key-'0'; //last digit of pin number
+            }
+            break;
         }
-    }
-};
 
-INT16U read_pin()
-{
-    INT8U ui_state = 0;
-
-
-    while(1)
-    {
-        INT8U key = 0;
-        gfprintf(COM2, "%c%cENTER CARD NUM", 0x1B, 0x80);
-        switch(ui_state)
-        {
-        case 0:
-            key = get_keyboard();
-            if( key >= '0' && key <= '9')
-            {
-                gfprintf(COM2, "%c%c%c", 0x1B, 0xC0+ui_state, key);
-                ui_state = 1;
-            }
-            break;
-        case 1:
-            key = get_keyboard();
-            if( key >= '0' && key <= '9')
-            {
-                gfprintf(COM2, "%c%c%c", 0x1B, 0xC0+ui_state, key);
-                ui_state = 2;
-            }
-            break;
-        case 2:
-            key = get_keyboard();
-            if( key >= '0' && key <= '9')
-            {
-                gfprintf(COM2, "%c%c%c", 0x1B, 0xC0+ui_state, key);
-                ui_state = 3;
-            }
-            break;
-        case 3:
-            key = get_keyboard();
-            if( key >= '0' && key <= '9')
-            {
-                gfprintf(COM2, "%c%c%c", 0x1B, 0xC0+ui_state, key);
-            }
-            return key-'0';
+        if(ui_state==12){
+            return valid % 2;
         }
     }
 };

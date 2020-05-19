@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;FinalAssignment/digiswitch.c&apos; to &apos;cash_insert.c&apos;" description="Rename resource &apos;digiswitch.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="digiswitch.c" name="cash_insert.c" stamp="1589908753121" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;FinalAssignment/cash_insert.c&apos; to &apos;digiswitch.c&apos;" description="Rename resource &apos;cash_insert.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="cash_insert.c" name="digiswitch.c" stamp="1589908769448" updateReferences="true"/>
+</session>

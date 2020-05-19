@@ -9,8 +9,6 @@
 #define READ_CARD_H_
 
 
-INT32U read_card();
-INT16U read_pin();
-
+INT8U read_card();
 
 #endif /* READ_CARD_H_ */
