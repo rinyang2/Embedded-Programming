@@ -3,18 +3,138 @@
 
 "C:\\ti\\ccsv8\\utils\\bin\\gmake" -k -j 12 all -O 
  
-Building file: "../button.c"
+Building file: "../gas_pump.c"
 Invoking: GNU Compiler
-"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/bin/arm-none-eabi-gcc.exe" -c -mcpu=cortex-m4 -march=armv7e-m -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DPART_TM4C123GH6PM -I"C:/Users/jinsk/workspace_v8/Embedded-Programming/FinalAssignment" -I"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/arm-none-eabi/include" -I"C:/Libraries/tm4c" -I"C:/Libraries/frt10/inc" -I"C:/Libraries/frt10/port/TivaM4" -I"C:/Libraries/emp" -Og -ffunction-sections -fdata-sections -g -gdwarf-3 -gstrict-dwarf -Wall -specs="nosys.specs" -MMD -MP -MF"button.d" -MT"button.o"   -o"button.o" "../button.c"
-../button.c: In function 'lever':
-../button.c:58:17: warning: variable 'button_event' set but not used [-Wunused-but-set-variable]
-          INT8U  button_event = GE_NO_EVENT;
-                 ^~~~~~~~~~~~
-Finished building: "../button.c"
+"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/bin/arm-none-eabi-gcc.exe" -c -mcpu=cortex-m4 -march=armv7e-m -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DPART_TM4C123GH6PM -I"C:/Users/jinsk/workspace_v8/Embedded-Programming/FinalAssignment" -I"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/arm-none-eabi/include" -I"C:/Libraries/tm4c" -I"C:/Libraries/frt10/inc" -I"C:/Libraries/frt10/port/TivaM4" -I"C:/Libraries/emp" -Og -ffunction-sections -fdata-sections -g -gdwarf-3 -gstrict-dwarf -Wall -specs="nosys.specs" -MMD -MP -MF"gas_pump.d" -MT"gas_pump.o"   -o"gas_pump.o" "../gas_pump.c"
+../gas_pump.c: In function 'gas_pump':
+../gas_pump.c:63:12: warning: implicit declaration of function 'lever1' [-Wimplicit-function-declaration]
+         if(lever1()==1||lever1()==3){
+            ^~~~~~
+In file included from ../gas_pump.c:31:0:
+../file.h:16:15: warning: passing argument 1 of 'gfprintf' makes pointer from integer without a cast [-Wint-conversion]
+ #define COM2  1      // LCD
+               ^
+../gas_pump.c:64:30: note: in expansion of macro 'COM2'
+                     gfprintf(COM2, "%c%cNOZZLE REMOVED! ", 0x1B, 0x80);
+                              ^~~~
+In file included from ../gas_pump.c:32:0:
+../string.h:10:12: note: expected 'FILE {aka unsigned char *}' but argument is of type 'int'
+ const void gfprintf( FILE, const char*, ...);
+            ^~~~~~~~
+In file included from ../gas_pump.c:31:0:
+../file.h:16:15: warning: passing argument 1 of 'gfprintf' makes pointer from integer without a cast [-Wint-conversion]
+ #define COM2  1      // LCD
+               ^
+../gas_pump.c:66:30: note: in expansion of macro 'COM2'
+                     gfprintf(COM2, "%c%c                ", 0x1B, 0xA8);
+                              ^~~~
+In file included from ../gas_pump.c:32:0:
+../string.h:10:12: note: expected 'FILE {aka unsigned char *}' but argument is of type 'int'
+ const void gfprintf( FILE, const char*, ...);
+            ^~~~~~~~
+../gas_pump.c:67:28: warning: 'return' with a value, in function returning void
+                     return 0;
+                            ^
+../gas_pump.c:55:6: note: declared here
+ void gas_pump(INT16U price){
+      ^~~~~~~~
+In file included from ../gas_pump.c:31:0:
+../file.h:16:15: warning: passing argument 1 of 'gfprintf' makes pointer from integer without a cast [-Wint-conversion]
+ #define COM2  1      // LCD
+               ^
+../gas_pump.c:72:18: note: in expansion of macro 'COM2'
+         gfprintf(COM2, "%c%c8.%2uDKK/L%3u.%2uL", 0x1B, 0x80,price%100,liter/100, liter%100);
+                  ^~~~
+In file included from ../gas_pump.c:32:0:
+../string.h:10:12: note: expected 'FILE {aka unsigned char *}' but argument is of type 'int'
+ const void gfprintf( FILE, const char*, ...);
+            ^~~~~~~~
+In file included from ../gas_pump.c:31:0:
+../file.h:16:15: warning: passing argument 1 of 'gfprintf' makes pointer from integer without a cast [-Wint-conversion]
+ #define COM2  1      // LCD
+               ^
+../gas_pump.c:73:18: note: in expansion of macro 'COM2'
+         gfprintf(COM2, "%c%c    %4u.%4uDKK", 0x1B, 0xA8,left,right);
+                  ^~~~
+In file included from ../gas_pump.c:32:0:
+../string.h:10:12: note: expected 'FILE {aka unsigned char *}' but argument is of type 'int'
+ const void gfprintf( FILE, const char*, ...);
+            ^~~~~~~~
+../gas_pump.c:74:21: warning: implicit declaration of function 'lever2' [-Wimplicit-function-declaration]
+         btn_State = lever2();
+                     ^~~~~~
+In file included from ../gas_pump.c:31:0:
+../gas_pump.c: In function 'cash_gas_pump':
+../file.h:16:15: warning: passing argument 1 of 'gfprintf' makes pointer from integer without a cast [-Wint-conversion]
+ #define COM2  1      // LCD
+               ^
+../gas_pump.c:124:22: note: in expansion of macro 'COM2'
+             gfprintf(COM2, "%c%cDELIVER FINISHED", 0x1B, 0x80);
+                      ^~~~
+In file included from ../gas_pump.c:32:0:
+../string.h:10:12: note: expected 'FILE {aka unsigned char *}' but argument is of type 'int'
+ const void gfprintf( FILE, const char*, ...);
+            ^~~~~~~~
+In file included from ../gas_pump.c:31:0:
+../file.h:16:15: warning: passing argument 1 of 'gfprintf' makes pointer from integer without a cast [-Wint-conversion]
+ #define COM2  1      // LCD
+               ^
+../gas_pump.c:126:22: note: in expansion of macro 'COM2'
+             gfprintf(COM2, "%c%c                ", 0x1B, 0xA8);
+                      ^~~~
+In file included from ../gas_pump.c:32:0:
+../string.h:10:12: note: expected 'FILE {aka unsigned char *}' but argument is of type 'int'
+ const void gfprintf( FILE, const char*, ...);
+            ^~~~~~~~
+In file included from ../gas_pump.c:31:0:
+../file.h:16:15: warning: passing argument 1 of 'gfprintf' makes pointer from integer without a cast [-Wint-conversion]
+ #define COM2  1      // LCD
+               ^
+../gas_pump.c:130:22: note: in expansion of macro 'COM2'
+             gfprintf(COM2, "%c%cNOZZLE REMOVED! ", 0x1B, 0x80);
+                      ^~~~
+In file included from ../gas_pump.c:32:0:
+../string.h:10:12: note: expected 'FILE {aka unsigned char *}' but argument is of type 'int'
+ const void gfprintf( FILE, const char*, ...);
+            ^~~~~~~~
+In file included from ../gas_pump.c:31:0:
+../file.h:16:15: warning: passing argument 1 of 'gfprintf' makes pointer from integer without a cast [-Wint-conversion]
+ #define COM2  1      // LCD
+               ^
+../gas_pump.c:132:22: note: in expansion of macro 'COM2'
+             gfprintf(COM2, "%c%c                ", 0x1B, 0xA8);
+                      ^~~~
+In file included from ../gas_pump.c:32:0:
+../string.h:10:12: note: expected 'FILE {aka unsigned char *}' but argument is of type 'int'
+ const void gfprintf( FILE, const char*, ...);
+            ^~~~~~~~
+In file included from ../gas_pump.c:31:0:
+../file.h:16:15: warning: passing argument 1 of 'gfprintf' makes pointer from integer without a cast [-Wint-conversion]
+ #define COM2  1      // LCD
+               ^
+../gas_pump.c:135:18: note: in expansion of macro 'COM2'
+         gfprintf(COM2, "%c%c8.%2uDKK/L%3u.%2uL", 0x1B, 0x80,price%100,liter/100, liter%100);
+                  ^~~~
+In file included from ../gas_pump.c:32:0:
+../string.h:10:12: note: expected 'FILE {aka unsigned char *}' but argument is of type 'int'
+ const void gfprintf( FILE, const char*, ...);
+            ^~~~~~~~
+In file included from ../gas_pump.c:31:0:
+../file.h:16:15: warning: passing argument 1 of 'gfprintf' makes pointer from integer without a cast [-Wint-conversion]
+ #define COM2  1      // LCD
+               ^
+../gas_pump.c:136:18: note: in expansion of macro 'COM2'
+         gfprintf(COM2, "%c%c    %4u.%4uDKK", 0x1B, 0xA8,left,right);
+                  ^~~~
+In file included from ../gas_pump.c:32:0:
+../string.h:10:12: note: expected 'FILE {aka unsigned char *}' but argument is of type 'int'
+ const void gfprintf( FILE, const char*, ...);
+            ^~~~~~~~
+Finished building: "../gas_pump.c"
  
 Building target: "FinalAssignment.out"
 Invoking: GNU Linker
-"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/bin/arm-none-eabi-gcc.exe" -DPART_TM4C123GH6PM -Og -ffunction-sections -fdata-sections -g -gdwarf-3 -gstrict-dwarf -Wall -specs="nosys.specs" -march=armv7e-m -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -Wl,-Map,"FinalAssignment.map" -o"FinalAssignment.out" "./adc.o" "./analog.o" "./button.o" "./countled.o" "./digiswitch.o" "./file.o" "./gas_select.o" "./gpio.o" "./heap_2.o" "./key.o" "./lcd.o" "./list.o" "./main.o" "./port.o" "./queue.o" "./read_card.o" "./scale.o" "./startup_frt.o" "./status_led.o" "./string.o" "./systick_frt.o" "./tasks.o" "./ui.o" -Wl,-T"../tm4c123gh6pm.lds"  
+"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/bin/arm-none-eabi-gcc.exe" -DPART_TM4C123GH6PM -Og -ffunction-sections -fdata-sections -g -gdwarf-3 -gstrict-dwarf -Wall -specs="nosys.specs" -march=armv7e-m -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -Wl,-Map,"FinalAssignment.map" -o"FinalAssignment.out" "./adc.o" "./analog.o" "./button.o" "./countled.o" "./devices.o" "./digiswitch.o" "./file.o" "./gas_pump.o" "./gas_select.o" "./gpio.o" "./heap_2.o" "./key.o" "./lcd.o" "./leds.o" "./list.o" "./main.o" "./port.o" "./queue.o" "./read_card.o" "./scale.o" "./startup_frt.o" "./status_led.o" "./string.o" "./systick_frt.o" "./tasks.o" "./ui.o" -Wl,-T"../tm4c123gh6pm.lds"  
 Finished building target: "FinalAssignment.out"
  
 

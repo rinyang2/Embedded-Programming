@@ -1,3 +1,4 @@
+
 /*****************************************************************************
 * University of Southern Denmark
 * Embedded C Programming (ECP)
@@ -46,7 +47,9 @@ INT8U button_pushed_SW2()
   return( !(GPIO_PORTF_DATA_R & 0x01) );  // SW2 at PF0
 }
 
-INT8U lever(void)
+
+
+INT8U lever1(void)
 /*****************************************************************************
 *   Input    :
 *   Output   :
@@ -60,75 +63,142 @@ INT8U lever(void)
   switch( button_state )
   {
     case BS_IDLE:
-	    if( button_pushed_SW2( ))		// if button pushed
-	    {
-  	    button_state = BS_FIRST_PUSH;
-		    button_timer = TIM_2_SEC;		// start timer = 2 sek;
+        if( button_pushed( ))       // if button pushed
+        {
+        button_state = BS_FIRST_PUSH;
+            button_timer = TIM_2_SEC;       // start timer = 2 sek;
       }
-	    break;
+        break;
     case BS_FIRST_PUSH:
-	    if( ! --button_timer )			// if timeout
-	    {
-	      button_state = BS_LONG_PUSH;
-		    button_event = BE_LONG_PUSH;
-	    }
-	    else
-	    {
-        if(  !button_pushed_SW2( ) )	// if button released
-		    {
-	        button_state = BS_FIRST_RELEASE;
-		      button_timer = TIM_50_SEC;	// start timer = 50 sek;
+        if( ! --button_timer )          // if timeout
+        {
+          button_state = BS_LONG_PUSH;
+            button_event = BE_LONG_PUSH;
         }
-	    }
-	    break;
+        else
+        {
+        if(  !button_pushed( ) )    // if button released
+            {
+            button_state = BS_FIRST_RELEASE;
+              button_timer = TIM_50_SEC;    // start timer = 50 sek;
+        }
+        }
+        break;
     case BS_FIRST_RELEASE:
-	    if( ! --button_timer )			// if timeout
-	    {
-	      button_state = BS_IDLE;
-		    button_event = BE_SINGLE_PUSH;
-	    }
-	    else
-	    {
-        if(  button_pushed_SW2(  ))		// if button pressed
-		    {
-	        button_state = BS_SECOND_PUSH;
-		      button_timer = TIM_2_SEC;		// start timer = 2 sek;
+        if( ! --button_timer )          // if timeout
+        {
+          button_state = BS_IDLE;
+            button_event = BE_SINGLE_PUSH;
         }
-	    }
-	    break;
+        else
+        {
+        if(  button_pushed(  ))     // if button pressed
+            {
+            button_state = BS_SECOND_PUSH;
+              button_timer = TIM_2_SEC;     // start timer = 2 sek;
+        }
+        }
+        break;
     case BS_SECOND_PUSH:
-	    if( ! --button_timer )			// if timeout
-	    {
-	      button_state = BS_LONG_PUSH;
-		    button_event = BE_LONG_PUSH;
-	    }
-	    else
-	    {
-        if( ! button_pushed_SW2( ) )					// if button released
-		    {
-	        button_state = BS_IDLE;
-		      button_event = BE_DOUBBLE_PUSH;
+        if( ! --button_timer )          // if timeout
+        {
+          button_state = BS_LONG_PUSH;
+            button_event = BE_LONG_PUSH;
         }
-	    }
-	    break;
+        else
+        {
+        if( ! button_pushed( ) )                    // if button released
+            {
+            button_state = BS_IDLE;
+              button_event = BE_DOUBBLE_PUSH;
+        }
+        }
+        break;
     case BS_LONG_PUSH:
-      if( ! button_pushed_SW2(  ) )					// if button released
-	      button_state = BS_IDLE;
-	    break;
+      if( ! button_pushed(  ) )                 // if button released
+          button_state = BS_IDLE;
+        break;
     default:
       break;
   }
   return( button_state );
 }
 
+INT8U lever2(void)
+/*****************************************************************************
+*   Input    :
+*   Output   :
+*   Function :
+******************************************************************************/
+{
+  static INT8U  button_state = BS_IDLE;
+  static INT16U button_timer;
+         INT8U  button_event = GE_NO_EVENT;
+
+  switch( button_state )
+  {
+    case BS_IDLE:
+        if( button_pushed_SW2( ))       // if button pushed
+        {
+        button_state = BS_FIRST_PUSH;
+            button_timer = TIM_2_SEC;       // start timer = 2 sek;
+      }
+        break;
+    case BS_FIRST_PUSH:
+        if( ! --button_timer )          // if timeout
+        {
+          button_state = BS_LONG_PUSH;
+            button_event = BE_LONG_PUSH;
+        }
+        else
+        {
+        if(  !button_pushed_SW2( ) )    // if button released
+            {
+            button_state = BS_FIRST_RELEASE;
+              button_timer = TIM_50_SEC;    // start timer = 50 sek;
+        }
+        }
+        break;
+    case BS_FIRST_RELEASE:
+        if( ! --button_timer )          // if timeout
+        {
+          button_state = BS_IDLE;
+            button_event = BE_SINGLE_PUSH;
+        }
+        else
+        {
+        if(  button_pushed_SW2(  ))     // if button pressed
+            {
+            button_state = BS_SECOND_PUSH;
+              button_timer = TIM_2_SEC;     // start timer = 2 sek;
+        }
+        }
+        break;
+    case BS_SECOND_PUSH:
+        if( ! --button_timer )          // if timeout
+        {
+          button_state = BS_LONG_PUSH;
+            button_event = BE_LONG_PUSH;
+        }
+        else
+        {
+        if( ! button_pushed_SW2( ) )                    // if button released
+            {
+            button_state = BS_IDLE;
+              button_event = BE_DOUBBLE_PUSH;
+        }
+        }
+        break;
+    case BS_LONG_PUSH:
+      if( ! button_pushed_SW2(  ) )                 // if button released
+          button_state = BS_IDLE;
+        break;
+    default:
+      break;
+  }
+  return( button_state );
+}
 /****************************** End Of Module *******************************/
-
-
-
-
-
-
-
 
 
 

@@ -29,14 +29,13 @@
 
 /*****************************   Functions   *******************************/
 
-INT8U lever(void);
+INT8U select_button(void);
 /*****************************************************************************
 *   Input    : -
-*   Output   : lever Event
+*   Output   : Button Event
 *   Function : Test function
 ******************************************************************************/
-INT8U button_pushed();
-INT8U button_pushed_SW2();
+
 
 /****************************** End Of Module *******************************/
 #endif /*BUTTON_H_*/

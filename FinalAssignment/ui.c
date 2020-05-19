@@ -13,7 +13,8 @@
 #include "read_card.h"
 #include "gas_select.h"
 #include "digiswitch.h"
-
+#include "button.h"
+#include "gas_pump.h"
 
 void ui_task(void *pvParameters)
 {
@@ -24,7 +25,6 @@ void ui_task(void *pvParameters)
         key = get_keyboard();
 
         gfprintf(COM2, "%c%cCASH:1 CARD:2   ", 0x1B, 0x80);
-
 
 
 
