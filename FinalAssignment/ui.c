@@ -11,28 +11,43 @@
 #include "semphr.h"
 #include "adc.h"
 #include "digiswitch.h"
+#include "read_card.h"
+
 
 void ui_task(void *pvParameters)
 {
     INT8U temp =0;
-    INT8U cnt =12;
-    INT8U buf[12]={0,};
+
     while(1){
         INT8U key = 0;
+        INT8U TEM = 0;
         key = get_keyboard();
+
         gfprintf(COM2, "%c%cCASH:1 CARD:2", 0x1B, 0x80);
+
+
+
+
         if(key=='1'){
             gfprintf(COM2, "%c%cINSERT CASH", 0x1B, 0xA8);
-            driver();
+            TEM=driver() * 10;
+            gfprintf(COM2, "%c%c%4uDKK inserted", 0x1B, 0xA8,TEM);
         }
+
+
+
+
+
+
+
+
         else if(key=='2'){
-            switch(temp){
-            case 0:key = get_keyboard();  break;
-            case 1:key = get_keyboard();
-            }
-
-
+            read_card();
+           // read_pin();
         }
+
+
     }
+    gfprintf(COM2, "%c%cENDOFLOOP", 0x1B, 0xA8);
 };
 

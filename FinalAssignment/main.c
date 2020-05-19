@@ -67,58 +67,7 @@ static void setupHardware(void)
     init_adc();
     init_files();
 }
-<<<<<<< HEAD
-/*
-int void case_int()
-{
-	INT8U key_input = ;//this is supposed to read the keypad input and return a number
 
-	switch(key_input){
-		case 1://1 is CARD
-			CARD_PIN = ;//here should exists a string read from the keypad, which will be later used to verify the CAR NUMBER AND PIN; this number should be a 12-digit number, where the 8 and 12 digit is compared
-			CARD_NUM = CARD_PIN >> 16;
-			if (0x0001 & CARD_PIN == 0x0001 & CARD_NUM){
-				//display the gas prices
-				INT8U gas_choice = ;//read from keypad
-				INT8U gas_price = 0;
-				switch(gas_choice){
-					case 1://#92
-						gas_price = 8.49;
-						break;
-					case 2://#95
-						gas_price = 8.79;
-						break;
-					case 3://DIESEL
-						gas_price = 8.12;
-						break;
-				}
-			}
-			break;
-		case 2:// 2 is CASH
-			//read digiswitch
-			//display the gas prices
-				INT8U gas_choice = ;//read from keypad
-				INT8U gas_price = 0;
-				switch(gas_choice){
-					case 1://#92
-						gas_price = 8.49;
-						break;
-					case 2://#95
-						gas_price = 8.79;
-						break;
-					case 3://DIESEL
-						gas_price = 8.12;
-						break;
-				}
-			}
-			break;
-	}
-}
-*/
-=======
-
-
->>>>>>> 7facc3fd44c6b01bdd6442198123a44e964b3318
 int main(void)
 /*****************************************************************************
 *   Input    :
@@ -136,8 +85,8 @@ int main(void)
   // Start the tasks.
   xTaskCreate( key_task,        "key",  USERTASK_STACK_SIZE, NULL, LOW_PRIO, NULL );    // the tasks are created. all priorities are the same or else only the higher priorities will run if ready
   xTaskCreate( lcd_task,        "lcd",  USERTASK_STACK_SIZE, NULL, LOW_PRIO, NULL );
-  xTaskCreate( ai_task,         "ai",   USERTASK_STACK_SIZE, NULL, LOW_PRIO, NULL );
-  xTaskCreate( scale_task,      "scale",USERTASK_STACK_SIZE, NULL, LOW_PRIO, NULL );
+  //xTaskCreate( ai_task,         "ai",   USERTASK_STACK_SIZE, NULL, LOW_PRIO, NULL );
+  //xTaskCreate( scale_task,      "scale",USERTASK_STACK_SIZE, NULL, LOW_PRIO, NULL );
   xTaskCreate( ui_task,         "ui",   USERTASK_STACK_SIZE, NULL, LOW_PRIO, NULL );
 
   // ----------------

@@ -1,0 +1,102 @@
+/*****************************************************************************
+* University of Southern Denmark
+* Embedded Programming (EMP)
+*
+* MODULENAME.: digiswitch.c
+*
+* PROJECT....: EMP
+*
+* DESCRIPTION: See module specification file (.h-file).
+*
+* Change Log:
+*****************************************************************************
+* Date    Id    Change
+* YYMMDD
+* --------------------
+* 150322  MoH   Module created.
+*
+*****************************************************************************/
+
+/***************************** Include files *******************************/
+#include <stdint.h>
+#include "tm4c123gh6pm.h"
+#include "emp_type.h"
+#include "lcd.h"
+#include "glob_def.h"
+#include "tmodel.h"
+//#include "queue.h"
+//#include "sem.h"
+
+#include "adc.h"
+#include "file.h"
+#include "string.h"
+
+#include "FreeRTOS.h"
+#include "Task.h"
+#include "queue.h"
+#include "semphr.h"
+
+/*****************************    Defines    *******************************/
+#define LOW 0
+#define HIGH 1
+/*****************************   Constants   *******************************/
+
+/*****************************   Variables   *******************************/
+
+
+/*****************************   Functions   *******************************/
+
+INT32U read_card()
+/*****************************************************************************
+*   Input    :
+*   Output   :
+*   Function :
+******************************************************************************/
+{
+   INT8U ticks = 8;
+   INT8U count = 0;
+   INT8U buf[8];
+   INT8U key=0;
+  while(ticks--){
+      key = get_keyboard();
+      buf[count]=key;
+      count++;
+  }
+  return (buf[0]-'0')*10000000 + (buf[1]-'0')*1000000 + (buf[2]-'0')*100000 + (buf[3]-'0')*10000 + (buf[4]-'0')*1000 + (buf[5]-'0')*100 + (buf[6]-'0')*10 + (buf[7]-'0');
+}
+
+INT16U read_pin()
+{
+   INT8U ticks = 4;
+   INT8U count = 0;
+   INT8U buf[4];
+   INT8U key=0;
+  while(ticks--){
+      key = get_keyboard();
+      buf[count]=key;
+      count++;
+  }
+  return (buf[0]-'0')*1000 + (buf[1]-'0')*100 + (buf[2]-'0')*10 + (buf[3]-'0');
+}
+
+BOOLEAN check_card(INT32U a, INT 16U b){
+    if(a%b==1){
+        return 1;
+    }
+    else return 0;
+}
+
+/*****************************************************************************
+
+*****************************************************************************/
+
+/****************************** End Of Module *******************************/
+
+
+
+
+
+
+
+
+

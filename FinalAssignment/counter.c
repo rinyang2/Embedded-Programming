@@ -55,25 +55,25 @@ INT8U counter( INT8U payment,  INT8U price)
 	    counter_value+=0.05;
 	    counter_timer = TIM_1_SEC;
 		led_status = YELLOW;
-		counter_leds( led_status )
+		counter_leds( led_status );
 		gfprintf( COM2, "%c%cTOTAL:%03u", 0x1B, 0x84, (counter_value * price));
 		counter_value+=0.05;
 	    counter_timer = TIM_1_SEC;
 		led_status = YELLOW;
-		counter_leds( led_status )
+		counter_leds( led_status );
 		gfprintf( COM2, "%c%cTOTAL:%03u", 0x1B, 0x84, (counter_value * price));
 		while (1){
 			counter_value+=0.3;
 	   		counter_timer = TIM_1_SEC;
 			led_status = GREEN;
-			counter_leds( led_status )
+			counter_leds( led_status );
 			gfprintf( COM2, "%c%cTOTAL:%03u", 0x1B, 0x84, (counter_value * price));
 			if (lever() == 0){//lever released (idle state)
 				for(count=0;count<5;count++){
 				counter_value+=0.3;
 	   			counter_timer = TIM_1_SEC;
 				led_status = GREEN;
-				counter_leds( led_status )				   
+				counter_leds( led_status );
 				gfprintf( COM2, "%c%cTOTAL:%03u", 0x1B, 0x84, (counter_value * price));
 				}
 				return 0;
@@ -83,26 +83,26 @@ INT8U counter( INT8U payment,  INT8U price)
 	    counter_value+=0.05;
 	    counter_timer = TIM_1_SEC;
 		led_status = YELLOW;
-		counter_leds( led_status )
+		counter_leds( led_status );
 		gfprintf( COM2, "%c%cTOTAL:%03u", 0x1B, 0x84, (counter_value * price));
 		counter_value+=0.05;
 	    counter_timer = TIM_1_SEC;
 		led_status = YELLOW;
-		counter_leds( led_status )
+		counter_leds( led_status );
 		gfprintf( COM2, "%c%cTOTAL:%03u", 0x1B, 0x84, (counter_value * price));
 		while (1){
 			counter_value+=0.3;
 	   		counter_timer = TIM_1_SEC;
 			led_status = GREEN;
-			counter_leds( led_status )
+			counter_leds( led_status );
 			gfprintf( COM2, "%c%cTOTAL:%03u", 0x1B, 0x84, (counter_value * price));
 			if (lever() == 0){//lever released (idle state)
 				return 0;
 			}
-			if (){//condition for the second case
+			if (1){//condition for the second case
 				counter_value+=0.05;
 				led_status = YELLOW;
-				counter_leds( led_status )
+				counter_leds( led_status );
 				gfprintf( COM2, "%c%cTOTAL:%03u", 0x1B, 0x84, (counter_value * price));
 			}
 	}

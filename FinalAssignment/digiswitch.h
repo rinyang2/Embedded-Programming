@@ -31,7 +31,7 @@
 void init_digiswitch();
 
 
-void driver();
+INT16U driver();
 /*****************************************************************************
 *   Input    : -
 *   Output   : -
