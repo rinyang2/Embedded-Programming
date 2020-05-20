@@ -42,7 +42,7 @@ void ui_task(void *pvParameters)
             //cash_gas_pump() receives 2 parameter(price of gas you chose, the input amount of cash) and pumps gas when sw2 is pushed, and halted when sw1 is pushed
             cash_gas_pump(gas_select(), TEMP);
 
-            gfprintf(COM1, "%c%cCASH", 0x1B, 0xA8);
+            gfprintf(COM1, "%c%cCASH", 0x1B, 0xA8);//COM1 is for UART use
             gfprintf(COM1, "%c%c%4uDKK inserted", 0x1B, 0xA8,TEMP);
         }
 
