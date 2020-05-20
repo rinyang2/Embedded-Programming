@@ -15,6 +15,7 @@
 #include "digiswitch.h"
 #include "button.h"
 #include "gas_pump.h"
+#include "uart0.h"
 
 void ui_task(void *pvParameters)
 {
@@ -40,6 +41,9 @@ void ui_task(void *pvParameters)
             //gas_select() returns the price of the gas you chose
             //cash_gas_pump() receives 2 parameter(price of gas you chose, the input amount of cash) and pumps gas when sw2 is pushed, and halted when sw1 is pushed
             cash_gas_pump(gas_select(), TEMP);
+
+            gfprintf(COM1, "%c%cCASH", 0x1B, 0xA8);
+            gfprintf(COM1, "%c%c%4uDKK inserted", 0x1B, 0xA8,TEMP);
         }
 
 
@@ -55,6 +59,8 @@ void ui_task(void *pvParameters)
            else{
                //same function as cash_gas_pump(), but only 1 parameter since there is no cash input
                gas_pump(gas_select());
+               gfprintf(COM1, "%c%cCARD", 0x1B, 0xA8);
+               gfprintf(COM1, "%c%cGAS PRICE:%4u", 0x1B, 0xA8,(gas_select()/100)));
            }
         }
 

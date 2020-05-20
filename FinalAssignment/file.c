@@ -25,6 +25,8 @@
 #include "file.h"
 #include "lcd.h"
 #include "key.h"
+#include "rtcs.h"
+#include "uart.h"
 
 /*****************************    Defines    *******************************/
 #define MAX_FILES  8
@@ -70,8 +72,8 @@ extern INT8U init_files()
 	  pof[i].put = NULL;
 	  pof[i].get = NULL;
   }
-  //pof[COM1].put = uart0_put_q;
-  //pof[COM1].get = uart0_get_q;
+  pof[COM1].put = uart0_put_q;
+  pof[COM1].get = uart0_get_q;
   pof[COM2].put = wr_ch_LCD;
   pof[COM3].get = get_keyboard;
 

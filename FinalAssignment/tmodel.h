@@ -20,6 +20,8 @@
 #ifndef _TMODEL_H_
 #define _TMODEL_H_
 
+#include "rtcs.h"
+
 // Tasks.
 // ------
 #define TASK_RTC         6
@@ -63,6 +65,10 @@
 // QUEUEs.
 // -------
 #define Q_OUTPUT 1
+#define Q_UART_TX 	USER_QUEUE
+#define Q_UART_RX   USER_QUEUE+1
+#define Q_LCD       USER_QUEUE+2
+#define Q_KEY       USER_QUEUE+3
 
 // Traffic Light Modes.
 // --------------------

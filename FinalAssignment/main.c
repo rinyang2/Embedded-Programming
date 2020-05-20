@@ -34,6 +34,7 @@
 #include "scale.h"
 #include "analog.h"
 #include "button.h"
+#include "uart.h"
 
 
 /*****************************    Defines    *******************************/
@@ -65,7 +66,9 @@ static void setupHardware(void)
     init_systick();
     init_gpio();
     init_adc();
+    uart0_init( 9600, 8, 1, 'n' );
     init_files();
+
 }
 
 int main(void)
