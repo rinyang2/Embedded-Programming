@@ -12,15 +12,39 @@ In file included from ../string.h:7:0,
 ../file.h:16:15: warning: passing argument 1 of 'gfprintf' makes pointer from integer without a cast [-Wint-conversion]
  #define COM2  1      // LCD
                ^
-../ui.c:29:18: note: in expansion of macro 'COM2'
+../ui.c:26:18: note: in expansion of macro 'COM2'
          gfprintf(COM2, "%c%cCASH:1 CARD:2   ", 0x1B, 0x80);
                   ^~~~
 In file included from ../ui.c:5:0:
 ../string.h:10:12: note: expected 'FILE {aka unsigned char *}' but argument is of type 'int'
  const void gfprintf( FILE, const char*, ...);
             ^~~~~~~~
-../ui.c:34:13: warning: implicit declaration of function 'uart0_putc'; did you mean 'uart0_put_q'? [-Wimplicit-function-declaration]
-             uart0_putc( ' ' );
+In file included from ../string.h:7:0,
+                 from ../ui.c:5:
+../file.h:16:15: warning: passing argument 1 of 'gfprintf' makes pointer from integer without a cast [-Wint-conversion]
+ #define COM2  1      // LCD
+               ^
+../ui.c:29:22: note: in expansion of macro 'COM2'
+             gfprintf(COM2, "%c%cINSERT CASH", 0x1B, 0xA8);
+                      ^~~~
+In file included from ../ui.c:5:0:
+../string.h:10:12: note: expected 'FILE {aka unsigned char *}' but argument is of type 'int'
+ const void gfprintf( FILE, const char*, ...);
+            ^~~~~~~~
+In file included from ../string.h:7:0,
+                 from ../ui.c:5:
+../file.h:16:15: warning: passing argument 1 of 'gfprintf' makes pointer from integer without a cast [-Wint-conversion]
+ #define COM2  1      // LCD
+               ^
+../ui.c:34:22: note: in expansion of macro 'COM2'
+             gfprintf(COM2, "%c%c%4uDKK inserted", 0x1B, 0xA8,TEMP);
+                      ^~~~
+In file included from ../ui.c:5:0:
+../string.h:10:12: note: expected 'FILE {aka unsigned char *}' but argument is of type 'int'
+ const void gfprintf( FILE, const char*, ...);
+            ^~~~~~~~
+../ui.c:40:13: warning: implicit declaration of function 'uart0_putc'; did you mean 'uart0_put_q'? [-Wimplicit-function-declaration]
+             uart0_putc( '\t' );
              ^~~~~~~~~~
              uart0_put_q
 In file included from ../string.h:7:0,
@@ -28,35 +52,7 @@ In file included from ../string.h:7:0,
 ../file.h:16:15: warning: passing argument 1 of 'gfprintf' makes pointer from integer without a cast [-Wint-conversion]
  #define COM2  1      // LCD
                ^
-../ui.c:35:22: note: in expansion of macro 'COM2'
-             gfprintf(COM2, "%c%cINSERT CASH", 0x1B, 0xA8);
-                      ^~~~
-In file included from ../ui.c:5:0:
-../string.h:10:12: note: expected 'FILE {aka unsigned char *}' but argument is of type 'int'
- const void gfprintf( FILE, const char*, ...);
-            ^~~~~~~~
-../ui.c:36:13: warning: implicit declaration of function 'uprintf'; did you mean 'gprintf'? [-Wimplicit-function-declaration]
-             uprintf("CS");
-             ^~~~~~~
-             gprintf
-In file included from ../string.h:7:0,
-                 from ../ui.c:5:
-../file.h:16:15: warning: passing argument 1 of 'gfprintf' makes pointer from integer without a cast [-Wint-conversion]
- #define COM2  1      // LCD
-               ^
-../ui.c:40:22: note: in expansion of macro 'COM2'
-             gfprintf(COM2, "%c%c%4uDKK inserted", 0x1B, 0xA8,TEMP);
-                      ^~~~
-In file included from ../ui.c:5:0:
-../string.h:10:12: note: expected 'FILE {aka unsigned char *}' but argument is of type 'int'
- const void gfprintf( FILE, const char*, ...);
-            ^~~~~~~~
-In file included from ../string.h:7:0,
-                 from ../ui.c:5:
-../file.h:16:15: warning: passing argument 1 of 'gfprintf' makes pointer from integer without a cast [-Wint-conversion]
- #define COM2  1      // LCD
-               ^
-../ui.c:59:25: note: in expansion of macro 'COM2'
+../ui.c:49:25: note: in expansion of macro 'COM2'
                 gfprintf(COM2, "%c%cCARD REJECTED", 0x1B, 0xA8);
                          ^~~~
 In file included from ../ui.c:5:0:
@@ -68,7 +64,7 @@ In file included from ../string.h:7:0,
 ../file.h:16:15: warning: passing argument 1 of 'gfprintf' makes pointer from integer without a cast [-Wint-conversion]
  #define COM2  1      // LCD
                ^
-../ui.c:61:25: note: in expansion of macro 'COM2'
+../ui.c:51:25: note: in expansion of macro 'COM2'
                 gfprintf(COM2, "%c%c                ", 0x1B, 0xA8);
                          ^~~~
 In file included from ../ui.c:5:0:
@@ -79,7 +75,7 @@ Finished building: "../ui.c"
  
 Building target: "FinalAssignment.out"
 Invoking: GNU Linker
-"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/bin/arm-none-eabi-gcc.exe" -DPART_TM4C123GH6PM -Og -ffunction-sections -fdata-sections -g -gdwarf-3 -gstrict-dwarf -Wall -specs="nosys.specs" -march=armv7e-m -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -Wl,-Map,"FinalAssignment.map" -o"FinalAssignment.out" "./adc.o" "./button.o" "./countled.o" "./devices.o" "./digiswitch.o" "./file.o" "./gas_pump.o" "./gas_select.o" "./gpio.o" "./heap_2.o" "./key.o" "./lcd.o" "./leds.o" "./list.o" "./main.o" "./port.o" "./queue.o" "./read_card.o" "./scale.o" "./startup_frt.o" "./status_led.o" "./string.o" "./systick_frt.o" "./tasks.o" "./uart.o" "./ui.o" -Wl,-T"../tm4c123gh6pm.lds"  
+"C:/ti/ccsv8/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major-win32/bin/arm-none-eabi-gcc.exe" -DPART_TM4C123GH6PM -Og -ffunction-sections -fdata-sections -g -gdwarf-3 -gstrict-dwarf -Wall -specs="nosys.specs" -march=armv7e-m -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -Wl,-Map,"FinalAssignment.map" -o"FinalAssignment.out" "./adc.o" "./button.o" "./countled.o" "./devices.o" "./digiswitch.o" "./file.o" "./gas_pump.o" "./gas_select.o" "./gpio.o" "./heap_2.o" "./key.o" "./lcd.o" "./leds.o" "./list.o" "./main.o" "./port.o" "./queue.o" "./read_card.o" "./startup_frt.o" "./status_led.o" "./string.o" "./systick_frt.o" "./tasks.o" "./uart.o" "./ui.o" -Wl,-T"../tm4c123gh6pm.lds"  
 Finished building target: "FinalAssignment.out"
  
 

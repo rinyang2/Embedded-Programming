@@ -31,7 +31,7 @@
 #include "queue.h"
 #include "glob_def.h"
 #include "semphr.h"
-#include "scale.h"
+
 #include "button.h"
 #include "uart.h"
 
@@ -80,6 +80,7 @@ int main(void)
 {
   setupHardware();
   xMutex = xSemaphoreCreateMutex();                                                     // create the mutex and the queues. make sure the handles are defined globally (in glob_def.h for example)
+
 
   Q_KEY = xQueueCreate( 128,  sizeof(INT8U) );
   Q_LCD = xQueueCreate( 128, sizeof(INT8U) );

@@ -33,7 +33,8 @@ BOOLEAN uart0_get_q( INT8U* );
 void uart_tx_task(void *pvparameter);
 void uart_rx_task(void *pvparameter);
 void uart_task(void *pvparameter);
-
+void say_cash();
+void say_card();
 
 extern void uart0_init( INT32U, INT8U, INT8U, INT8U );
 /*****************************************************************************

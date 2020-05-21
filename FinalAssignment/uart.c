@@ -85,8 +85,11 @@ void uprintf(const char *str){
     while(t--){
         UART0_DR_R = *str;
         str++;
+        vTaskDelay(50 / portTICK_RATE_MS);
     }
 }
+
+
 
 extern void uart_rx_task(void *pvparameter)
 /*****************************************************************************
@@ -205,8 +208,23 @@ void uart0_fifos_disable()
   UART0_LCRH_R  &= 0xFFFFFFEF;
 }
 
+void say_cash(){
+                uprintf("CA");
+                vTaskDelay(50 / portTICK_RATE_MS);
+                uprintf("SH");
+                vTaskDelay(50 / portTICK_RATE_MS);
+                uart0_putc( ' ' );
 
+}
 
+void say_card(){
+     uprintf("CA");
+    vTaskDelay(50 / portTICK_RATE_MS);
+    uprintf("RD");
+    vTaskDelay(50 / portTICK_RATE_MS);
+    uart0_putc( ' ' );
+
+}
 
 extern void uart0_init( INT32U baud_rate, INT8U databits, INT8U stopbits, INT8U parity )
 /*****************************************************************************

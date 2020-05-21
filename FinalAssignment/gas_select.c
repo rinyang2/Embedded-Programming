@@ -66,6 +66,8 @@ INT16U gas_select()
         temp = key - '0';
 
         if(temp==1){
+            uprintf("LF");
+            vTaskDelay(50 / portTICK_RATE_MS);
             uprintf("92");
             gfprintf(COM2, "%c%cLeadfree 92     ", 0x1B, 0x80);
                 gfprintf(COM2, "%c%c                ", 0x1B, 0xA8);
@@ -73,6 +75,8 @@ INT16U gas_select()
             return 849;
         }
         else if(temp==2){
+            uprintf("LF");
+            vTaskDelay(50 / portTICK_RATE_MS);
             uprintf("95");
             gfprintf(COM2, "%c%cLeadfree 95     ", 0x1B, 0x80);
                 gfprintf(COM2, "%c%c                ", 0x1B, 0xA8);
@@ -80,7 +84,11 @@ INT16U gas_select()
             return 879;
         }
         else if(temp==3){
-            uprintf("ds");
+            uprintf("Di");
+            vTaskDelay(50 / portTICK_RATE_MS);
+            uprintf("es");
+            vTaskDelay(50 / portTICK_RATE_MS);
+            uprintf("el");
             gfprintf(COM2, "%c%cDiesel          ", 0x1B, 0x80);
                 gfprintf(COM2, "%c%c                ", 0x1B, 0xA8);
                 vTaskDelay(2000 / portTICK_RATE_MS);

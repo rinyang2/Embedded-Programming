@@ -7,7 +7,6 @@
 #include "lcd.h"
 #include "key.h"
 #include "ui.h"
-#include "scale.h"
 #include "semphr.h"
 #include "adc.h"
 #include "read_card.h"
@@ -21,19 +20,14 @@ void ui_task(void *pvParameters)
 {
 
     while(1){
-
         INT8U key = 0;
         INT16U TEMP = 0;
         key = get_keyboard();
-        gfprintf(COM1, "%c%cCASH:1 CARD:2   ", 0x1B, 0x80);
         gfprintf(COM2, "%c%cCASH:1 CARD:2   ", 0x1B, 0x80);
 
-
-
         if(key=='1'){
-            uart0_putc( ' ' );
             gfprintf(COM2, "%c%cINSERT CASH", 0x1B, 0xA8);
-            uprintf("CS");
+            say_cash();
             //digiswitch.c, driver() returns value of the digiswitch, which is the cash input
             TEMP=driver() * 10;
 
@@ -43,31 +37,26 @@ void ui_task(void *pvParameters)
             //gas_select() returns the price of the gas you chose
             //cash_gas_pump() receives 2 parameter(price of gas you chose, the input amount of cash) and pumps gas when sw2 is pushed, and halted when sw1 is pushed
             cash_gas_pump(gas_select(), TEMP);
-
-
+            uart0_putc( '\t' );
         }
 
 
-
         else if(key=='2'){
-            uart0_putc( ' ' );
-            vTaskDelay(50 / portTICK_RATE_MS);
-            uprintf("CD");
+            say_card();
            //read_card() reads 12 digit from keyboard(8 for card, 4 for pin) and add the end digit of the card and pin.
            //If the sum is odd, the function returns 0, if even, returns 1
            if(!read_card()){
                gfprintf(COM2, "%c%cCARD REJECTED", 0x1B, 0xA8);
                vTaskDelay(2000 / portTICK_RATE_MS);
                gfprintf(COM2, "%c%c                ", 0x1B, 0xA8);
+               uart0_putc( '\t' );
            }
            else{
                //same function as cash_gas_pump(), but only 1 parameter since there is no cash input
                gas_pump(gas_select());
-
+               uart0_putc( '\t' );
            }
         }
-
-
     }
 };
 

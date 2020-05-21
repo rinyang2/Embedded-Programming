@@ -67,7 +67,11 @@ INT16U driver()
 *   Function :
 ******************************************************************************/
 {
-   int temp=0;
+   INT16U temp=0;
+   INT8U a;
+   INT8U b;
+   INT8U c;
+   INT8U d;
     LAST_AB = (GPIO_PORTA_DATA_R & 0x60)/0x20;
     while (1) {
 
