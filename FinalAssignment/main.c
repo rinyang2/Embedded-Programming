@@ -32,7 +32,6 @@
 #include "glob_def.h"
 #include "semphr.h"
 #include "scale.h"
-#include "analog.h"
 #include "button.h"
 #include "uart.h"
 
@@ -67,6 +66,7 @@ static void setupHardware(void)
     init_gpio();
     init_adc();
     uart0_init( 9600, 8, 1, 'n' );
+
     init_files();
 
 }
@@ -84,14 +84,14 @@ int main(void)
 
   Q_KEY = xQueueCreate( 128,  sizeof(INT8U) );
   Q_LCD = xQueueCreate( 128, sizeof(INT8U) );
-
+  Q_UART_TX = xQueueCreate( 128, sizeof(INT8U) );
+  Q_UART_RX = xQueueCreate( 128, sizeof(INT8U) );
   // Start the tasks.
   xTaskCreate( key_task,        "key",  USERTASK_STACK_SIZE, NULL, LOW_PRIO, NULL );    // the tasks are created. all priorities are the same or else only the higher priorities will run if ready
   xTaskCreate( lcd_task,        "lcd",  USERTASK_STACK_SIZE, NULL, LOW_PRIO, NULL );
-  //xTaskCreate( ai_task,         "ai",   USERTASK_STACK_SIZE, NULL, LOW_PRIO, NULL );
-  //xTaskCreate( scale_task,      "scale",USERTASK_STACK_SIZE, NULL, LOW_PRIO, NULL );
   xTaskCreate( ui_task,         "ui",   USERTASK_STACK_SIZE, NULL, LOW_PRIO, NULL );
-
+  xTaskCreate( uart_tx_task,    "ut",   USERTASK_STACK_SIZE, NULL, LOW_PRIO, NULL );
+  xTaskCreate( uart_rx_task,    "ur",   USERTASK_STACK_SIZE, NULL, LOW_PRIO, NULL );
   // ----------------
 
   // Start the scheduler.

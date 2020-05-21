@@ -30,8 +30,8 @@
 BOOLEAN uart0_put_q( INT8U );
 BOOLEAN uart0_get_q( INT8U* );
 
-void uart_tx_task(INT8U my_id, INT8U my_state, INT8U event, INT8U data);
-void uart_rx_task(INT8U my_id, INT8U my_state, INT8U event, INT8U data);
+void uart_tx_task(void *pvparameter);
+void uart_rx_task(void *pvparameter);
 
 
 extern void uart0_init( INT32U, INT8U, INT8U, INT8U );
@@ -44,4 +44,5 @@ extern void uart0_init( INT32U, INT8U, INT8U, INT8U );
 
 /****************************** End Of Module *******************************/
 #endif
+
 

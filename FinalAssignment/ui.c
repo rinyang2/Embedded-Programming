@@ -15,7 +15,7 @@
 #include "digiswitch.h"
 #include "button.h"
 #include "gas_pump.h"
-#include "uart0.h"
+#include "uart.h"
 
 void ui_task(void *pvParameters)
 {
@@ -24,7 +24,7 @@ void ui_task(void *pvParameters)
         INT8U key = 0;
         INT16U TEMP = 0;
         key = get_keyboard();
-
+        gfprintf(COM1, "%c%cCASH:1 CARD:2   ", 0x1B, 0x80);
         gfprintf(COM2, "%c%cCASH:1 CARD:2   ", 0x1B, 0x80);
 
 
@@ -60,7 +60,7 @@ void ui_task(void *pvParameters)
                //same function as cash_gas_pump(), but only 1 parameter since there is no cash input
                gas_pump(gas_select());
                gfprintf(COM1, "%c%cCARD", 0x1B, 0xA8);
-               gfprintf(COM1, "%c%cGAS PRICE:%4u", 0x1B, 0xA8,(gas_select()/100)));
+               gfprintf(COM1, "%c%cGAS PRICE:%4u", 0x1B, 0xA8,(gas_select()/100));
            }
         }
 
@@ -68,3 +68,11 @@ void ui_task(void *pvParameters)
     }
 };
 
+void uart_task( void *pvParameter){
+    INT8U ch;
+    while(1){
+
+    gfprintf(COM1, "fuck");
+    }
+
+}

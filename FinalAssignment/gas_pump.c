@@ -58,10 +58,11 @@ void gas_pump(INT16U price){
     INT16U right = 0;
     INT16U liter = 0;
     INT8U clock = 0;
+    INT8U timer = 0;
     INT8U indicator=0;
     while(1){
-        if(lever1()==1||lever1()==3){
-                    gfprintf(COM2, "%c%cNOZZLE REMOVED! ", 0x1B, 0x80);
+        if(lever1()==1||lever1()==3||timer==5){
+                    gfprintf(COM2, "%c%cDELIVER FINISHED", 0x1B, 0x80);
                     set_leds( TURN_LED_ON, TURN_LED_OFF, TURN_LED_OFF ); //turn red led on
                     vTaskDelay(2000 / portTICK_RATE_MS);
                     gfprintf(COM2, "%c%c                ", 0x1B, 0xA8);
@@ -95,6 +96,7 @@ void gas_pump(INT16U price){
             }
             clock++;
             indicator=1;
+            timer = 0;
         }
         else{
             if(indicator == 1){
@@ -106,7 +108,8 @@ void gas_pump(INT16U price){
             clock = 0;
             set_leds( TURN_LED_ON, TURN_LED_OFF, TURN_LED_OFF ); //turn red led on
         }
-        vTaskDelay(500 / portTICK_RATE_MS);
+        timer++;
+        vTaskDelay(1000 / portTICK_RATE_MS);
     }
 }
 
@@ -129,7 +132,7 @@ INT8U cash_gas_pump(INT16U price, INT16U cash){
             return 0;
         }
         else if(lever1()==1||lever1()==3){
-            gfprintf(COM2, "%c%cNOZZLE REMOVED! ", 0x1B, 0x80);
+            gfprintf(COM2, "%c%cDELIVER FINISHED", 0x1B, 0x80);
             set_leds( TURN_LED_ON, TURN_LED_OFF, TURN_LED_OFF ); //turn red led on
             vTaskDelay(1000 / portTICK_RATE_MS);
             gfprintf(COM2, "%c%c                ", 0x1B, 0xA8);

@@ -1,0 +1,1 @@
+"./adc.o" "./digiswitch.o" "./file.o" "./gpio.o" "./heap_2.o" "./lcd.o" "./list.o" "./main.o" "./port.o" "./queue.o" "./startup_frt.o" "./status_led.o" "./string.o" "./systick_frt.o" "./tasks.o" -Wl,-T"../tm4c123gh6pm.lds" 

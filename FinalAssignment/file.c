@@ -25,7 +25,7 @@
 #include "file.h"
 #include "lcd.h"
 #include "key.h"
-#include "rtcs.h"
+
 #include "uart.h"
 
 /*****************************    Defines    *******************************/

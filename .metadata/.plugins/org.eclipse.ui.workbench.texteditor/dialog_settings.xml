@@ -2,12 +2,16 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="0xC0" key="selection"/>
+		<item value="QueueHandle" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="//queue"/>
+			<item value="queuehandle"/>
+			<item value="queue handle"/>
+			<item value="queue"/>
 			<item value="0xC9"/>
 		</list>
 		<list key="replacehistory">

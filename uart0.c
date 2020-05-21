@@ -29,7 +29,16 @@
 
 
 /*****************************   Functions   *******************************/
+BOOLEAN uart0_put_q( INT8U ch )
+{
+  put_queue( Q_UART_TX, ch, 1 );
+  return( 1 );
+}
 
+BOOLEAN uart0_get_q( INT8U *pch )
+{
+  return( get_queue( Q_UART_RX, pch, 1 ));
+}
 
 INT32U lcrh_databits( INT8U antal_databits )
 /*****************************************************************************

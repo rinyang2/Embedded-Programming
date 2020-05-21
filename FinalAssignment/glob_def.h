@@ -14,7 +14,7 @@
 #define GLOB_DEF_H_
 
 //  QUEUES
-QueueHandle_t  Q_KEY, Q_LCD;
+QueueHandle_t  Q_KEY, Q_LCD, Q_UART_TX, Q_UART_RX;
 
 // SEMAPHORES
 xSemaphoreHandle xMutex;
