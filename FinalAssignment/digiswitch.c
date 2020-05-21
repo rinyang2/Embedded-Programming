@@ -96,7 +96,7 @@ INT16U driver()
                     anticounter++;
                 }
             }
-            gfprintf(COM2, "%c%cCREDIT:%5uDKK", 0x1B, 0xA8,temp=(counter*50-anticounter*5));
+            gfprintf(COM2, "%c%cCREDIT:%5uDKK", 0x1B, 0xA8,temp=(counter*50+anticounter*5));
             LAST_AB=AB;
         }
 

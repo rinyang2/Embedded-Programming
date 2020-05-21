@@ -21,6 +21,7 @@ void ui_task(void *pvParameters)
 {
 
     while(1){
+
         INT8U key = 0;
         INT16U TEMP = 0;
         key = get_keyboard();
@@ -30,8 +31,9 @@ void ui_task(void *pvParameters)
 
 
         if(key=='1'){
+            uart0_putc( ' ' );
             gfprintf(COM2, "%c%cINSERT CASH", 0x1B, 0xA8);
-
+            uprintf("CS");
             //digiswitch.c, driver() returns value of the digiswitch, which is the cash input
             TEMP=driver() * 10;
 
@@ -42,13 +44,15 @@ void ui_task(void *pvParameters)
             //cash_gas_pump() receives 2 parameter(price of gas you chose, the input amount of cash) and pumps gas when sw2 is pushed, and halted when sw1 is pushed
             cash_gas_pump(gas_select(), TEMP);
 
-            gfprintf(COM1, "%c%cCASH", 0x1B, 0xA8);//COM1 is for UART use
-            gfprintf(COM1, "%c%c%4uDKK inserted", 0x1B, 0xA8,TEMP);
+
         }
 
 
 
         else if(key=='2'){
+            uart0_putc( ' ' );
+            vTaskDelay(50 / portTICK_RATE_MS);
+            uprintf("CD");
            //read_card() reads 12 digit from keyboard(8 for card, 4 for pin) and add the end digit of the card and pin.
            //If the sum is odd, the function returns 0, if even, returns 1
            if(!read_card()){
@@ -59,8 +63,7 @@ void ui_task(void *pvParameters)
            else{
                //same function as cash_gas_pump(), but only 1 parameter since there is no cash input
                gas_pump(gas_select());
-               gfprintf(COM1, "%c%cCARD", 0x1B, 0xA8);
-               gfprintf(COM1, "%c%cGAS PRICE:%4u", 0x1B, 0xA8,(gas_select()/100));
+
            }
         }
 
@@ -68,11 +71,4 @@ void ui_task(void *pvParameters)
     }
 };
 
-void uart_task( void *pvParameter){
-    INT8U ch;
-    while(1){
 
-    gfprintf(COM1, "fuck");
-    }
-
-}

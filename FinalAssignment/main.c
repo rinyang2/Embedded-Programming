@@ -79,7 +79,6 @@ int main(void)
 ******************************************************************************/
 {
   setupHardware();
-
   xMutex = xSemaphoreCreateMutex();                                                     // create the mutex and the queues. make sure the handles are defined globally (in glob_def.h for example)
 
   Q_KEY = xQueueCreate( 128,  sizeof(INT8U) );
@@ -90,8 +89,9 @@ int main(void)
   xTaskCreate( key_task,        "key",  USERTASK_STACK_SIZE, NULL, LOW_PRIO, NULL );    // the tasks are created. all priorities are the same or else only the higher priorities will run if ready
   xTaskCreate( lcd_task,        "lcd",  USERTASK_STACK_SIZE, NULL, LOW_PRIO, NULL );
   xTaskCreate( ui_task,         "ui",   USERTASK_STACK_SIZE, NULL, LOW_PRIO, NULL );
-  xTaskCreate( uart_tx_task,    "ut",   USERTASK_STACK_SIZE, NULL, LOW_PRIO, NULL );
-  xTaskCreate( uart_rx_task,    "ur",   USERTASK_STACK_SIZE, NULL, LOW_PRIO, NULL );
+
+ // xTaskCreate( uart_task,       "ut",   USERTASK_STACK_SIZE, NULL, LOW_PRIO, NULL );
+  //xTaskCreate( uart_rx_task,    "ur",   USERTASK_STACK_SIZE, NULL, LOW_PRIO, NULL );
   // ----------------
 
   // Start the scheduler.

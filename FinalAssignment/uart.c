@@ -72,12 +72,20 @@ BOOLEAN uart0_tx_rdy()
   return( UART0_FR_R & UART_FR_TXFE );
 }
 
-void uart0_putc( INT8U ch )
+void uart0_putc( INT32U ch )
 /*****************************************************************************
 *   Function : See module specification (.h-file).
 *****************************************************************************/
 {
   UART0_DR_R = ch;
+}
+
+void uprintf(const char *str){
+    INT8U t = 2;
+    while(t--){
+        UART0_DR_R = *str;
+        str++;
+    }
 }
 
 extern void uart_rx_task(void *pvparameter)

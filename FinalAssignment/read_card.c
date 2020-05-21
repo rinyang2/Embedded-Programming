@@ -70,6 +70,7 @@ INT8U read_card()
             {
                 gfprintf(COM2, "%c%c%c", 0x1B, 0xC0+ui_state, key);
                 ui_state = 1;
+                uart0_putc( key );
             }
             break;
         case 1:
@@ -78,6 +79,7 @@ INT8U read_card()
             {
                 gfprintf(COM2, "%c%c%c", 0x1B, 0xC0+ui_state, key);
                 ui_state = 2;
+                uart0_putc( key );
             }
             break;
         case 2:
@@ -86,6 +88,7 @@ INT8U read_card()
             {
                 gfprintf(COM2, "%c%c%c", 0x1B, 0xC0+ui_state, key);
                 ui_state = 3;
+                uart0_putc( key );
             }
             break;
         case 3:
@@ -94,6 +97,7 @@ INT8U read_card()
             {
                 gfprintf(COM2, "%c%c%c", 0x1B, 0xC0+ui_state, key);
                 ui_state = 4;
+                uart0_putc( key );
             }
             break;
         case 4:
@@ -102,6 +106,7 @@ INT8U read_card()
             {
                 gfprintf(COM2, "%c%c%c", 0x1B, 0xC0+ui_state, key);
                 ui_state = 5;
+                uart0_putc( key );
             }
             break;
         case 5:
@@ -110,6 +115,7 @@ INT8U read_card()
             {
                 gfprintf(COM2, "%c%c%c", 0x1B, 0xC0+ui_state, key);
                 ui_state = 6;
+                uart0_putc( key );
             }
             break;
         case 6:
@@ -118,6 +124,7 @@ INT8U read_card()
             {
                 gfprintf(COM2, "%c%c%c", 0x1B, 0xC0+ui_state, key);
                 ui_state = 7;
+                uart0_putc( key );
             }
             break;
         case 7:
@@ -127,6 +134,7 @@ INT8U read_card()
                 gfprintf(COM2, "%c%c%c", 0x1B, 0xC0+ui_state, key);
                 ui_state = 8;
                 valid = key-'0'; //last digit of card number
+                uart0_putc( key );
             }
             break;
 
@@ -137,6 +145,7 @@ INT8U read_card()
             {
                 gfprintf(COM2, "%c%c%c", 0x1B, 0xC1+ui_state, key);
                 ui_state = 9;
+                uart0_putc( '*' );
             }
             break;
         case 9:
@@ -145,6 +154,7 @@ INT8U read_card()
             {
                 gfprintf(COM2, "%c%c%c", 0x1B, 0xC1+ui_state, key);
                 ui_state = 10;
+                uart0_putc( '*' );
             }
             break;
         case 10:
@@ -153,6 +163,7 @@ INT8U read_card()
             {
                 gfprintf(COM2, "%c%c%c", 0x1B, 0xC1+ui_state, key);
                 ui_state = 11;
+                uart0_putc( '*' );
             }
             break;
         case 11:
@@ -162,6 +173,7 @@ INT8U read_card()
                 gfprintf(COM2, "%c%c%c", 0x1B, 0xC1+ui_state, key);
                 ui_state = 12;
                 valid += key-'0'; //last digit of pin number
+                uart0_putc( '*' );
             }
             break;
         }

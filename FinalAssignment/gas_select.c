@@ -30,7 +30,7 @@
 #include "adc.h"
 #include "file.h"
 #include "string.h"
-
+#include "uart.h"
 #include "FreeRTOS.h"
 #include "Task.h"
 #include "queue.h"
@@ -66,18 +66,21 @@ INT16U gas_select()
         temp = key - '0';
 
         if(temp==1){
+            uprintf("92");
             gfprintf(COM2, "%c%cLeadfree 92     ", 0x1B, 0x80);
                 gfprintf(COM2, "%c%c                ", 0x1B, 0xA8);
                 vTaskDelay(2000 / portTICK_RATE_MS);
             return 849;
         }
         else if(temp==2){
+            uprintf("95");
             gfprintf(COM2, "%c%cLeadfree 95     ", 0x1B, 0x80);
                 gfprintf(COM2, "%c%c                ", 0x1B, 0xA8);
                 vTaskDelay(2000 / portTICK_RATE_MS);
             return 879;
         }
         else if(temp==3){
+            uprintf("ds");
             gfprintf(COM2, "%c%cDiesel          ", 0x1B, 0x80);
                 gfprintf(COM2, "%c%c                ", 0x1B, 0xA8);
                 vTaskDelay(2000 / portTICK_RATE_MS);
